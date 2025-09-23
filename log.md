@@ -21,3 +21,4 @@
 - Udkast til problemformulering
 	- Udkastet er emne-orienteret problemformulering, det skal være problem-orienteret problemformulering der bruger ingenørmetoden
 	- Vi skal løse noget problematisk med noget "fysisk" vores påstand skal være vi kan løse problemet med produktet, det kan gøres ved at finde problemet, lave løsningen (et computerspil) og implementere produktet i problemet.
+	-** Forøge viden om fordelene? koncekvenserne ved valg af bedre matrialer**
