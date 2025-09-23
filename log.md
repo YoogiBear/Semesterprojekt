@@ -18,9 +18,9 @@
 - Andet:
 	- Der kommer  til at være en poster session, hvor vi skal printe en A0 poster der infomere om vores projekt, som skal vises og gennemgås til vores medstuderende i Oktober. 
 
-**Arbejde:**
+- **Arbejde:**
 	- Udbygget start på problemtræ
 	- Snakket om problemer, probelformulering, med ingenørmetoden i mende.
 
-**Til næste møde**
+- **Til næste møde**
 	- Brainstorm på endelige problemformulering, og tilføjelser til problemtræ
