@@ -34,5 +34,8 @@
 
 - Inddel rapport i problemanalyse, årsagsanalyse, konsekvensanalyse og målgruppeanalyse osv. osv.
 
-- **Til næste møde**
+- **Til næste møde (fredag d. 03/10)**
 	- Få vores poster til at stå ud
+	- Kildesøgning til underspørgsmål
+		- Vær kildekritisk og find flere kilder der verificere informationerne
+	- Evt. skrivning på problemanalyse
