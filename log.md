@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **Logbog den 23. Sep. 2025**
 **Møde med vejleder**
 - Gennemgang af sammenarbjdes kontrakten:
@@ -12,13 +13,30 @@
 	- Vi skal løse noget problematisk med noget "fysisk" vores påstand skal være vi kan løse problemet med produktet, det kan gøres ved at finde problemet, lave løsningen (et computerspil) og implementere produktet i problemet.
 	- Forøge viden om fordelene? koncekvenserne ved valg af bedre matrialer
 	- Undersøge hvordan vi kan informere, optimere og forøge, viden for forbrugeren.
+=======
+Uge 38 - GruppeLog
+Fredag - Projektarbejde
 
-- Andet:
-	- Der kommer  til at være en poster session, hvor vi skal printe en A0 poster der infomere om vores projekt, som skal vises og gennemgås til vores medstuderende i Oktober. 
+ * Arbejdet på Universitet
+ * Sad fra 8-12
+ * Referat: 
+	Alle fra gruppen var til stede og vi arbejdet på samarbejdsaftalen, vejlederaftale samt et første udkast til Problemformulering.
 
-- **Arbejde:**
-	- Udbygget start på problemtræ.
-	- Snakket om problemer, probelformulering, med ingenørmetoden i mende.
-	- Sendt udkast til problemformulering til Jeppe på mail.
-- **Til næste møde**
-	- Brainstorm på endelige problemformulering, og tilføjelser til problemtræ.
+Uge 39 - GruppeLog
+Tirsdag - Vejledermøde samt projektarbejde
+
+ * Arbejdet på Universitet
+ * Sad fra 8-14
+ * Referat: 
+	Vejledermøde: Vi gennemgik vores samarbejdsaftalen, vejlederaftale samt udkastet til Problemformulering. Fik en del feedback fra vejleder. 
+	Projektarbejde: Gennemgik feedback fra vejleder og rettede, de ting som var gal i samarbejdsaftalen og vejlederaftale. Arbejdet med Problemformulering og sendt udkast til vejleder. 
+
+Torsdag - Gruppemøde
+
+ * Hjemme / holdt over discord 
+ * 9-10
+ * Referat:
+	Vi gennemgik feedback fra vejleder om Problemformulering og udarbejdet en ny Problemformulering, som blev sendt afsted. 
+>>>>>>> 3031e67109e6d17c0fdffb6968e147dbc74382a1
+
+
