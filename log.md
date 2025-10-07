@@ -1,16 +1,26 @@
 Uge 38 - GruppeLog.
 Fredag - Projektarbejde.
 
+<<<<<<< HEAD
  * Arbejdet på Universitet.
  * Sad fra 8-12.
+=======
+ * Arbejdet på Universitet
+ * Arbejdet fra 8-12
+>>>>>>> 360bbe1bebfe69e39428d4280ce00dac50acd61d
  * Referat: 
 	Alle fra gruppen var til stede og vi arbejdet på samarbejdsaftalen, vejlederaftale samt et første udkast til Problemformulering.
 
 Uge 39 - GruppeLog.
 Tirsdag - Vejledermøde samt projektarbejde.
 
+<<<<<<< HEAD
  * Arbejdet på Universitet.
  * Sad fra 8-14.
+=======
+ * Arbejdet på Universitet
+ * Arbejdet fra 8-14
+>>>>>>> 360bbe1bebfe69e39428d4280ce00dac50acd61d
  * Referat: 
 	Vejledermøde: Vi gennemgik vores samarbejdsaftalen, vejlederaftale samt udkastet til Problemformulering. Fik en del feedback fra vejleder. 
 	Projektarbejde: Gennemgik feedback fra vejleder og rettede, de ting som var gal i samarbejdsaftalen og vejlederaftale. Arbejdet med Problemformulering og sendt udkast til vejleder. 
