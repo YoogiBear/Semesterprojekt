@@ -65,4 +65,10 @@ Tirsdag - Spilbeskrivelse og verb/noun analyse.
 * Arbejdet fra 8-14.
 * Referart:
 	- Gruppen lavet en samlet spilbeskrivelse og en verb/noun analyse.
+	
+Fredag - CRC-Cards og UML.
+* Arbejdet på Universitet.
+* Arbejdet fra 8-12.
+* Referart:
+	- Gruppen lavet og gennemgik CRC-Cards og lavet et UNL-Diagram ud fra CRC-Cards.
 
