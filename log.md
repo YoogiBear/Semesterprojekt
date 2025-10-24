@@ -52,3 +52,17 @@ Tirsdag - Plakat fremvisning.
 * Arbejdet fra 8-12.
 * Referart:
 	- Alle grupperne på T4 skulle fremlægge deres plakater der skulle infomere resten af holdet om projektet og hvad hver gruppe arbejdet med.
+	
+Fredag - problemanalysen skriving.
+* Arbejdet på Universitet.
+* Arbejdet fra 8-12.
+* Referart:
+	- Alle i gruppen skrev på problemanalysen for at færdiggøre den.
+	
+Uge 43 - Gruppelog.
+Tirsdag - Spilbeskrivelse og verb/noun analyse.
+* Arbejdet på Universitet.
+* Arbejdet fra 8-14.
+* Referart:
+	- Gruppen lavet en samlet spilbeskrivelse og en verb/noun analyse.
+
