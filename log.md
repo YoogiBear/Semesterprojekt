@@ -72,3 +72,7 @@ Fredag - CRC-Cards og UML.
 * Referart:
 	- Gruppen lavet og gennemgik CRC-Cards og lavet et UNL-Diagram ud fra CRC-Cards.
 
+Lørdag/Søndag - Udkast til program
+* Arbejdet hjemme.
+* Referart:
+	- Lavet udkast til klasser og program udfra UML og CRC-Cards
