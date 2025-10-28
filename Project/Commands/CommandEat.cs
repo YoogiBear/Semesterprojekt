@@ -3,15 +3,19 @@
 
 class CommandEat : BaseCommand, ICommand {
   public CommandEat () {
-    description = "You ate Food";
+    description = "You eat Food";
   }
-  
+
     //attempts to execute EatCommand with given context, command and given parameters else return
-  public void Execute (string command, string[] parameters) {
-    if (GuardEq(parameters, 1)) {
-      Console.WriteLine("I don't seem to know where that is 🤔");
+  public void Execute (Context context, string command, string[] parameters) {
+    if (Game.foodArray[0] == null){
+      Console.WriteLine("You have no food.");
       return;
     }
-    context.Transition(parameters[0]);
+    else if (GuardEq(parameters, 1)) {
+      Console.WriteLine("You need to specify your food. 🤔");
+      return;
+    }
+    Game.player.Eat(Game.food.saturation);
   }
 }

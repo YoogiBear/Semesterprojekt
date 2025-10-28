@@ -9,6 +9,7 @@ public class Player
     public string[] items;
     public string[] food;
     public string[] objectives;
+    public int hunger = 100;
 
     public Player()
     {
@@ -22,4 +23,13 @@ public class Player
     public void Consume() { throw new NotImplementedException(); }
     public void Catch() { throw new NotImplementedException(); }
     public void Repair() { throw new NotImplementedException(); }
+
+    public int Hunger()
+    {
+        return hunger;
+    }
+
+    public void Eat(int decrease) {
+        hunger -= decrease;
+    }
 }

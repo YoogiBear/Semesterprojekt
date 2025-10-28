@@ -1,13 +1,18 @@
 /* Main class for launching the game
  */
 
-class Game {
+public class Game {
   static World    world    = new World();
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
-    static Player player = new Player();
-  
+  public static Player player = new Player();
+
+  public static Food food = new Food();
+
+  public static Food[] foodArray = new Food[5];
+
+
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
     registry.Register("exit", cmdExit);
@@ -15,6 +20,7 @@ class Game {
     registry.Register("bye", cmdExit);
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
+    registry.Register("eat", new CommandEat());
   }
   
   static void Main (string[] args) {
@@ -23,10 +29,13 @@ class Game {
     //Initialisation
     InitRegistry();
     context.GetCurrent().Welcome();
+    foodArray[0] = food;
     
     //THIS IS THE MAIN GAME LOOP. EVERYTHING STARTS FROM HERE
     while (context.IsDone()==false) {
       Console.Write("> ");
+      Console.WriteLine("You have " + player.Hunger() + " hunger");
+      Console.WriteLine(foodArray[0]);
       string? line = Console.ReadLine();
       if (line!=null) registry.Dispatch(line);
     }
