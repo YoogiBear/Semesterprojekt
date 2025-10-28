@@ -18,9 +18,18 @@ public class Island
     {
         throw new NotImplementedException();
     }
-    public int GeneratePollution()
+    public int GeneratePollution(Resource[] trash, int pollution)
     {
-        throw new NotImplementedException();
+        //Depending on the amount of trash (size of Resources), pollution is added to the "ocean"
+        float pollutionAdd = trash.Length/10*2;
+        if(pollutionAdd >= 1.0) //Runs when trash contains 5 or more pieces
+        {
+            return pollution += int(Math.Round(pollutionAdd, 0));
+        }
+        else 
+        {
+            return pollution;
+        }
     }
 
 }
