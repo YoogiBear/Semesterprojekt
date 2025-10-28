@@ -4,19 +4,19 @@
 public class Island
 {
     public int pollution;
-    public int trees;
+    public static int trees;
     public Resource[] Resources;
 
     public Island()
     {
         pollution = 10;
-        trees = 10;
+        trees = 1;
         Resources = new Resource[10];
     }
 
-    public int[] GenerateTrees()
+    public void GenerateTrees()
     {
-        throw new NotImplementedException();
+        trees += 1;
     }
     public int GeneratePollution(Resource[] trash, int pollution)
     {
