@@ -44,7 +44,7 @@ Follow these steps in a terminal or a commandoprompt.
 1. Clone or download the project:
    ```bash
    git clone https://github.com/YoogiBear/Semesterprojekt
-   cd eco-quest
+   cd Project
    ```
 
 2. Run the game with command: 
