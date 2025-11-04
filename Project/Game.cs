@@ -7,8 +7,8 @@ class Game {
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player();
-    static Logbook logbook = new Logbook();
-  
+  static Logbook logbook = new Logbook();
+  static int trash = 10;
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
     registry.Register("quit", cmdExit);
@@ -55,3 +55,5 @@ public static class Utility
     }
 
 }
+
+
