@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-// Simple Trash model
 public class Trash
 {
     // weight is how much pollution this trash generates when added
@@ -14,7 +13,7 @@ public class Trash
     }
 }
 
-// Pollution component (only increases)
+// Pollution
 public class Pollution
 {
     public int level;
@@ -26,7 +25,7 @@ public class Pollution
         level = initialLevel;
     }
 
-    // Increase pollution by amount (e.g., when trash is added)
+    // Increase pollution by amount
     public void AddPollution(int amount)
     {
         if (amount <= 0) return;
@@ -68,7 +67,7 @@ public class Ocean
         this.pollutionFactor = Math.Max(1, pollutionFactor);
     }
 
-    // Add Trash object -> increases pollution immediately
+    // Add Trash object to increases pollution 
     public void AddTrash(Trash trash)
     {
         if (trash == null) throw new ArgumentNullException(nameof(trash));
@@ -76,39 +75,9 @@ public class Ocean
         Pollution.AddPollution(added);
     }
 
-    // Add raw amount of trash (weight)
-    public void AddTrash(int weight)
-    {
-        if (weight <= 0) return;
-        int added = weight * pollutionFactor;
-        Pollution.AddPollution(added);
-    }
-
     public void ShowStatus()
     {
         Console.WriteLine($"Pollution Level: {Pollution.Level}");
         Console.WriteLine("Food sources: " + (Food.FoodSources.Count == 0 ? "(none)" : string.Join(", ", Food.FoodSources)));
-    }
-}
-
-// Example usage
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        var ocean = new Ocean(initialPollution: 10, pollutionFactor: 2); // each unit of trash = 2 pollution
-        ocean.ShowStatus();
-
-        // Add some fish
-        ocean.Food.GenerateFish(3);
-
-        // Add trash as an object
-        var trash1 = new Trash(weight: 5);
-        ocean.AddTrash(trash1); // increases pollution by 5*2 = 10
-
-        // Add raw trash amount
-        ocean.AddTrash(3); // increases pollution by 3*2 = 6
-
-        ocean.ShowStatus();
     }
 }
