@@ -4,19 +4,55 @@
  * **/
 public class Item
 {
-    public int durability;
-    public string[] materials;
+    private int durability = 100;
+    public string[] arrayItem = new string[10];
 
-    public Item ()
+    public Item(Resource resources)
     {
-        durability = 100;
-        materials = new string[10];
+        for (int i = 0; i < arrayItem.Length; i++)
+        {
+            if (arrayItem[i] == null)
+            {
+                arrayItem[i] = CreateItem(resources);
+            }
+            else
+            {
+                arrayItem[i] = "I was false?";
+            }
+        }
     }
 
-    public string[] CreateItem()
+    string CreateItem(Resource r)
     {
-        throw new NotImplementedException();
+        if (r == null)
+        {
+            return null;
+        }
 
+        if (r.name == "plastic")
+        {
+            return "p";
+        }
+        else if (r.name == "metal")
+        {
+            return "m";
+        }
+        else if (r.name == "wood")
+        {
+            return "w";
+        }
+        else if (r.name == "cardboard")
+        {
+            return "c";
+        }
+        else if (r.name == "")
+        {
+            return "Empty";
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public string Interaction(Player player)
@@ -24,27 +60,32 @@ public class Item
         throw new NotImplementedException();
 
     }
+
     public string Placed()
     {
         throw new NotImplementedException();
 
     }
+
     public bool DestroyItem(int amount)
     {
-        throw new NotImplementedException();
-
+        return amount >= durability;
     }
+
     public int RepairItem(int amount)
     {
-        throw new NotImplementedException();
-
+        if (durability < 100)
+        {
+            durability += amount;
+        }
+        return durability;
     }
 
     public int DamageItem(int amount)
     {
-        throw new NotImplementedException();
-
+        durability -= amount;
+        return durability;
     }
-
+    
 
 }
