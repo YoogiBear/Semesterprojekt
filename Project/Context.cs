@@ -12,7 +12,6 @@ class Context {
   public Space GetCurrent() {
     return current;
   }
-  
   public void Transition (string direction) {
     Space next = current.FollowEdge(direction);
     if (next==null) {

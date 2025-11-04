@@ -5,20 +5,33 @@ class World {
   Space entry;
   
   public World () {
-    Space entry    = new Space("Entry");
-    Space corridor = new Space("Corridor");
-    Space cave     = new Space("Cave");
-    Space pit      = new Space("Darkest Pit");
-    Space outside  = new Space("Outside");
+
+    Space center = new Space("the center of the island");
+    Space north = new Space("the northern part of the island");
+    Space south = new Space("the southern part of the island");
+    Space east = new Space("the eastern part of the island");
+    Space west = new Space("the western part of the island");
+
+    Space ocean = new Ocean("the ocean");
     
-    entry.AddEdge("door", corridor);
-    corridor.AddEdge("door", cave);
-    cave.AddEdge("north", pit);
-    cave.AddEdge("south", outside);
-    pit.AddEdge("door", cave);
-    outside.AddEdge("door", cave);
-    
-    this.entry = entry;
+
+    ocean.AddEdge("land", center);
+    center.AddEdge("north", north);
+    center.AddEdge("south", south);
+    center.AddEdge("east", east);
+    center.AddEdge("west", west);
+    north.AddEdge("center", center);
+    south.AddEdge("center", center);
+    east.AddEdge("center", center);
+    west.AddEdge("center", center);
+
+    north.AddEdge("ocean", ocean);
+    south.AddEdge("ocean", ocean);
+    east.AddEdge("ocean", ocean);
+    west.AddEdge("ocean", ocean);
+
+
+        this.entry = center;
   }
   
   public Space GetEntry () {

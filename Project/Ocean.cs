@@ -3,25 +3,32 @@
  * TODO: Implement proper properties and methods.
  * **/
 
-public class Ocean
+public class Ocean : Space
 {
-    public Resource[] resources;
-    public int pollutionLevel;
-    public string[] food;
 
-    public Ocean()
+    public Resource[] resourcesprefab =
+        [
+            new Resource(), new Resource(),
+            new Resource(), new Resource(),
+            new Resource(), new Resource(),
+            new Resource(), new Resource(),
+            new Resource(),new Resource()
+        ];
+
+    public Resource[] resources;
+    public List<Food> food;
+    public int pollutionLevel;
+    public Ocean(string Name) : base(Name)
     {
         resources = new Resource[10];
+        food = new List<Food>() { new Food(), new Food()};
         pollutionLevel = 10;
-        food = new string[10];
-    }
-
-    public void CreateFood()
-    {
-        throw new NotImplementedException();
     }
     public void CreateResources()
     {
-        throw new NotImplementedException();
+        resources = resourcesprefab;
     }
+
 }
+
+

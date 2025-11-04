@@ -2,7 +2,8 @@
  */
 
 interface ICommand {
-  void Execute (Context context, string command, string[] parameters);
-  string GetDescription ();
+    void Execute (Context context, string command, string[] parameters);
+    string GetDescription ();
 }
+
 

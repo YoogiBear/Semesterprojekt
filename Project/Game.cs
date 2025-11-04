@@ -6,20 +6,23 @@ class Game {
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
-    static Player player = new Player();
+  static Player player = new Player();
+    static Logbook logbook = new Logbook();
   
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
-    registry.Register("exit", cmdExit);
     registry.Register("quit", cmdExit);
-    registry.Register("bye", cmdExit);
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
+    registry.Register("catch", new CommandCatch(player));
   }
   
   static void Main (string[] args) {
-    Console.WriteLine("Welcome to the World of Zuul!");
-    
+    Utility.SlowPrint("Welcome to Eco-Quest(WIP)", 50);
+    Console.WriteLine("Press any key to continue...");
+    Console.ReadKey();
+    Console.Clear();
+    logbook.Intro();
     //Initialisation
     InitRegistry();
     context.GetCurrent().Welcome();
@@ -32,4 +35,23 @@ class Game {
     }
     Console.WriteLine("Game Over 😥");
   }
+
+ 
+}
+
+public static class Utility
+{
+    // This class allows text to be written out letter by letter with spaces in between, for added effect.
+    public static void SlowPrint(string text, int time = 100)
+    {
+        text.ToCharArray();
+        foreach (char ch in text)
+        {
+            Console.Write(ch.ToString());
+            Console.Write("");
+            Thread.Sleep(time);
+        }
+        Console.WriteLine();
+    }
+
 }

@@ -5,21 +5,21 @@
 
 public class Player
 {
-    public string[] resources;
-    public string[] items;
-    public string[] food;
+    public Resource[] resources;
+    public Item[] items;
+    public List<Food> foods;
     public string[] objectives;
 
     public Player()
     {
-        resources = new string[10];
-        items = new string[10];
-        food = new string[10];
+        resources = new Resource[10];
+        items = new Item[10];
+        foods = new List<Food>();
         objectives = new string[10];
     }
 
     public void Build() { throw new NotImplementedException(); }
     public void Consume() { throw new NotImplementedException(); }
-    public void Catch() { throw new NotImplementedException(); }
+    public void Catch(Food food) { foods.Add(food); }
     public void Repair() { throw new NotImplementedException(); }
 }

@@ -1,7 +1,7 @@
 /* Space class for modeling spaces (rooms, caves, ...)
  */
 
-class Space : Node {
+public class Space : Node {
   public Space (String name) : base(name)
   {
   }
@@ -9,7 +9,7 @@ class Space : Node {
   public void Welcome () {
     Console.WriteLine("You are now at "+name);
     HashSet<string> exits = edges.Keys.ToHashSet();
-    Console.WriteLine("Current exits are:");
+    Console.WriteLine("Current paths are:");
     foreach (String exit in exits) {
       Console.WriteLine(" - "+exit);
     }
