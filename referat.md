@@ -39,3 +39,25 @@
 	- Kildesøgning til underspørgsmål
 		- Vær kildekritisk og find flere kilder der verificere informationerne
 	- Evt. skrivning på problemanalyse
+
+**Referat fra vejledermøde 04/11/2025**
+
+- Piler i UML skal tænkes som "Kender til" dette betyder at alle pilene skal vendes som de er lavet lige nu.
+- Hvorfor er CreateFood en method, kan det ikke bare instantieres i food class?
+
+- Der findes forskellige typer klasse diagrammer, vi har ikke lært om dem endnu, men vi skal prøve at undgå et dokumentations UMI-diagram.
+	- Vi skal lave dokumentations klassediagram til sidst i projektet.
+	- Vores UML-Diagram er en blanding af analyse og dokumentations diagram pt.
+
+
+- Vores kode snipt ser fint ud, der skal stadig laves meget arbejde på det.
+	- Husk at spillet vi laver svare på vores problemstilling.
+	- Husk vores krav der er lavet til spillet.
+	- Giv vores krav tal, funktionelle krav 1, 2, 3...
+	- Inkluder de krav der er stillit til opgaven i vores kravspecifikation.
+	- Opsæt vores krav i en tabel, giv dem en titel, vægtning og kravbeskrivelse.
+	- Gør vores krav mere spil specifikke, de er meget overordnet.
+
+**Til næste uge**
+        
+- Vi skal have kørende kode, der præsentere vores spil, implemntation af krav og 15 minutter lang powerpoint.
