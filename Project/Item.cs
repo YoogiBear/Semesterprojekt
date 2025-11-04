@@ -5,7 +5,7 @@
 public class Item
 {
     private int durability = 100;
-    public string[] arrayItem = new string[10];
+    private string[] arrayItem = new string[10];
 
     public Item(Resource resources)
     {
@@ -14,10 +14,6 @@ public class Item
             if (arrayItem[i] == null)
             {
                 arrayItem[i] = CreateItem(resources);
-            }
-            else
-            {
-                arrayItem[i] = "I was false?";
             }
         }
     }
