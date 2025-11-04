@@ -57,21 +57,12 @@ public class Ocean
     public Pollution Pollution { get; }
     public FoodGenerator Food { get; }
 
-    // Optional: pollutionFactor lets you translate trash weight into pollution
-    private readonly int pollutionFactor;
-
-    public Ocean(int initialPollution = 0, int pollutionFactor = 1)
-    {
-        Pollution = new Pollution(initialPollution);
-        Food = new FoodGenerator();
-        this.pollutionFactor = Math.Max(1, pollutionFactor);
-    }
 
     // Add Trash object to increases pollution 
     public void AddTrash(Trash trash)
     {
         if (trash == null) throw new ArgumentNullException(nameof(trash));
-        int added = trash.Weight * pollutionFactor;
+        int added = trash.Weight;
         Pollution.AddPollution(added);
     }
 
