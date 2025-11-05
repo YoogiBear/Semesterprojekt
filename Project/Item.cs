@@ -1,50 +1,103 @@
-/**
- * Player class NOT finished. Base has been established
- * TODO: Implement proper properties and methods.
- * **/
 public class Item
 {
-    public int durability;
-    public string[] materials;
+    //Sets Durability to 100
+    private int durability = 100;
+    //An empty string to put our Item into
+    private string itemCode;
 
-    public Item ()
+    //Constructor for Item, calls CreateItem, if the resource is null, it throws and exception
+    public Item(Resource resources)
     {
-        durability = 100;
-        materials = new string[10];
-    }
+        if (resources == null)
+        {
+            throw new ArgumentNullException(nameof(resources));
+        }
 
-    public string[] CreateItem()
+        itemCode = CreateItem(resources);
+    }
+    
+    //Check the resource parameter and if the name of the resource matches to an item, it gets created
+    string CreateItem(Resource r)
     {
-        throw new NotImplementedException();
-
+        
+        if (r == null)
+        {
+            return null;
+        }
+        
+        if (r.name == "plastic")
+        {
+            return "Spade";
+        }
+        else if (r.name == "metal")
+        {
+            return "Fishing rod";
+        }
+        else if (r.name == "wood")
+        {
+            return "Plank";
+        }
+        else if (r.name == "cardboard")
+        {
+            return "Box";
+        }
+        else if (r.name == "")
+        {
+            return "Empty";
+        }
+        else
+        {
+            return null;
+        }
     }
-
+    
+    //Not implemented yet
     public string Interaction(Player player)
     {
         throw new NotImplementedException();
 
     }
-    public string Placed()
+    
+    //Not implemented yet
+    public string Placed(Player player)
     {
         throw new NotImplementedException();
 
     }
+    
+    //If the amount is greater or equal to durability it will return true, if not it returns falls
     public bool DestroyItem(int amount)
     {
-        throw new NotImplementedException();
-
+        return amount >= durability;
     }
+    
+    //Repairs the item by the amount inputed. Keeps durability at a max of 100, even if repair gets it from 80 to 130
     public int RepairItem(int amount)
     {
-        throw new NotImplementedException();
+        if (durability < 100)
+        {
+            durability += amount;
 
+            if (durability > 100)
+            {
+                durability = 100;
+            }
+        }
+        return durability;
     }
-
+    
+    //Damage the item by the amount inputed. Checks and make sure durability isn't 0
     public int DamageItem(int amount)
     {
-        throw new NotImplementedException();
+        durability -= amount;
 
+        if (durability <= 0)
+        {
+            durability = 0; 
+        }
+        
+        return durability;
     }
-
+    
 
 }
