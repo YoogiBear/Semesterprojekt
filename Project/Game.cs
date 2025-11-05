@@ -13,6 +13,7 @@ class Game {
         ICommand cmdExit = new CommandExit();
         registry.Register("go", new CommandGo());
         registry.Register("catch", new CommandCatch(player));
+        registry.Register("create", new CommandItem(player));
         registry.Register("help", new CommandHelp(registry));
         registry.Register("quit", cmdExit);
     }

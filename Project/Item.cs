@@ -99,5 +99,10 @@ public class Item
         return durability;
     }
     
+    //Created a ToString so we can print the list of Items the player have
+    public override string ToString() 
+    {
+        return itemCode;
+    }
 
 }
