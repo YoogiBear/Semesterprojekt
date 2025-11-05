@@ -1,45 +1,45 @@
-/**
- * Player class NOT finished. Base has been established
- * TODO: Implement proper properties and methods.
- * **/
 public class Item
 {
+    //Sets Durability to 100
     private int durability = 100;
-    private string[] arrayItem = new string[10];
+    //An empty string to put our Item into
+    private string itemCode;
 
+    //Constructor for Item, calls CreateItem, if the resource is null, it throws and exception
     public Item(Resource resources)
     {
-        for (int i = 0; i < arrayItem.Length; i++)
+        if (resources == null)
         {
-            if (arrayItem[i] == null)
-            {
-                arrayItem[i] = CreateItem(resources);
-            }
+            throw new ArgumentNullException(nameof(resources));
         }
-    }
 
+        itemCode = CreateItem(resources);
+    }
+    
+    //Check the resource parameter and if the name of the resource matches to an item, it gets created
     string CreateItem(Resource r)
     {
+        
         if (r == null)
         {
             return null;
         }
-
+        
         if (r.name == "plastic")
         {
-            return "p";
+            return "Spade";
         }
         else if (r.name == "metal")
         {
-            return "m";
+            return "Fishing rod";
         }
         else if (r.name == "wood")
         {
-            return "w";
+            return "Plank";
         }
         else if (r.name == "cardboard")
         {
-            return "c";
+            return "Box";
         }
         else if (r.name == "")
         {
@@ -50,36 +50,52 @@ public class Item
             return null;
         }
     }
-
+    
+    //Not implemented yet
     public string Interaction(Player player)
     {
         throw new NotImplementedException();
 
     }
-
-    public string Placed()
+    
+    //Not implemented yet
+    public string Placed(Player player)
     {
         throw new NotImplementedException();
 
     }
-
+    
+    //If the amount is greater or equal to durability it will return true, if not it returns falls
     public bool DestroyItem(int amount)
     {
         return amount >= durability;
     }
-
+    
+    //Repairs the item by the amount inputed. Keeps durability at a max of 100, even if repair gets it from 80 to 130
     public int RepairItem(int amount)
     {
         if (durability < 100)
         {
             durability += amount;
+
+            if (durability > 100)
+            {
+                durability = 100;
+            }
         }
         return durability;
     }
-
+    
+    //Damage the item by the amount inputed. Checks and make sure durability isn't 0
     public int DamageItem(int amount)
     {
         durability -= amount;
+
+        if (durability <= 0)
+        {
+            durability = 0; 
+        }
+        
         return durability;
     }
     
