@@ -10,22 +10,37 @@ class Game {
   static Logbook logbook = new Logbook();
   static int trash = 10;
   private static void InitRegistry () {
-    ICommand cmdExit = new CommandExit();
-    registry.Register("quit", cmdExit);
-    registry.Register("go", new CommandGo());
-    registry.Register("help", new CommandHelp(registry));
-    registry.Register("catch", new CommandCatch(player));
-  }
+        ICommand cmdExit = new CommandExit();
+        registry.Register("go", new CommandGo());
+        registry.Register("catch", new CommandCatch(player));
+        registry.Register("help", new CommandHelp(registry));
+        registry.Register("quit", cmdExit);
+    }
   
   static void Main (string[] args) {
-    Utility.SlowPrint("Welcome to Eco-Quest(WIP)", 50);
-    Console.WriteLine("Press any key to continue...");
-    Console.ReadKey();
-    Console.Clear();
-    logbook.Intro();
-    //Initialisation
-    InitRegistry();
-    context.GetCurrent().Welcome();
+        
+        Utility.SlowPrint("Welcome to Eco-Quest(WIP)", 50);
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
+        Console.Clear();
+        Utility.SlowPrint("You wake up on a deserted island in the middle of nowhere.",20);
+        Thread.Sleep(1000);
+        Utility.SlowPrint("You spot a logbook on the ground.", 20);
+        Thread.Sleep(1000);
+        Utility.SlowPrint("You pick it up and flip to the first page.", 20);
+        Thread.Sleep(1000);
+        Utility.SlowPrint("It reads: 'If ever you are in need of help. Just ask.'", 20);
+        Thread.Sleep(1000);
+        Utility.SlowPrint("You wonder what it means...", 20);
+        Thread.Sleep(1000);
+        Console.WriteLine();
+        Utility.SlowPrint("Press any key to continue...", 10);
+        Console.ReadKey();
+        Console.Clear();
+
+        //Initialisation
+        InitRegistry();
+        context.GetCurrent().Welcome();
     
     //THIS IS THE MAIN GAME LOOP. EVERYTHING STARTS FROM HERE
     while (context.IsDone()==false) {
@@ -37,23 +52,6 @@ class Game {
   }
 
  
-}
-
-public static class Utility
-{
-    // This class allows text to be written out letter by letter with spaces in between, for added effect.
-    public static void SlowPrint(string text, int time = 100)
-    {
-        text.ToCharArray();
-        foreach (char ch in text)
-        {
-            Console.Write(ch.ToString());
-            Console.Write("");
-            Thread.Sleep(time);
-        }
-        Console.WriteLine();
-    }
-
 }
 
 

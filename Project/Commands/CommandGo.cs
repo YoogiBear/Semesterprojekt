@@ -3,7 +3,7 @@
 
 class CommandGo : BaseCommand, ICommand {
   public CommandGo () {
-    description = "Follow an exit";
+    description = "Used to traverse the island. Write 'go' followed by a valid direction. ";
   }
   
     //attempts to execute GoCommand with given context, command and given parameters else return 

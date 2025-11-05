@@ -7,7 +7,7 @@ public class Resource
     public int strength;
     public int pollution;
 
-    public Resource(string Name = "defaultName", int Strength, int Pollution)
+    public Resource(string Name = "defaultName", int Strength = 20, int Pollution = 20)
     {
         name = Name;
         strength = Strength;

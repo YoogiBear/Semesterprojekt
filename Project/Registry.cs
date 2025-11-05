@@ -23,7 +23,7 @@ class Registry {
   }
   
   public ICommand GetCommand (string commandName) {
-    return commands[commandName];
+    return commands[commandName.ToLower()];
   }
 
 
