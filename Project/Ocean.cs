@@ -8,8 +8,8 @@ public class Ocean : Space
 
     public Resource[] resourcesprefab =
         [
-            new Resource(), new Resource(),
-            new Resource(), new Resource(),
+            new Resource("plastic"), new Resource("plastic"),
+            new Resource("metal"), new Resource("metal"),
             new Resource(), new Resource(),
             new Resource(), new Resource(),
             new Resource(),new Resource()
@@ -24,10 +24,34 @@ public class Ocean : Space
         food = new List<Food>() { new Food(), new Food()};
         pollutionLevel = 10;
     }
-
+    
+    //Changed so CreateResources now copies the elements of resourcesprefab and not just hold the same values
     public void CreateResources()
     {
-        resources = resourcesprefab;
+        resources = new Resource[resourcesprefab.Length];
+
+        for (int i = 0; i < resourcesprefab.Length; i++)
+        {
+            resources[i] = resourcesprefab[i];
+        }
+    }
+
+    public Resource TakeResource(string r)
+    {
+        if (r == "" || r == null)
+        {
+            return null;
+        }
+
+        for (int i = 0; i < resources.Length; i++)
+        {
+            Resource rs = resources[i];
+            if (rs.name == r)
+            {
+                return rs;
+            }
+        }
+        return null;
     }
 
     // Add Trash object to increases pollution 

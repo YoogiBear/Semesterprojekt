@@ -2,6 +2,7 @@
 class CommandGather : BaseCommand, ICommand
 {
     private Player player;
+    private Ocean ocean;
 
     public CommandGather(Player player)
     {
@@ -23,7 +24,10 @@ class CommandGather : BaseCommand, ICommand
         }
         else
         {
-            
+            string wanted = parameters[0];
+            Resource gathered = ocean.TakeResource(wanted);
+            player.AddResource(gathered);
+            Console.WriteLine("You have collected 1" + parameters[0]);
         }
     }
 }

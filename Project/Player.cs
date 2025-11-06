@@ -18,6 +18,12 @@ public class Player
         objectives = new string[10];
     }
 
+    public void AddResource(Resource resource)
+    {
+        if (resource == null) return;
+        resources.Add(resource);
+    }
+
     public void Build() { throw new NotImplementedException(); }
     public void Consume() { throw new NotImplementedException(); }
     public void Catch(Food food) { foods.Add(food); }
