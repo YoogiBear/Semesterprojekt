@@ -2,7 +2,6 @@
 class CommandItem : BaseCommand, ICommand
 {
     Player player;
-    public List<Item> items = new List<Item>();
     public CommandItem(Player player)
     {
         this.player = player;
@@ -26,23 +25,23 @@ class CommandItem : BaseCommand, ICommand
                 if (s == "plastic")
                 {
                     Resource r = new Resource("plastic");
-                    items.Add(new Item(r));
+                    player.items.Add(new Item(r));
                 }else if (s == "metal")
                 {
                     Resource r = new Resource("metal");
-                    items.Add(new Item(r));
+                    player.items.Add(new Item(r));
                 }else if (s == "cardboard")
                 {
                     Resource r = new Resource("cardboard");
-                    items.Add(new Item(r));
+                    player.items.Add(new Item(r));
                 }else if (s == "wood")
                 {
                     Resource r = new Resource("wood");
-                    items.Add(new Item(r));
+                    player.items.Add(new Item(r));
                 }
                 else if (s == "print")
                 {
-                    foreach (Item i in items)
+                    foreach (Item i in player.items)
                     {
                         Console.WriteLine(i);
                     }
