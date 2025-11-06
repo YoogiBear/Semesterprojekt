@@ -5,14 +5,14 @@
 
 public class Player
 {
-    public Resource[] resources;
+    public List<Resource> resources;
     public List<Item> items;
     public List<Food> foods;
     public string[] objectives;
 
     public Player()
     {
-        resources = new Resource[10];
+        resources = new List<Resource>();
         items = new List<Item>();
         foods = new List<Food>();
         objectives = new string[10];
