@@ -7,7 +7,7 @@ public class Player
 {
     public string[] resources;
     public string[] items;
-    public string[] food;
+    public static List<Food> foods;
     public string[] objectives;
     public int hunger = 100;
 
@@ -15,7 +15,7 @@ public class Player
     {
         resources = new string[10];
         items = new string[10];
-        food = new string[10];
+        foods = new List<Food>();
         objectives = new string[10];
     }
 
@@ -23,6 +23,8 @@ public class Player
     public void Consume() { throw new NotImplementedException(); }
     public void Catch() { throw new NotImplementedException(); }
     public void Repair() { throw new NotImplementedException(); }
+
+
 
     public int Hunger()
     {
@@ -32,4 +34,5 @@ public class Player
     public void Eat(int decrease) {
         hunger -= decrease;
     }
+
 }

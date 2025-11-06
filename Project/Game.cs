@@ -7,10 +7,8 @@ public class Game {
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   public static Player player = new Player();
+  public static Food apple = new Food();
 
-  public static Food food = new Food();
-
-  public static Food[] foodArray = new Food[5];
 
 
   private static void InitRegistry () {
@@ -29,13 +27,13 @@ public class Game {
     //Initialisation
     InitRegistry();
     context.GetCurrent().Welcome();
-    foodArray[0] = food;
+    Player.foods.Add(apple);
     
     //THIS IS THE MAIN GAME LOOP. EVERYTHING STARTS FROM HERE
     while (context.IsDone()==false) {
       Console.Write("> ");
       Console.WriteLine("You have " + player.Hunger() + " hunger");
-      Console.WriteLine(foodArray[0]);
+      Console.WriteLine(Player.foods.Count);
       string? line = Console.ReadLine();
       if (line!=null) registry.Dispatch(line);
     }
