@@ -23,22 +23,19 @@ class CommandCheck : BaseCommand, ICommand
             return;
         }
         //Check every item in the inventory array
-        for(int i = 0; i<_player.items.Length; i++)
+       for(int i = 0; i<_player.items.Count; i++)
         {
-            //Item cannot be null because null isnt type item
-            if (_player.items[i] != null)
+            //Check to see if the name of the item is what the player is looking for
+            if (_player.items[i].ToString() == parameters[0])
             {
-                //Check to see if the name of the item is what the player is looking for
-                if (_player.items[i].ToString() == parameters[0])
-                {
-                    //The durability of the item can now me checked
-                    Console.WriteLine($"{parameters[0]} is in inventory.");
-                    return;
-                }
+                //The durability of the item can now me checked
+                Console.WriteLine($"{parameters[0]} is in inventory.");
+                return;
             }
+            
         }
         //The item the player was looking for was not found the array at all.
-        Utility.SlowPrint($"Sorry but '{parameters[0]}' isn't in the inventory", 10);
+        Utility.SlowPrint($"Sorry but '{parameters[0]}' isn't in the inventory.", 10);
 
     }
 }
