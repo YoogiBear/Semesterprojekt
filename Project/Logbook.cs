@@ -16,9 +16,11 @@ public class Logbook
 
     }
 
-    public void Intro()
+    public void DisplayCurrentObjective()
     {
-        
+        Utility.SlowPrint("You checked the logbook for your current objective.", 10);
+        Console.WriteLine();
+        Thread.Sleep(1000);
         currentObjective.Present();
     }
 }

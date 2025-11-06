@@ -9,10 +9,21 @@ public class Objective
     public string description;
     private bool completed;
     private bool current;
-    public void Complete()
+
+
+    public void Present()
     {
-        completed = true;
-        current = false;
+        int wait = 500;
+        Thread.Sleep(wait);
+        Utility.SlowPrint("---------------------------", 5);
+        Thread.Sleep(wait);
+        Utility.SlowPrint($"{title}", 20);
+        Thread.Sleep(wait);
+        Utility.SlowPrint("---------------------------", 5);
+        Thread.Sleep(wait);
+        Utility.SlowPrint($"{description}", 20);
+        Thread.Sleep(wait);
+        Console.WriteLine();
     }
 
     public void Begin()
@@ -20,17 +31,11 @@ public class Objective
         current = true;
     }
 
-    public void Present()
+    public void Complete()
     {
-        Thread.Sleep(1000);
-        Utility.SlowPrint("---------------------------", 10);
-        Thread.Sleep(1000);
-        Utility.SlowPrint($"{title}");
-        Thread.Sleep(1000);
-        Utility.SlowPrint("---------------------------",10);
-        Thread.Sleep(1000);
-        Utility.SlowPrint($"{description}", 40);
-        Thread.Sleep(1000);
-        Console.WriteLine();
+        completed = true;
+        current = false;
     }
+
+
 }

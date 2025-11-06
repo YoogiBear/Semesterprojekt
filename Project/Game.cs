@@ -7,11 +7,12 @@ class Game {
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player();
-  static Logbook logbook = new Logbook();
+
   static int trash = 10;
   private static void InitRegistry () {
         ICommand cmdExit = new CommandExit();
         registry.Register("go", new CommandGo());
+        registry.Register("check", new CommandCheck(player));
         registry.Register("catch", new CommandCatch(player));
         registry.Register("create", new CommandItem(player));
         registry.Register("help", new CommandHelp(registry));
@@ -19,7 +20,7 @@ class Game {
     }
   
   static void Main (string[] args) {
-        
+        /*
         Utility.SlowPrint("Welcome to Eco-Quest(WIP)", 50);
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
@@ -38,7 +39,7 @@ class Game {
         Utility.SlowPrint("Press any key to continue...", 10);
         Console.ReadKey();
         Console.Clear();
-
+        */
         //Initialisation
         InitRegistry();
         context.GetCurrent().Welcome();
@@ -54,5 +55,3 @@ class Game {
 
  
 }
-
-

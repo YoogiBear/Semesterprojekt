@@ -9,13 +9,14 @@ public class Player
     public Item[] items;
     public List<Food> foods;
     public string[] objectives;
-
+    public Logbook logbook;
     public Player()
     {
         resources = new Resource[10];
         items = new Item[10];
         foods = new List<Food>();
         objectives = new string[10];
+        logbook = new Logbook();
     }
 
     public void Build() { throw new NotImplementedException(); }
