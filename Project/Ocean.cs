@@ -42,14 +42,14 @@ public class Ocean : Space
     {
         if (hasVisited == false)
         {
-            Utility.SlowPrint($"This is the first time visiting {name}. You find a newspaper and start reading it.", 20);
-            Utility.SlowPrint("In 2022, packaging made up 1,108,000 tons — equivalent to approximately 189.6 kg per citizen in Denmark.",30);
-            Utility.SlowPrint(" Around 200,000 tons of that came from plastic packaging — a material that is both costly to produce and is downcycled, meaning it can eventually no longer be recycled.",30);
+            Utility.SlowPrint("Meget plastik ender som mikroplast i naturen, og netop pga. dens styrke, tager det ekstremt lang tid at nedbryde det.",20);
+            Utility.SlowPrint("11 million tons plastikaffald finder vej til vores have, gennem fejlsortering, og affaldsdumpning i havet. Disse 11 million tons,",20);
+            Utility.SlowPrint("er blot en lille tilføjelse til de allere 200 millioner ton der allerede er i verdenshavne. Med denne rate af produktion og spilde, vil der være mere plastik end fisk i havet inden 2050.",30);
             hasVisited = true;
         }
         else
         {
-            Console.WriteLine("You return to the ocean. The water feels familiar.");
+            Utility.SlowPrint("You return to the ocean. The water feels familiar.", 30);
         }
 
         ShowStatus();
