@@ -10,9 +10,9 @@ public class Ocean : Space
         [
             new Resource("plastic"), new Resource("plastic"),
             new Resource("metal"), new Resource("metal"),
-            new Resource(), new Resource(),
-            new Resource(), new Resource(),
-            new Resource(),new Resource()
+            new Resource("plastic"), new Resource("plastic"),
+            new Resource("plastic"), new Resource("plastic"),
+            new Resource("plastic"),new Resource("plastic")
         ];
 
     public Resource[] resources;
@@ -23,6 +23,8 @@ public class Ocean : Space
         resources = new Resource[10];
         food = new List<Food>() { new Food(), new Food()};
         pollutionLevel = 10;
+        
+        CreateResources();
     }
     
     //Changed so CreateResources now copies the elements of resourcesprefab and not just hold the same values
@@ -38,16 +40,21 @@ public class Ocean : Space
 
     public Resource TakeResource(string r)
     {
-        if (r == "" || r == null)
+        if (string.IsNullOrWhiteSpace(r))
         {
             return null;
         }
 
-        for (int i = 0; i < resources.Length; i++)
+        for(int i = 0; i < resources.Length; i++)
         {
             Resource rs = resources[i];
+            
+            if (rs == null) { continue; }
+            
             if (rs.name == r)
             {
+                resources[i] = null;
+                
                 return rs;
             }
         }

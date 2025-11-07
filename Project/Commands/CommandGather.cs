@@ -2,7 +2,7 @@
 class CommandGather : BaseCommand, ICommand
 {
     private Player player;
-    private Ocean ocean;
+
 
     public CommandGather(Player player)
     {
@@ -12,6 +12,7 @@ class CommandGather : BaseCommand, ICommand
 
     public void Execute(Context context, string command, string[] parameters)
     {
+        Ocean ocean = (Ocean)context.GetCurrent();
         if(GuardEq(parameters, 1))
         {
             Console.WriteLine("I don't seem to know what to gather here");
@@ -24,10 +25,15 @@ class CommandGather : BaseCommand, ICommand
         }
         else
         {
-            string wanted = parameters[0];
+            
+            string? wanted = parameters[0];
+            //Console.WriteLine(wanted);
             Resource gathered = ocean.TakeResource(wanted);
             player.AddResource(gathered);
-            Console.WriteLine("You have collected 1" + parameters[0]);
+            Console.Write("You have garthered: ");
+            player.PrintResource();
+            Console.WriteLine();
+            Console.WriteLine("You have collected 1 " + parameters[0]);
         }
     }
 }

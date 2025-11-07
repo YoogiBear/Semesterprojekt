@@ -20,7 +20,28 @@ class CommandItem : BaseCommand, ICommand
             //Currently takes a input from the user and then checks if i matches to a resource type manually 
             //TODO: Need to implement resource gathering for the player and then this need to be changed to match for a resource the player have
             //This is made for testing and to show how it works not a final solution
-            foreach (string s in parameters)
+            for(int i = 0; i < player.resources.Count() ; i++)
+            {
+
+                if (player.resources[i].name == parameters[0])
+                {
+                    player.items.Add(new Item(player.resources[i]));
+                    player.resources.Remove(player.resources[i]);
+                }
+                else
+                {
+                    Console.WriteLine("Uhm, please check what resources you have");
+                }
+            }
+
+            if (parameters[0] == "print")
+            {
+                foreach (Item i in player.items)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            /*foreach (string s in parameters)
             {
                 if (s == "plastic")
                 {
@@ -46,7 +67,7 @@ class CommandItem : BaseCommand, ICommand
                         Console.WriteLine(i);
                     }
                 }
-            }
+            }*/
         }
     }
 }

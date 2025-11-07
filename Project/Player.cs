@@ -24,8 +24,19 @@ public class Player
         resources.Add(resource);
     }
 
+    public void PrintResource()
+    {
+        foreach (Resource r in resources)
+        {
+            Console.Write(r.name);
+        }
+
+        
+    }
+
     public void Build() { throw new NotImplementedException(); }
     public void Consume() { throw new NotImplementedException(); }
     public void Catch(Food food) { foods.Add(food); }
     public void Repair() { throw new NotImplementedException(); }
+    
 }
