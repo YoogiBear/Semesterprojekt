@@ -27,7 +27,14 @@ public class Game {
   
   static void Main (string[] args) {
 
-        Utility.SlowPrint("Welcome to Eco-Quest(WIP)", 50);
+        Console.Clear();
+        Utility.SlowPrint("Welcome to", 50);
+        Utility.SlowPrint("███████╗ ██████╗ ██████╗                ██████╗ ██╗   ██╗███████╗███████╗████████╗", 1);
+        Utility.SlowPrint("██╔════╝██╔════╝██╔═══██╗              ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝", 1);
+        Utility.SlowPrint("█████╗  ██║     ██║   ██║    █████╗    ██║   ██║██║   ██║█████╗  ███████╗   ██║", 1);
+        Utility.SlowPrint("██╔══╝  ██║     ██║   ██║    ╚════╝    ██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║ ", 1);
+        Utility.SlowPrint("███████╗╚██████╗╚██████╔╝              ╚██████╔╝╚██████╔╝███████╗███████║   ██║ ", 1);
+        Utility.SlowPrint("╚══════╝ ╚═════╝ ╚═════╝                ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝ ", 1);
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
         Console.Clear();
