@@ -26,7 +26,7 @@ public class Game {
     }
   
   static void Main (string[] args) {
-        /*
+
         Utility.SlowPrint("Welcome to Eco-Quest(WIP)", 50);
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
@@ -45,7 +45,7 @@ public class Game {
         Utility.SlowPrint("Press any key to continue...", 10);
         Console.ReadKey();
         Console.Clear();
-        */
+
         //Initialisation
         InitRegistry();
         context.GetCurrent().Welcome();

@@ -14,7 +14,7 @@ class World {
     //make forest, beach, campsite. make trash work.
     Space ocean = new Ocean("the ocean");
     Space beach = new Beach("the beach");
-    Space forestArea = new Space("the forest area");
+    Space forestArea = new Forest("the forest area");
 
 
     ocean.AddEdge("land", beach);
@@ -54,7 +54,7 @@ public class Beach : Space
     }
     
 }
-
+/*
 public class Forest : Space
 {
 
@@ -64,4 +64,4 @@ public class Forest : Space
     }
 
 }
-
+*/
