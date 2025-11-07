@@ -6,7 +6,7 @@ public class Space : Node {
   {
 
   }
-    public void Welcome () {
+    public virtual void Welcome () {
         Utility.SlowPrint($"Currently you are at {name}.", 10);
         HashSet<string> exits = edges.Keys.ToHashSet();
         Thread.Sleep(500);
