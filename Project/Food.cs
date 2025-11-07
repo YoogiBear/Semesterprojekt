@@ -6,9 +6,9 @@ public class Food
     public string name;
     public int saturation;
 
-    public Food(string Name = "DefaultFoodName", int Saturation = 10)
+    public Food(string name = "DefaultFoodName", int saturation = 10)
     {
-        name = Name;
-        saturation = Saturation;
+        this.name = name;
+        this.saturation = saturation;
     }
 }

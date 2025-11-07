@@ -1,7 +1,7 @@
 /* Main class for launching the game
  */
 
-class Game {
+public class Game {
   static World    world    = new World();
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
@@ -19,6 +19,7 @@ class Game {
         registry.Register("quit", cmdExit);
         registry.Register("gather", new CommandGather(player));
         registry.Register("chop", new CommandChop(player));
+        registry.Register("eat", new CommandEat(player));
     }
   
   static void Main (string[] args) {
