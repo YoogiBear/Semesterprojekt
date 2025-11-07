@@ -15,11 +15,12 @@ class World {
     Space ocean = new Ocean("the ocean");
     Space beach = new Beach("the beach");
     Space forestArea = new Forest("the forest area");
+    
 
 
     ocean.AddEdge("land", beach);
-
     center.AddEdge("forest", forestArea);
+    forestArea.AddEdge("center", center);
 
     center.AddEdge("north", north);
     center.AddEdge("south", south);
