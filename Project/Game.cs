@@ -17,6 +17,8 @@ class Game {
         registry.Register("create", new CommandItem(player));
         registry.Register("help", new CommandHelp(registry));
         registry.Register("quit", cmdExit);
+        registry.Register("gather", new CommandGather(player));
+        registry.Register("chop", new CommandChop(player));
     }
   
   static void Main (string[] args) {
