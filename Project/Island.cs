@@ -4,23 +4,38 @@
 public class Island
 {
     public int pollution;
-    public int trees;
-    public Resource[] Resources;
+    public static List<Tree> trees = new List<Tree>();
+    public List<Resource> resources;
 
     public Island()
     {
         pollution = 10;
-        trees = 10;
-        Resources = new Resource[10];
+        GenerateTrees();
+        resources = new List<Resource>();
     }
 
-    public int[] GenerateTrees()
+    public void GenerateTrees()
     {
-        throw new NotImplementedException();
+        Random rng = new Random();
+        int numberOfTrees = rng.Next(1, 6); //Generates between 1 and 5 trees
+        for (int i = 0; i < numberOfTrees; i++)
+        {
+            trees.Add(new Tree());
+        }
+        Console.WriteLine($"Generated {numberOfTrees} trees on the island.");
     }
-    public int GeneratePollution()
+    public int GeneratePollution(Resource[] trash, int pollution)
     {
-        throw new NotImplementedException();
+        //Depending on the amount of trash (size of Resources), pollution is added to the "ocean"
+        float pollutionAdd = trash.Length/10f*2f;
+        if(pollutionAdd >= 1.0f) //Runs when trash contains 5 or more pieces
+        {
+            return pollution += (int)Math.Round(pollutionAdd, 0);
+        }
+        else 
+        {
+            return pollution;
+        }
     }
 
 }
