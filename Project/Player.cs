@@ -20,12 +20,26 @@ public class Player
         logbook = new Logbook();
     }
 
+    public void AddResource(Resource resource)
+    {
+        if (resource == null) return;
+        resources.Add(resource);
+    }
+
+    public void PrintResource()
+    {
+        foreach (Resource r in resources)
+        {
+            Console.Write(r.name);
+        }
+
+        
+    }
+
     public void Build() { throw new NotImplementedException(); }
     public void Consume() { throw new NotImplementedException(); }
     public void Catch(Food food) { foods.Add(food); }
     public void Repair() { throw new NotImplementedException(); }
-
-
 
     public int Hunger()
     {
@@ -35,5 +49,5 @@ public class Player
     public void Eat(int decrease) {
         hunger -= decrease;
     }
-
+    
 }
