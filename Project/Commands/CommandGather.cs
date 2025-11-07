@@ -1,10 +1,11 @@
+
 class CommandGather : BaseCommand, ICommand
 {
     private Player _player;
     public CommandGather(Player player)
     {
         _player = player;
-        description = "Allows for gathering fruits. But only near a tree.";
+        description = "Allows for gathering resources in Ocean and near trees";
 
     }
     //attempts to execute GoCommand with given context, command and given parameters else return 
@@ -30,6 +31,23 @@ class CommandGather : BaseCommand, ICommand
         Tree tree = Island.trees[0]; 
         string result = tree.Gather(_player);
         Console.WriteLine(result);
-
+        Ocean ocean = (Ocean)context.GetCurrent();
+        if (context.GetCurrent().GetName() != "the ocean")
+        {
+            Console.WriteLine("Seems you can't gather resources here");
+            return;
+        }
+        else
+        {
+            
+            string? wanted = parameters[0];
+            //Console.WriteLine(wanted);
+            Resource gathered = ocean.TakeResource(wanted);
+            _player.AddResource(gathered);
+            Console.Write("You have garthered: ");
+            _player.PrintResource();
+            Console.WriteLine();
+            Console.WriteLine("You have collected 1 " + parameters[0]);
+        }
     }
 }
