@@ -6,11 +6,11 @@ class World {
   
   public World () {
 
-    Space center = new Space("the center of the island");
-    Space north = new Space("the northern part of the island");
-    Space south = new Space("the southern part of the island");
-    Space east = new Space("the eastern part of the island");
-    Space west = new Space("the western part of the island");
+    Space center = new Center("the center of the island");
+    Space north = new North("the northern part of the island");
+    Space south = new South("the southern part of the island");
+    Space east = new East("the eastern part of the island");
+    Space west = new West("the western part of the island");
     //make forest, beach, campsite. make trash work.
     Space ocean = new Ocean("the ocean");
     Space beach = new Beach("the beach");
