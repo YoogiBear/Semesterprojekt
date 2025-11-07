@@ -9,7 +9,8 @@ class World {
     Space corridor = new Space("Corridor");
     Space cave     = new Space("Cave");
     Space pit      = new Space("Darkest Pit");
-    Space outside  = new Space("Outside");
+    Space outside = new Space("Outside");
+    Space forestArea = new Space("the forest area");
     
     entry.AddEdge("door", corridor);
     corridor.AddEdge("door", cave);
@@ -17,7 +18,9 @@ class World {
     cave.AddEdge("south", outside);
     pit.AddEdge("door", cave);
     outside.AddEdge("door", cave);
-    
+    outside.AddEdge("forest", forestArea);
+    forestArea.AddEdge("outside", outside);
+
     this.entry = entry;
   }
   

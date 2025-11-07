@@ -5,16 +5,16 @@
 
 public class Player
 {
-    public string[] resources;
+    public List<Resource> resources;
     public string[] items;
-    public string[] food;
+    public List<Food> foods;
     public string[] objectives;
 
     public Player()
     {
-        resources = new string[10];
+        resources = new List<Resource>();
         items = new string[10];
-        food = new string[10];
+        foods = new List<Food>();
         objectives = new string[10];
     }
 

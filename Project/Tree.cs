@@ -5,47 +5,43 @@ using System.Collections.Specialized;
 
 public class Tree
 {
+    private static readonly Random rng = new Random();
     public int fruitsOnTree;
     public Tree() //Constructor
     {
-        fruitsOnTree = 5;
+        fruitsOnTree = rng.Next(1, 6);;
     }
-    public int ChopTree(Player player)
+    public string ChopTree(Player player)
     {
-        if (Island.trees == 0)
+        if (Island.trees.Count == 0)
         {
-            Console.WriteLine("No trees to chop");
-            return 0;
+            return "No trees to chop";
         }
         else
         {
-            Island.trees -= 1;
-            //Grant 5 wood to player
+            Island.trees.Remove(Island.trees[0]); //Removes a tree from the island
+            //Grant wood to player
             Resource choppedtree = new Resource("Wood", 10, 5);
-            int resource_size = player.resources.Length;
-            for(int i=0; i<3; i++)
-            {
-                player.resources[resource_size+i] = choppedtree;
-            }
+            player.resources.Add(choppedtree);
         
-            return 0;
+            return "You chopped down a tree and collected 1 piece of wood!";
         }
         
     }
     public string Gather(Player player) //Collect coconut from palm tree
     {
-        if (Island.trees == 0)
+        if (Island.trees.Count == 0)
         {
             return "No tree to gather food from";
         }
-        else if (fruitsOnTree == 0)
+        if (fruitsOnTree == 0)
         {
             return "There are no coconuts left";
         }
         else //If tree and fruit are available, create new Food object
         {
             Food fruit = new Food("Coconut", 10);
-            player.food[player.food.Length] = fruit; //Food-array is formatted as string?
+            player.foods.Add(fruit); //Food-array is formatted as string?
             fruitsOnTree -= 1;
 
             return $"You collected a coconut! Remaining coconuts on the tree {fruitsOnTree}";

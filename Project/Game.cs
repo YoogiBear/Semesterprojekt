@@ -6,7 +6,9 @@ class Game {
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
-    static Player player = new Player();
+  static Player player = new Player();
+
+  static Island island = new Island();
   
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
@@ -15,6 +17,8 @@ class Game {
     registry.Register("bye", cmdExit);
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
+    registry.Register("gather", new CommandGather(player));
+    registry.Register("chop", new CommandChop(player));
   }
   
   static void Main (string[] args) {
