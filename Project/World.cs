@@ -14,8 +14,12 @@ class World {
     //make forest, beach, campsite. make trash work.
     Space ocean = new Ocean("the ocean");
     Space beach = new Beach("the beach");
+    Space forestArea = new Space("the forest area");
+
 
     ocean.AddEdge("land", beach);
+
+    center.AddEdge("forest", forestArea);
 
     center.AddEdge("north", north);
     center.AddEdge("south", south);
@@ -32,7 +36,8 @@ class World {
     west.AddEdge("beach", beach);
     beach.AddEdge("ocean", ocean);
     beach.AddEdge("center", center);
-        this.entry = center;
+      this.entry = center;
+    
   }
   
   public Space GetEntry () {

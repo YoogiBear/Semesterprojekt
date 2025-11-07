@@ -1,12 +1,10 @@
 class CommandChop : BaseCommand, ICommand
 {
     private Player _player;
-    private Tree _tree;
 
     public CommandChop(Player player)
     {
         _player = player;
-        _tree = Island.trees[0];
         description = "Allows for chopping trees for resources. But only near a tree..";
     }
 
