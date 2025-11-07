@@ -8,6 +8,8 @@ public class Game {
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player();
 
+  static Island island = new Island();
+
   static int trash = 10;
   private static void InitRegistry () {
         ICommand cmdExit = new CommandExit();

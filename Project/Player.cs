@@ -5,7 +5,7 @@
 
 public class Player
 {
-    public Resource[] resources;
+    public List<Resource> resources;
     public List<Item> items;
     public List<Food> foods;
     public int hunger = 100;
@@ -13,7 +13,7 @@ public class Player
     public Logbook logbook;
     public Player()
     {
-        resources = new Resource[10];
+        resources = new List<Resource>();
         items = new List<Item>();
         foods = new List<Food>();
         objectives = new string[10];
