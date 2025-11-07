@@ -7,16 +7,17 @@ public class Player
 {
     public string[] resources;
     public string[] items;
-    public static List<Food> foods;
+    public List<Food> foods;
     public string[] objectives;
     public int hunger = 100;
-
+    public Food apple = new Food("apple", 5);
     public Player()
     {
         resources = new string[10];
         items = new string[10];
         foods = new List<Food>();
         objectives = new string[10];
+        foods.Add(apple);
     }
 
     public void Build() { throw new NotImplementedException(); }

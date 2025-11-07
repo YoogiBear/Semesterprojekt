@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ui6EdhHKcAE=",
+  "dgSpecHash": "iRcfZRrxNQ0=",
   "success": true,
-  "projectFilePath": "E:\\Kate\\semesterProject1\\Semesterprojekt\\Project\\cs.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\tobim\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\tobim\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\tobim\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\tobim\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.19\\microsoft.netcore.app.host.win-x64.8.0.19.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Kate\\semesterProject1\\Semesterprojekt\\Project\\cs.csproj": {}
+    "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj": {}
   },
   "projects": {
-    "E:\\Kate\\semesterProject1\\Semesterprojekt\\Project\\cs.csproj": {
+    "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Kate\\semesterProject1\\Semesterprojekt\\Project\\cs.csproj",
+        "projectUniqueName": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj",
         "projectName": "cs",
-        "projectPath": "E:\\Kate\\semesterProject1\\Semesterprojekt\\Project\\cs.csproj",
+        "projectPath": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj",
         "packagesPath": "C:\\Users\\tobim\\.nuget\\packages\\",
-        "outputPath": "E:\\Kate\\semesterProject1\\Semesterprojekt\\Project\\obj\\",
+        "outputPath": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tobim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tobim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,24 +60,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
