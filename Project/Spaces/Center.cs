@@ -7,8 +7,10 @@ public class Center : Space
     public Center(String name) : base(name)
     {
 
+
     }
     //hasVisited ool set to false, meaning the player hasnt been in this area of the map yet.
+
     public bool hasVisited;
 
     public override void Welcome()
@@ -21,6 +23,7 @@ public class Center : Space
             hasVisited = true; //Sets hasVisisted to true, meaning the player wont get the custom message anymore
             Utility.SlowPrint("You can see these paths:", 20);
             // Hashset is used to check the edges for which paths are open from this area
+
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
             {
@@ -29,7 +32,9 @@ public class Center : Space
             }
             Utility.SlowPrint("What would you like to do now?", 20);
         }
+
         else //If the player has been here and hasVisited is true, this will be displayed from now on when the player enters this area
+
         {
             Utility.SlowPrint("You are back in the center, you can go any direction on the island from here.", 30);
             Utility.SlowPrint("You can see these paths:", 20);

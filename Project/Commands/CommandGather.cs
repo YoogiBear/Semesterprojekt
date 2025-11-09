@@ -11,6 +11,7 @@ class CommandGather : BaseCommand, ICommand
     //attempts to execute GoCommand with given context, command and given parameters else return 
     public void Execute(Context context, string command, string[] parameters)
     {
+
         if (command == "gather")
         {
             if (GuardEq(parameters, 1))

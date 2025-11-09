@@ -7,6 +7,7 @@ be displayed the next time the player enters this area.
 using System.Net;
 using System.Xml;
 
+<<<<<<< HEAD
 public class Center : Space
 {
     public Center(String name) : base(name)
@@ -206,6 +207,8 @@ public class West : Space
     }
 }
 
+=======
+>>>>>>> ba37c26b4484f13c2712bb3efe1cb4dfacadb930
 public class Forest : Space
 {
     public Forest(String name) : base(name)
