@@ -5,7 +5,7 @@ public class Item
     //An empty string to put our Item into
     private string itemCode;
 
-    //Constructor for Item, calls CreateItem, if the resource is null, it throws and exception
+    //Constructor for Item, calls CreateItem, if the resource is null, it throws an exception
     public Item(Resource resources)
     {
         if (resources == null)
@@ -65,7 +65,7 @@ public class Item
 
     }
     
-    //If the amount is greater or equal to durability it will return true, if not it returns falls
+    //If the amount is greater or equal to durability it will return true, if not it returns false
     public bool DestroyItem(int amount)
     {
         return amount >= durability;
@@ -89,6 +89,11 @@ public class Item
     //Damage the item by the amount inputed. Checks and make sure durability isn't 0
     public int DamageItem(int amount)
     {
+        if (amount < 0) //Avoids a negative amount that would increase durability
+        {
+            amount = 0;
+        }
+        
         durability -= amount;
 
         if (durability <= 0)

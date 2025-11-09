@@ -15,8 +15,8 @@ public class Ocean : Space
             new Resource("plastic"),new Resource("plastic")
         ];
 
-    public Resource[] resources;
-    public List<Food> food;
+    public Resource[] resources; //Array to hold resources within the ocean
+    public List<Food> food; //List to hold food sources within the ocean
     public int pollutionLevel;
     public Ocean(string Name) : base(Name)
     {
@@ -38,7 +38,7 @@ public class Ocean : Space
         }
     }
 
-    public Resource TakeResource(string r)
+    public Resource TakeResource(string r) //Removes resource from ocean when called
     {
         if (string.IsNullOrWhiteSpace(r))
         {
@@ -61,7 +61,7 @@ public class Ocean : Space
         return null;
     }
 
-    // Add Trash object to increases pollution 
+    // Add Trash object to increase pollution 
     public void AddTrash(int trash)
     {
         if (trash == 0) throw new ArgumentNullException(nameof(trash));
@@ -73,7 +73,7 @@ public class Ocean : Space
     {
         if (hasVisited == false)
         {
-            Utility.SlowPrint("Meget plastik ender som mikroplast i naturen, og netop pga. dens styrke, tager det ekstremt lang tid at nedbryde det.",20);
+            Utility.SlowPrint("A lot of plastic ends up as microplastics in nature, and due to its strength, it takes an extremely long time to decompose.",20);
             Utility.SlowPrint("11 million tons plastikaffald finder vej til vores have, gennem fejlsortering, og affaldsdumpning i havet. Disse 11 million tons,",20);
             Utility.SlowPrint("er blot en lille tilføjelse til de allere 200 millioner ton der allerede er i verdenshavne. Med denne rate af produktion og spilde, vil der være mere plastik end fisk i havet inden 2050.",30);
             hasVisited = true;

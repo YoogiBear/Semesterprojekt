@@ -16,8 +16,8 @@ class Registry {
   }
   
   public void Dispatch (string line) {
-    string[] elements = line.Split(" ");
-    string command = elements[0];
+    string[] elements = line.Split(" "); // split input line into command and parameters
+    string command = elements[0]; // first element is command - eg "go" where rest are parameters (north, south, etc)
     string[] parameters = GetParameters(elements);
     (commands.ContainsKey(command) ? GetCommand(command) : fallback).Execute(context, command, parameters);
   }
@@ -35,8 +35,9 @@ class Registry {
   
   private string[] GetParameters (string[] input) {
     string[] output = new string[input.Length-1];
-    for (int i=0 ; i<output.Length ; i++) {
-      output[i] = input[i+1];
+    for (int i = 0; i < output.Length; i++)
+    {
+      output[i] = input[i + 1];
     }
     return output;
   }
