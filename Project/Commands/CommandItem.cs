@@ -7,23 +7,20 @@ class CommandItem : BaseCommand, ICommand
         this.player = player;
         description = "Allows for the player to create a Item matching the resources gathered";
     }
-
+    
     public void Execute(Context context, string command, string[] parameters)
     {
         if (GuardEq(parameters, 1))
         {
             Console.WriteLine("Hmm, seems you want to create a Item with no resources");
-            return; 
         }
         else
         {
-            //Currently takes a input from the user and then checks if i matches to a resource type manually 
-            //TODO: Need to implement resource gathering for the player and then this need to be changed to match for a resource the player have
-            //This is made for testing and to show how it works not a final solution
+            //Checks if the player have a resources that matches the input and then creates the Item while removing the resources from the player
             for(int i = 0; i < player.resources.Count() ; i++)
             {
 
-                if (player.resources[i].name == parameters[0])
+                if (player.resources[i].name == parameters[0].ToLower())
                 {
                     player.items.Add(new Item(player.resources[i]));
                     player.resources.Remove(player.resources[i]);
@@ -34,7 +31,7 @@ class CommandItem : BaseCommand, ICommand
                 }
             }
 
-            if (parameters[0] == "print")
+            if (parameters[0].ToLower() == "print")
             {
                 foreach (Item i in player.items)
                 {

@@ -25,6 +25,7 @@ class CommandCheck : BaseCommand, ICommand
         {
             Console.Write("Resource available: ");
             _player.PrintResource();
+            Console.WriteLine(" ");
             return; 
         }
         //Check every item in the inventory array

@@ -24,15 +24,11 @@ class CommandGather : BaseCommand, ICommand
         else if (context.GetCurrent().GetName() == "the ocean")
         {
             Ocean ocean = (Ocean)context.GetCurrent();
-            string? wanted = parameters[0];
-            //Console.WriteLine(wanted);
+            string wanted = parameters[0];
             Resource gathered = ocean.TakeResource(wanted);
             _player.AddResource(gathered);
+            Console.WriteLine("You have collect a resource from the ocean");
             return;
-            /*Console.Write("You have garthered: ");
-            _player.PrintResource();
-            Console.WriteLine();
-            Console.WriteLine("You have collected 1 " + parameters[0] + " ");*/
         }
     }
 }
