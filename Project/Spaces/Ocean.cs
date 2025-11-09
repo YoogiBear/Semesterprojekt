@@ -69,23 +69,6 @@ public class Ocean : Space
         Pollution.AddPollution(added);
     }
 
-    public override void Welcome()
-    {
-        if (hasVisited == false)
-        {
-            Utility.SlowPrint("A lot of plastic ends up as microplastics in nature, and due to its strength, it takes an extremely long time to decompose.",20);
-            Utility.SlowPrint("11 million tons plastikaffald finder vej til vores have, gennem fejlsortering, og affaldsdumpning i havet. Disse 11 million tons,",20);
-            Utility.SlowPrint("er blot en lille tilføjelse til de allere 200 millioner ton der allerede er i verdenshavne. Med denne rate af produktion og spilde, vil der være mere plastik end fisk i havet inden 2050.",30);
-            hasVisited = true;
-        }
-        else
-        {
-            Utility.SlowPrint("You return to the ocean. The water feels familiar.", 30);
-        }
-
-        ShowStatus();
-    }
-
     public void ShowStatus()
     {
         Console.WriteLine($"Pollution Level: {Pollution.Level}");
