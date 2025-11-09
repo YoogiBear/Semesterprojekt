@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|c:\\users\\zelen\\uni\\1.semester\\semesterprojekt\\project\\semesterprojekt-1\\project\\commands\\commandcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|solutionrelative:commands\\commandcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|c:\\users\\zelen\\uni\\1.semester\\semesterprojekt\\project\\semesterprojekt-1\\project\\commands\\commandcatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|solutionrelative:commands\\commandcatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|c:\\users\\zelen\\uni\\1.semester\\semesterprojekt\\project\\semesterprojekt-1\\project\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|c:\\users\\zelen\\uni\\1.semester\\semesterprojekt\\project\\semesterprojekt-1\\project\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|solutionrelative:food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|c:\\users\\zelen\\uni\\1.semester\\semesterprojekt\\project\\semesterprojekt-1\\project\\commands\\commanditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|solutionrelative:commands\\commanditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|c:\\users\\zelen\\uni\\1.semester\\semesterprojekt\\project\\semesterprojekt-1\\project\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B62B54-4DD8-3A5B-CCD9-A0498B374471}|cs.csproj|solutionrelative:context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,49 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CommandCheck.cs",
-              "DocumentMoniker": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Commands\\CommandCheck.cs",
-              "RelativeDocumentMoniker": "Commands\\CommandCheck.cs",
-              "ToolTip": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Commands\\CommandCheck.cs",
-              "RelativeToolTip": "Commands\\CommandCheck.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCUAAABPAAAAAAAAAA==",
+              "Title": "CommandCatch.cs",
+              "DocumentMoniker": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Commands\\CommandCatch.cs",
+              "RelativeDocumentMoniker": "Commands\\CommandCatch.cs",
+              "ToolTip": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Commands\\CommandCatch.cs",
+              "RelativeToolTip": "Commands\\CommandCatch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T12:33:15.745Z",
+              "WhenOpened": "2025-11-07T10:30:37.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Player.cs",
-              "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Player.cs",
-              "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Title": "Food.cs",
+              "DocumentMoniker": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Food.cs",
+              "RelativeDocumentMoniker": "Food.cs",
+              "ToolTip": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Food.cs",
+              "RelativeToolTip": "Food.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T12:32:49.775Z",
+              "WhenOpened": "2025-11-07T10:30:30.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CommandItem.cs",
-              "DocumentMoniker": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Commands\\CommandItem.cs",
-              "RelativeDocumentMoniker": "Commands\\CommandItem.cs",
-              "ToolTip": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Commands\\CommandItem.cs",
-              "RelativeToolTip": "Commands\\CommandItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Context.cs",
+              "RelativeDocumentMoniker": "Context.cs",
+              "ToolTip": "C:\\Users\\zelen\\Uni\\1.semester\\Semesterprojekt\\Project\\Semesterprojekt-1\\Project\\Context.cs",
+              "RelativeToolTip": "Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T12:32:07.098Z",
+              "WhenOpened": "2025-11-07T10:25:31.956Z",
               "EditorCaption": ""
             }
           ]
