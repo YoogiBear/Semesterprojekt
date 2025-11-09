@@ -1,3 +1,5 @@
+using System.Reflection.Metadata;
+
 public class Item
 {
     //Sets Durability to 100
@@ -20,34 +22,22 @@ public class Item
     string CreateItem(Resource r)
     {
         
-        if (r == null)
+        if (r == null) { return null;}
+
+        switch (r.name)
         {
-            return null;
-        }
-        
-        if (r.name == "plastic")
-        {
-            return "Spade";
-        }
-        else if (r.name == "metal")
-        {
-            return "Fishing rod";
-        }
-        else if (r.name == "wood")
-        {
-            return "Plank";
-        }
-        else if (r.name == "cardboard")
-        {
-            return "Box";
-        }
-        else if (r.name == "")
-        {
-            return "Empty";
-        }
-        else
-        {
-            return null;
+            case "plastic":
+                return "Spade";
+            case "metal":
+                return "Fishing Rod";
+            case "Wood":
+                return "Plank";
+            case "cardboard":
+                return "Box";
+            case "":
+                return "empty";
+            default:
+                return null;
         }
     }
     

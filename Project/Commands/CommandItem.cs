@@ -41,33 +41,6 @@ class CommandItem : BaseCommand, ICommand
                     Console.WriteLine(i);
                 }
             }
-            /*foreach (string s in parameters)
-            {
-                if (s == "plastic")
-                {
-                    Resource r = new Resource("plastic");
-                    player.items.Add(new Item(r));
-                }else if (s == "metal")
-                {
-                    Resource r = new Resource("metal");
-                    player.items.Add(new Item(r));
-                }else if (s == "cardboard")
-                {
-                    Resource r = new Resource("cardboard");
-                    player.items.Add(new Item(r));
-                }else if (s == "wood")
-                {
-                    Resource r = new Resource("wood");
-                    player.items.Add(new Item(r));
-                }
-                else if (s == "print")
-                {
-                    foreach (Item i in player.items)
-                    {
-                        Console.WriteLine(i);
-                    }
-                }
-            }*/
         }
     }
 }
