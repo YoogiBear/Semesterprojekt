@@ -15,7 +15,6 @@ public static class Utility
         }
         Console.WriteLine();
     }
-
 }
 
 
