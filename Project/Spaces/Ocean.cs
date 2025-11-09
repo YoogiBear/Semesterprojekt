@@ -69,6 +69,38 @@ public class Ocean : Space
         Pollution.AddPollution(added);
     }
 
+    //Look center class for code explantion
+    public override void Welcome()
+    {
+        if (hasVisited == false)
+        {
+            Utility.SlowPrint("A lot of plastic ends up as microplastics in nature, and due to its strength, it takes an extremely long time to decompose.", 30);
+            Utility.SlowPrint("11 million tons of plastic waste find their way into our oceans through incorrect sorting and waste dumping at sea. These 11 million tons", 30);
+            Utility.SlowPrint("are just a small addition to the already 200 million tons that are already in the worlds oceans. At this rate of production and waste, there will be more plastic than fish in the ocean by 2050.", 30);
+            hasVisited = true;
+            Utility.SlowPrint("You can see these paths:", 20);
+            HashSet<string> exits = edges.Keys.ToHashSet();
+            foreach (String exit in exits)
+            {
+                Console.WriteLine(" - " + exit);
+                Thread.Sleep(500);
+            }
+            Utility.SlowPrint("What would you like to do now?", 20);
+        }
+        else
+        {
+            Utility.SlowPrint("You are back in the forest, chop down trees or collect some fruits", 30);
+            Utility.SlowPrint("You can see these paths:", 20);
+            HashSet<string> exits = edges.Keys.ToHashSet();
+            foreach (String exit in exits)
+            {
+                Console.WriteLine(" - " + exit);
+                Thread.Sleep(500);
+            }
+            Utility.SlowPrint("What would you like to do now?", 20);
+        }
+    }
+
     public void ShowStatus()
     {
         Console.WriteLine($"Pollution Level: {Pollution.Level}");
