@@ -8,7 +8,7 @@ class CommandUnknown : BaseCommand, ICommand {
   {
     if (string.IsNullOrEmpty(command))
     {
-      return;
+      Console.WriteLine("Please type what you whould to do 😁");
     }
     else
     {
