@@ -17,13 +17,10 @@ public class Ocean : Space
 
     public Resource[] resources; //Array to hold resources within the ocean
     public List<Food> food; //List to hold food sources within the ocean
-    public int pollutionLevel;
     public Ocean(string Name) : base(Name)
     {
         resources = new Resource[10];
         food = new List<Food>() { new Food(), new Food()};
-        pollutionLevel = 10;
-        
         CreateResources();
     }
     
@@ -73,9 +70,9 @@ public class Ocean : Space
     {
         if (hasVisited == false)
         {
-            Utility.SlowPrint("A lot of plastic ends up as microplastics in nature, and due to its strength, it takes an extremely long time to decompose.",20);
-            Utility.SlowPrint("11 million tons plastikaffald finder vej til vores have, gennem fejlsortering, og affaldsdumpning i havet. Disse 11 million tons,",20);
-            Utility.SlowPrint("er blot en lille tilføjelse til de allere 200 millioner ton der allerede er i verdenshavne. Med denne rate af produktion og spilde, vil der være mere plastik end fisk i havet inden 2050.",30);
+            Utility.SlowPrint("A lot of plastic ends up as microplastics in nature, and due to its strength, it takes an extremely long time to decompose.", 20);
+            Utility.SlowPrint("11 million tons of plastic waste finds its way to our oceans, through mis-sorting and dumping of waste in the ocean. These 11 million tons,", 20);
+            Utility.SlowPrint("are just a small addition to the already 200 million tons that are already in the world's oceans. With this rate of production and waste, there will be more plastic than fish in the sea by 2050.", 30);
             hasVisited = true;
         }
         else
@@ -97,19 +94,53 @@ public class Ocean : Space
 
 
 // Food generator component
-public class FoodGenerator
+public static class FoodGenerator
 {
-    public readonly List<string> foodSources = new List<string>();
-    public IReadOnlyList<string> FoodSources => foodSources.AsReadOnly();
-
-    public void GenerateFish(int count)
+    public static readonly List<string> foodSources = new List<string>();
+    public static IReadOnlyList<string> FoodSources => foodSources.AsReadOnly();
+    
+    public static void GenerateFish()
     {
-        if (count <= 0) return;
-        for (int i = 0; i < count; i++)
+        if (Island.pollution <= 10) //Little to no pollution
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                foodSources.Add("Fish");
+                Console.WriteLine(i);
+            }
+            Console.WriteLine($"Fish generated succesfully overnight!.");
+            return;
+        }
+        else if (10 < Island.pollution && Island.pollution <= 20) //Slight pollution
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                foodSources.Add("Fish");
+            }
+            Console.WriteLine($"Fish generated succesfully overnight!.");
+            return;
+        }
+        else if (20 < Island.pollution &&    Island.pollution <= 30) //Average pollution
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                foodSources.Add("Fish");
+            }
+            Console.WriteLine($"Fish generated succesfully overnight!.");
+            return;
+        }
+        else if (30 < Island.pollution && Island.pollution <= 40) //Max pollution
         {
             foodSources.Add("Fish");
+            Console.WriteLine($"Fish generated succesfully overnight!.");
+            return;
         }
-        Console.WriteLine($"{count} fish generated.");
+        else if (40<Island.pollution ) //Dead fish
+        {
+            Console.WriteLine("Too much pollution in the ocean! No fish were generated overnight.");
+            return;
+        }
+
     }
 }
 

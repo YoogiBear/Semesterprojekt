@@ -41,7 +41,7 @@ public class Tree
         else //If tree and fruit are available, create new Food object
         {
             Food fruit = new Food("Coconut", 10);
-            player.foods.Add(fruit); //Food-array is formatted as string?
+            player.foods.Add(fruit);
             fruitsOnTree -= 1;
 
             return $"You collected a coconut! Remaining coconuts on the tree {fruitsOnTree}";

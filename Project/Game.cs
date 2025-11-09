@@ -7,10 +7,10 @@ public class Game {
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player();
-
   static Island island = new Island();
+  static Ocean ocean = new Ocean("the ocean");
 
-  static int trash = 10;
+  //static int trash = 10;
   private static void InitRegistry () {
         ICommand cmdExit = new CommandExit();
         registry.Register("go", new CommandGo());
@@ -23,6 +23,7 @@ public class Game {
         registry.Register("gather", new CommandGather(player));
         registry.Register("chop", new CommandChop(player));
         registry.Register("eat", new CommandEat(player));
+        registry.Register("sleep", new CommandSleep(player, ocean));
     }
   
   static void Main (string[] args) {
@@ -64,7 +65,5 @@ public class Game {
       if (line!=null) registry.Dispatch(line);
     }
     Console.WriteLine("Game Over 😥");
-  }
-
- 
+  } 
 }

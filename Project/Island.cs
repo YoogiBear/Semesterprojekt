@@ -3,7 +3,7 @@
 
 public class Island
 {
-    public int pollution;
+    public static int pollution;
     public static List<Tree> trees = new List<Tree>();
     public List<Resource> resources;
 
