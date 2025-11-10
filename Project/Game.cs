@@ -20,7 +20,6 @@ public class Game {
         registry.Register("help", new CommandHelp(registry));
         registry.Register("collect", new CommandGather(player));
         registry.Register("quit", cmdExit);
-        registry.Register("gather", new CommandGather(player));
         registry.Register("chop", new CommandChop(player));
         registry.Register("eat", new CommandEat(player));
         registry.Register("sleep", new CommandSleep(player, ocean));

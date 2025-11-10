@@ -19,18 +19,20 @@ public class Player
         objectives = new string[10];
         logbook = new Logbook();
     }
-
+    
+    //Adds a resource to players list
     public void AddResource(Resource resource)
     {
         if (resource == null) return;
         resources.Add(resource);
     }
-
+    
+    //Prints resources out that are available in the player inventory  
     public void PrintResource()
     {
         foreach (Resource r in resources)
         {
-            Console.Write(r.name);
+            Console.Write(r.name + " ");
         }
 
         

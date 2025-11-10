@@ -7,7 +7,7 @@ class CommandCheck : BaseCommand, ICommand
     public CommandCheck(Player player)
     {
         _player = player;
-        description = "- Item : Checks durability of item in inventory.\n\t  - logbook : Checks current objective.";
+        description = "- Item : Checks durability of item in inventory.\n\t  - logbook : Checks current objective.\n\t - resources : Checks what resources are available in the inventory.";
 
     }
     public void Execute(Context context, string command, string[] parameters)
@@ -21,6 +21,12 @@ class CommandCheck : BaseCommand, ICommand
         {
             _player.logbook.DisplayCurrentObjective();
             return;
+        }else if (parameters[0].ToLower() == "resources")
+        {
+            Console.Write("Resource available: ");
+            _player.PrintResource();
+            Console.WriteLine(" ");
+            return; 
         }
         //Check every item in the inventory array
        for(int i = 0; i<_player.items.Count; i++)
