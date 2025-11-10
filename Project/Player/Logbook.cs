@@ -23,6 +23,7 @@ public class Logbook
         Console.WriteLine();
         Thread.Sleep(1000);
         currentObjective.Present();
+        if (currentObjective == entry) { currentObjective = nextObjective; }
     }
 
     public Objective NextObjective() { return nextObjective; }

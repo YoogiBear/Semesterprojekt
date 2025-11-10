@@ -9,7 +9,7 @@ public class BoatObjective : Objective
     public BoatObjective()
     {
         title = "Build a boat";
-        description = "You have to build a boat to get out of here!";
+        description = "You have to build a boat to get out of here!\nYou'll need to collect resources to build it.";
     }
 
     public void TrackPlayerResources(int amount)

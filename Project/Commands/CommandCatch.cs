@@ -25,7 +25,7 @@ class CommandCatch : BaseCommand, ICommand
         //Allows for command execution
         //TODO: This logic is bad please update it.
         Ocean ocean = (Ocean)context.GetCurrent();
-        if (ocean.food.Count<Food>() >0)
+        if (ocean.food.Count<Food>()>0 && ocean.food.Exists(food => food.name == parameters[0]))
         {
             Food food = ocean.food.First<Food>();
             _player.Catch(food);
@@ -33,7 +33,7 @@ class CommandCatch : BaseCommand, ICommand
             Utility.SlowPrint("A fish was caught!", 20);
         } else
         {
-            Utility.SlowPrint("Sadly, there wasn't any fish to catch.", 20);
+            Utility.SlowPrint($"Sadly, {parameters[0]} could not be found in the ocean.", 20);
         }
 
     }
