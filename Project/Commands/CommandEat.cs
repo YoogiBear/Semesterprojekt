@@ -22,12 +22,13 @@ class CommandEat : BaseCommand, ICommand
             Console.WriteLine("You have no food.");
             return;
         }
-        //Predicate to deterimine if item does NOT exists by name and if true return and end sequence.
+        //Predicate to determine if item does NOT exists by name and if true return and end sequence.
         if (!_player.foods.Exists(food => food.name == parameters[0])) {
             Console.WriteLine($"{parameters[0]} was not found in the inventory."); 
+            Console.WriteLine(parameters[0] + " was not found in the inventory.");
             return;
         }
-        //If food DOES in fact exists FIND that item and eat via saturation and remove from the list of foods.
+        //If food DOES in fact exists, FIND that item and eat via saturation and remove from the list of foods.
         Food food = _player.foods.First(food => food.name == parameters[0]);
         _player.Eat(food.saturation);
         _player.foods.Remove(food);
