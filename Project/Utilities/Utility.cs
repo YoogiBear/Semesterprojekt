@@ -30,7 +30,7 @@ public static class Utility
         Console.WriteLine(); // move to the next line after printing the whole string
     }
 
-    static void DrawStatusBar(int current, int max)
+    static void DrawStatusBar(int current, int max, string content)
     {
         int barLength = 20; // Number of characters for the bar
         double percentage = (double)current / max;
@@ -42,7 +42,7 @@ public static class Utility
         Console.ResetColor();
         Console.Write(new string(' ', barLength - filledLength));
         Console.Write("] ");
-        Console.WriteLine($"{current}/{max} HP");
+        Console.WriteLine($"{current}/{max} " + content);
     }
 }
 
