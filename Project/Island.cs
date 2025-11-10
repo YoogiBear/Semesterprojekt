@@ -28,19 +28,9 @@ public class Island
     }
     public int GeneratePollution(Resource[] trash, int pollution)
     {
-        //Depending on the amount of trash (size of Resources), pollution is added to the "ocean"
+        //Depending on the amount of trash (size of list), pollution is added to the "ocean"
         float pollutionAdd = trash.Length/10f*2f;
         return pollutionAdd >= 1.0f ? pollution += (int)Math.Round(pollutionAdd, 0) : pollution;
-        /*
-
-        if (pollutionAdd >= 1.0f) //Runs when trash contains 5 or more pieces
-        {
-            return pollution += (int)Math.Round(pollutionAdd, 0);
-        }
-        else 
-        {
-            return pollution;
-        }*/
     }
 
 }

@@ -121,7 +121,6 @@ public static class FoodGenerator
             for (int i = 0; i < 4; i++)
             {
                 foodSources.Add("Fish");
-                Console.WriteLine(i);
             }
             Console.WriteLine($"Fish generated succesfully overnight!.");
             return;
