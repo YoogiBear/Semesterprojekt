@@ -9,6 +9,7 @@ public class Player
     public List<Item> items;
     public List<Food> foods;
     public int hunger = 0;
+    public const int maxHunger = 100;
     public string[] objectives;
     public Logbook logbook;
     public Player()

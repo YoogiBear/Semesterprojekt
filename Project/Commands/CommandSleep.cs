@@ -15,11 +15,12 @@ class CommandSleep : BaseCommand, ICommand
     {
         if (parameters != null)
         {
-             Console.Clear();
-             Utility.SlowPrint("You went to sleep and wake up the next day.", 40);
-             Game.daycounter = Game.daycounter+1;
+            Console.Clear();
             //Update player hunger
             _player.hunger += 15;
+            Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Hunger", ConsoleColor.Red);
+            Utility.SlowPrint("You went to sleep and wake up the next day.", 40);
+            Game.daycounter = Game.daycounter+1;
             if (_player.IsPlayerDeadFromHunger())
             {
                 Utility.SlowPrint("Oh no! It seems like you didn't eat and died from starvation! Too bad..", 10);
