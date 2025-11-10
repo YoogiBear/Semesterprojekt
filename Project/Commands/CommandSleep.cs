@@ -15,10 +15,23 @@ class CommandSleep : BaseCommand, ICommand
     {
         if (parameters != null)
         {
-            Console.Clear();
+             Console.Clear();
              Utility.SlowPrint("You went to sleep and wake up the next day.", 40);
+             Game.daycounter = Game.daycounter+1;
             //Update player hunger
-            _player.hunger -= 15;
+            _player.hunger += 15;
+            if (_player.IsPlayerDeadFromHunger())
+            {
+                Utility.SlowPrint("Oh no! It seems like you didn't eat and died from starvation! Too bad..", 10);
+                context.MakeDone();
+                return;
+            }
+            if(Game.daycounter >7)
+            {
+                Utility.SlowPrint("Oh no! You wasted so much time you ended up dying..\nToo bad!", 10);
+                context.MakeDone();
+                return;
+            }
             Thread.Sleep(1000);
             Console.WriteLine("Hunger increased by 15! Maybe some breakfast?", 10);
             //Update fish in ocean based on pollution

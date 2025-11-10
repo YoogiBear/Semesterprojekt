@@ -101,3 +101,11 @@ public class Item
     }
 
 }
+
+public class Boat : Item {
+
+    public Boat(Resource resource) : base(resource)
+    {
+
+    }
+}

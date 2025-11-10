@@ -8,11 +8,12 @@ public class Logbook
     public List<Objective> objectives;
     private Objective currentObjective;
     private Objective entry;
-
+    private BoatObjective nextObjective;
     public Logbook()
     {
         entry = new Objective() { title = "Stranded", description = "It seems like you are stranded.\nYou will have to figure out how to survive." };
         currentObjective = entry;
+        nextObjective = new BoatObjective();
 
     }
 
@@ -23,4 +24,6 @@ public class Logbook
         Thread.Sleep(1000);
         currentObjective.Present();
     }
+
+    public Objective NextObjective() { return nextObjective; }
 }

@@ -9,6 +9,7 @@ public class Game {
   static Player player = new Player();
   static Island island = new Island();
   static Ocean ocean = new Ocean("the ocean");
+  public static int daycounter = 0;
 
   //static int trash = 10;
   private static void InitRegistry () {

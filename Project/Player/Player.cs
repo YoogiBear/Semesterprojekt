@@ -8,7 +8,7 @@ public class Player
     public List<Resource> resources;
     public List<Item> items;
     public List<Food> foods;
-    public int hunger = 100;
+    public int hunger = 0;
     public string[] objectives;
     public Logbook logbook;
     public Player()
@@ -39,7 +39,6 @@ public class Player
     }
 
     public void Build() { throw new NotImplementedException(); }
-    public void Consume() { throw new NotImplementedException(); }
     public void Catch(Food food) { foods.Add(food); }
     public void Repair() { throw new NotImplementedException(); }
 
@@ -51,5 +50,7 @@ public class Player
     public void Eat(int decrease) {
         hunger -= decrease;
     }
+
+    public bool IsPlayerDeadFromHunger() { return hunger >= 100; }
     
 }

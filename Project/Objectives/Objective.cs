@@ -11,6 +11,7 @@ public class Objective
     private bool current;
 
 
+
     public void Present()
     {
         int wait = 500;
