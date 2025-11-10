@@ -30,14 +30,14 @@ public static class Utility
         Console.WriteLine(); // move to the next line after printing the whole string
     }
 
-    static void DrawStatusBar(int current, int max, string content)
+    static void DrawStatusBar(int current, int max, string content, ConsoleColor barColor)
     {
         int barLength = 20; // Number of characters for the bar
         double percentage = (double)current / max;
         int filledLength = (int)(barLength * percentage);
 
         Console.Write("[");
-        Console.ForegroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = barColor;
         Console.Write(new string('▮', filledLength));
         Console.ResetColor();
         Console.Write(new string(' ', barLength - filledLength));
