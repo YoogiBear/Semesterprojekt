@@ -61,3 +61,21 @@
 **Til næste uge**
         
 - Vi skal have kørende kode, der præsentere vores spil, implemntation af krav og 15 minutter lang powerpoint.
+
+**Feedback fra midtvejs seminar**
+
+- Brug nord, syd, øst og vest til at give mere informationer.
+ - Samel alt infomationen fra hasVisited til en hel og samlet tekst til sidst i spillet når man har samlet båden og sejler væk.
+- Fjern skip funktionen i Utility.SlowPrint, så brugeren ikke bare skipper igennem uden at læse!!
+	- Andre vil slukke spillet hvis der ikke kan skippes, test med målgruppe hvad de fortrækker.
+- Lav nogle sprøgsmål? som man kan give til spilleren for at test om de har læst og lært fra spillet.
+	- F.eks. når de skal bygge båden og vælge materailer.
+- Hvad er forskellen på content og koden, hvorfor er koden, kodeningen og spillet på Engelsk.
+	- Vi skal argumentere for at valget af at spillet er lavet på engelsk er fordi det er en større målgruppe, og at folk der spiller spillet højst sansyndligvis kan engelsk.
+	- Det kan også argumenteres for at spillet kan bruges til immigranter eller personer der kommer til Danmark, og ikke kan dansk endnu men hjøst sandsynligvis kan engelsk.
+
+
+- Skift at du collecter trash fra beach ikke ocean.
+- Spcificer hvilke trash, der skal både være plastik og metal.
+	- Alt efter hvilke trash du collecter skal det tilføje pollution til ocean.
+- Der skal være en begrænset værdi af trash hver sleep-cycle.
