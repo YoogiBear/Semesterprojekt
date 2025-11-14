@@ -75,4 +75,43 @@ Fredag - CRC-Cards og UML.
 Lørdag/Søndag - Udkast til program
 * Arbejdet hjemme.
 * Referart:
-	- Lavet udkast til klasser og program udfra UML og CRC-Cards
+	- Lavet udkast til klasser og program udfra UML og CRC-Cards.
+
+Uge 44 - Gruppelog.
+Tirsdag - Kodening.
+* Arbejdet på Universiteti.
+* Arbejdet fra 8-12
+* Referart:
+	- Begynde at kode ud fra World Of Zuul, tilføjet klasser og metoder fra UML-Diagrammet.
+
+Fredag - Kodening.
+* Arbejdet på Universiteti.
+* Arbejdet fra 8-12
+* Referart:
+	- Tilføjet yderliger kode fra UML-Diagrammet og lavet mere funktionalitet.
+
+Uge 45 - Gruppelog.
+Tirsdag - Kodening.
+* Arbejdet på Universiteti.
+* Arbejdet fra 8-12
+* Referart:
+	- Finpudsning af kode og sidste funktionalitet til iteration #1.
+
+Fredag - Rapport, slides og kode.
+* Arbejdet på Universiteti.
+* Arbejdet fra 8-12
+* Referart:
+	- Bug fixet kode, skrev på rapporten og lavet slides til midtvejs semiar.
+
+Uge 46 - Gruppelog.
+Tirsdag - Midtvejs seminar.
+* Møde på Universiteti.
+* Arbejdet fra 8-11.
+* Referart:
+	- Alle grupper mødets til midtvejs seminar, vi skulle fremlægge iteration #1 af spillet samt vores opgave indtilvidere.
+
+Fredag - Planer for iteration #2
+* Arbejdet på Universiteti.
+* Arbejdet fra 8-12.
+* Referart:
+	- Idegeneraring til tilføjelser til iteration #2. Gennemgang af feedback fra iteration #1.
