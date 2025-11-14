@@ -33,6 +33,12 @@ class CommandHelp : BaseCommand, ICommand {
     }
         Thread.Sleep(1000);
         Console.WriteLine();
+        Utility.SlowPrint("The resources you can find on the island are plastic, metal, wood and cardboard.", 20);
+        Thread.Sleep(1000);
+        Utility.SlowPrint("The food you can find is fish and fruis.", 20);
+        Thread.Sleep(1000);
+        Utility.SlowPrint("If you need more information about the individual resources or food, ask for help about them, as long as you have found the information yourself first.", 20);
+        Thread.Sleep(1000);
         Utility.SlowPrint("Hope it help!", 20);
         Thread.Sleep(1000);
         Console.WriteLine();
