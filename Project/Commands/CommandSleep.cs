@@ -1,5 +1,5 @@
 // Command for sleeping
-//Restores fish based on pollution, new materials, regulates 
+// Restores fish based on pollution, new materials, regulates 
 
 class CommandSleep : BaseCommand, ICommand
 {
@@ -9,39 +9,39 @@ class CommandSleep : BaseCommand, ICommand
     {
         _player = player;
         _ocean = ocean;
-        description = "Sleep to replenish ocean's resources and trash";
+        description = "Sov for at genoprette havets ressourcer og affald";
     }
     public void Execute(Context context, string command, string[] parameters)
     {
         if (parameters != null)
         {
             Console.Clear();
-            //Update player hunger
+            //Opdater spillerens sult
             _player.hunger += 15;
-            Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Hunger", ConsoleColor.Red);
-            Utility.SlowPrint("You went to sleep and wake up the next day.", 40);
+            Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Sult", ConsoleColor.Red);
+            Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
             Game.daycounter = Game.daycounter+1;
             if (_player.IsPlayerDeadFromHunger())
             {
-                Utility.SlowPrint("Oh no! It seems like you didn't eat and died from starvation! Too bad..", 10);
+                Utility.SlowPrint("Åh nej! Det ser ud til, at du ikke spiste og døde af sult! Øv..", 10);
                 context.MakeDone();
                 return;
             }
             if(Game.daycounter >7)
             {
-                Utility.SlowPrint("Oh no! You wasted so much time you ended up dying..\nToo bad!", 10);
+                Utility.SlowPrint("Åh nej! Du spildte så meget tid, at du endte med at dø..\nØv!", 10);
                 context.MakeDone();
                 return;
             }
             Thread.Sleep(1000);
-            Console.WriteLine("Hunger increased by 15! Maybe some breakfast?", 10);
-            //Update fish in ocean based on pollution
+            Console.WriteLine("Sulten steg med 15! Måske lidt morgenmad?", 10);
+            //Opdater fisk i havet baseret på forurening
             Thread.Sleep(1000);
             FoodGenerator.GenerateFish();
-            //Create new resources in ocean
+            //Opret nye ressourcer i havet
             _ocean.CreateResources();
             Thread.Sleep(1000);
-            Console.WriteLine("New materials flushed to shore", 10);
+            Console.WriteLine("Nye materialer skyllet op på stranden", 10);
             return;
         }
     }

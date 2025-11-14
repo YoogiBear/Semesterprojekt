@@ -8,31 +8,30 @@ class CommandEat : BaseCommand, ICommand
     public CommandEat(Player player)
     {
         _player = player;
-        description = "You eat Food";
+        description = "Du spiser mad";
     }
-    //attempts to execute EatCommand with given context, command and given parameters else return
+    // forsøger at udføre EatCommand med givet context, command og parametre, ellers returner
     public void Execute(Context context, string command, string[] parameters)
     {
         if (GuardEq(parameters, 1)) {
-            Console.WriteLine("You need to specify your food. 🤔");
+            Console.WriteLine("Du skal angive, hvilken mad du vil spise. 🤔");
             return;
         }
-        //checks if there is any food to eat in general, if not return and end sequence.
+        // tjekker om der overhovedet er mad at spise, hvis ikke returner og afslut
         if (_player.foods.Count == 0) {
-            Console.WriteLine("You have no food.");
+            Console.WriteLine("Du har ingen mad.");
             return;
         }
-        //Predicate to determine if item does NOT exists by name and if true return and end sequence.
+        // predicate til at tjekke om mad IKKE findes efter navn, hvis sand returner og afslut
         if (!_player.foods.Exists(food => food.name == parameters[0])) {
-            Console.WriteLine($"{parameters[0]} was not found in the inventory."); 
-            Console.WriteLine(parameters[0] + " was not found in the inventory.");
+            Console.WriteLine($"{parameters[0]} blev ikke fundet i inventaret."); 
             return;
         }
-        //If food DOES in fact exists, FIND that item and eat via saturation and remove from the list of foods.
+        // hvis mad findes, find item og spis via saturation, fjern fra liste
         Food food = _player.foods.First(food => food.name == parameters[0]);
         _player.Eat(food.saturation);
         _player.foods.Remove(food);
-        Utility.SlowPrint($"You ate the {parameters[0]}!",10);
-        Utility.SlowPrint($"current hunger is: {_player.hunger}",10);
+        Utility.SlowPrint($"Du spiste {parameters[0]}!",10);
+        Utility.SlowPrint($"Nuværende sult: {_player.hunger}",10);
     }
 }

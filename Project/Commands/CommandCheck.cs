@@ -7,41 +7,39 @@ class CommandCheck : BaseCommand, ICommand
     public CommandCheck(Player player)
     {
         _player = player;
-        description = "- Item : Checks durability of item in inventory.\n\t  - logbook : Checks current objective.\n\t - resources : Checks what resources are available in the inventory.";
-
+        description = "- Item : Tjekker holdbarheden af et item i inventaret.\n\t  - logbog : Tjekker det nuværende mål.\n\t - ressourcer : Tjekker hvilke ressourcer der er tilgængelige i inventaret.";
     }
     public void Execute(Context context, string command, string[] parameters)
     {
         if (GuardEq(parameters, 1))
         {
-            Console.WriteLine("You wanted to check what exactly?");
+            Console.WriteLine("Hvad ville du gerne tjekke?");
             return;
         }
-        else if (parameters[0].ToLower() == "logbook")
+        else if (parameters[0].ToLower() == "logbook" || parameters[0].ToLower() == "logbog")
         {
             _player.logbook.DisplayCurrentObjective();
             return;
-        }else if (parameters[0].ToLower() == "resources")
+        }
+        else if (parameters[0].ToLower() == "resources" || parameters[0].ToLower() == "ressourcer")
         {
-            Console.Write("Resource available: ");
+            Console.Write("Tilgængelige ressourcer: ");
             _player.PrintResource();
             Console.WriteLine(" ");
             return; 
         }
-        //Check every item in the inventory array
-       for(int i = 0; i<_player.items.Count; i++)
+        // Tjekker hvert item i inventaret
+        for(int i = 0; i<_player.items.Count; i++)
         {
-            //Check to see if the name of the item is what the player is looking for
+            // Tjekker om navnet på itemet matcher det spilleren leder efter
             if (_player.items[i].ToString() == parameters[0])
             {
-                //The durability of the item can now me checked
-                Console.WriteLine($"{parameters[0]} is in inventory.");
+                // Holdbarheden af itemet kan nu tjekkes
+                Console.WriteLine($"{parameters[0]} er i inventaret.");
                 return;
             }
-            
         }
-        //The item the player was looking for was not found the array at all.
-        Utility.SlowPrint($"Sorry but '{parameters[0]}' isn't in the inventory.", 10);
-
+        // Itemet spilleren ledte efter blev ikke fundet i arrayet
+        Utility.SlowPrint($"Beklager, men '{parameters[0]}' er ikke i inventaret.", 10);
     }
 }

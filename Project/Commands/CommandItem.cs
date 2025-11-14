@@ -1,22 +1,21 @@
-﻿
-class CommandItem : BaseCommand, ICommand
+﻿class CommandItem : BaseCommand, ICommand
 {
     Player player;
     public CommandItem(Player player)
     {
         this.player = player;
-        description = "Allows for the player to create a Item matching the resources gathered";
+        description = "Giver spilleren mulighed for at oprette et item, der matcher de indsamlede ressourcer";
     }
     
     public void Execute(Context context, string command, string[] parameters)
     {
         if (GuardEq(parameters, 1))
         {
-            Console.WriteLine("Hmm, seems you want to create a Item with no resources");
+            Console.WriteLine("Hmm, det ser ud til, at du vil oprette et item uden ressourcer");
         }
         else
         {
-            //Checks if the player have a resources that matches the input and then creates the Item while removing the resources from the player
+            //Tjekker om spilleren har en ressource, der matcher input, og opretter itemet, mens ressourcen fjernes fra spilleren
             for(int i = 0; i < player.resources.Count() ; i++)
             {
 
@@ -27,7 +26,7 @@ class CommandItem : BaseCommand, ICommand
                 }
                 else
                 {
-                    Console.WriteLine("Uhm, please check what resources you have");
+                    Console.WriteLine("Øhm, tjek venligst hvilke ressourcer du har");
                 }
             }
 

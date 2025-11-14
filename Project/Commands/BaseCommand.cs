@@ -1,14 +1,14 @@
-/* Baseclass for all commands
+/* Baseklasse for alle kommandoer
  */
 
 class BaseCommand {
-  protected string description = "Undocumented";
+    protected string description = "Ikke dokumenteret";
   
-  protected bool GuardEq (string[] parameters, int bound) {
-    return parameters.Length!=bound;
-  }
+    protected bool GuardEq (string[] parameters, int bound) {
+        return parameters.Length != bound;
+    }
   
-  public String GetDescription () {
-    return description;
-  }
+    public string GetDescription () {
+        return description;
+    }
 }

@@ -8,11 +8,11 @@ class CommandUnknown : BaseCommand, ICommand {
   {
     if (string.IsNullOrEmpty(command))
     {
-      Console.WriteLine("Please type what you whould to do 😁");
+      Console.WriteLine("Skriv venligst, hvad du ønsker at gøre 😁");
     }
     else
     {
-      Console.WriteLine("I don't understand what '" + command + "' is.😕");
+      Console.WriteLine("Jeg forstår ikke, hvad '" + command + "' betyder.😕");
     }
   }
 }

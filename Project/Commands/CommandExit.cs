@@ -4,7 +4,7 @@
 class CommandExit : BaseCommand, ICommand {
     public CommandExit()
     {
-        description = "Ends the game.";
+        description = "Slutter spillet.";
     }
   public void Execute (Context context, string command, string[] parameters) {
     context.MakeDone();

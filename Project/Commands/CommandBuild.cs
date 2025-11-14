@@ -14,10 +14,9 @@ class CommandBuild : BaseCommand, ICommand
     {
         if (GuardEq(parameters, 1))
         {
-            Console.WriteLine("You tried to build nothing, and you succeeded? 🤔");
+            Console.WriteLine("Du prøvede at bygge ingenting, og det lykkedes? 🤔");
             return;
         }
-        //Allows for command execution
-
+        // Tillader udførelse af kommando
     }
 }

@@ -7,35 +7,35 @@ class CommandCatch : BaseCommand, ICommand
     public CommandCatch(Player player)
     {
         _player = player;
-        description = "Allows for the catching of fish. But only near a valid water source.";
-
+        description = "Giver mulighed for at fange fisk. Men kun tæt på en gyldig vandkilde.";
     }
-    //attempts to execute GoCommand with given context, command and given parameters else return 
+    // forsøger at udføre CatchCommand med givet context, command og parametre, ellers returner 
     public void Execute(Context context, string command, string[] parameters)
     {
         if (GuardEq(parameters, 1))
         {
-            Console.WriteLine("I don't seem to know what to catch 🤔");
+            Console.WriteLine("Jeg ved ikke, hvad du skal fange 🤔");
             return;
-        } else if(context.GetCurrent().GetName() != "the ocean") {
-            Console.WriteLine("You are not within an area for which to catch anything.");
+        } 
+        else if(context.GetCurrent().GetName() != "the ocean") 
+        {
+            Console.WriteLine("Du er ikke i et område, hvor du kan fange noget.");
             return;
         }
 
-        //Allows for command execution
-        //TODO: This logic is bad please update it.
+        // Tillader udførelse af kommando
+        // TODO: Denne logik er dårlig, opdater venligst
         Ocean ocean = (Ocean)context.GetCurrent();
         if (ocean.food.Count<Food>()>0 && ocean.food.Exists(food => food.name == parameters[0]))
         {
             Food food = ocean.food.First<Food>();
             _player.Catch(food);
             ocean.food.Remove(food);
-            Utility.SlowPrint("A fish was caught!", 20);
-        } else
+            Utility.SlowPrint("En fisk blev fanget!", 20);
+        } 
+        else
         {
-            Utility.SlowPrint($"Sadly, {parameters[0]} could not be found in the ocean.", 20);
+            Utility.SlowPrint($"Desværre kunne {parameters[0]} ikke findes i havet.", 20);
         }
-
     }
-
 }

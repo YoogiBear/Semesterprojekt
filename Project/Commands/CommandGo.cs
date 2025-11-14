@@ -3,13 +3,13 @@
 
 class CommandGo : BaseCommand, ICommand {
   public CommandGo () {
-    description = "Used to traverse the island. Write 'go' followed by a valid direction. ";
+    description = "Bruges til at bevæge dig rundt på øen. Skriv 'go' efterfulgt af en gyldig retning.";
   }
   
-    //attempts to execute GoCommand with given context, command and given parameters else return 
+  // forsøger at udføre GoCommand med givet context, command og parametre, ellers returner
   public void Execute (Context context, string command, string[] parameters) {
     if (GuardEq(parameters, 1)) {
-      Console.WriteLine("I don't seem to know where that is 🤔");
+      Console.WriteLine("Jeg ser ikke ud til at vide, hvor det er 🤔");
       return;
     }
     context.Transition(parameters[0]);

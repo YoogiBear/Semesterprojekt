@@ -5,28 +5,28 @@ class CommandChop : BaseCommand, ICommand
     public CommandChop(Player player)
     {
         _player = player;
-        description = "Allows for chopping trees for resources. But only near a tree..";
+        description = "Giver mulighed for at hugge træer for ressourcer. Men kun tæt på et træ..";
     }
 
     public void Execute(Context context, string command, string[] parameters)
     {
-        // Hvis spilleren skriver kun "chop"
+        // Hvis spilleren kun skriver "chop"
         if (GuardEq(parameters, 1))
         {
-            Console.WriteLine("I don't seem to know what to chop 🤔");
+            Console.WriteLine("Jeg ved ikke, hvad du skal hugge 🤔");
             return;
         }
 
         // Spilleren skal være i skov-området
         if (context.GetCurrent().GetName() != "the forest area")
         {
-            Console.WriteLine("You are not within an area for which to chop anything.");
+            Console.WriteLine("Du er ikke i et område, hvor du kan hugge noget.");
             return;
         }
 
         if (Island.trees.Count == 0)
         {
-            Console.WriteLine("There are no trees left to chop.");
+            Console.WriteLine("Der er ingen træer tilbage at hugge.");
             return;
         }
 
@@ -34,6 +34,5 @@ class CommandChop : BaseCommand, ICommand
         Tree tree = Island.trees[0];
         string result = tree.ChopTree(_player);
         Console.WriteLine(result);
-       
     }
 }
