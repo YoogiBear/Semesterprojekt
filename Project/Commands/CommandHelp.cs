@@ -48,19 +48,24 @@ class CommandHelp : BaseCommand, ICommand {
     else{
         switch(parameters[0]){
           case "plast" :
-            Console.WriteLine("Info om plast");
+            Console.WriteLine("Hver 1 Plast udleder NUMBER Pollution per Dag.");
+            Console.WriteLine("Du kan bruge Plast til SOMETHING.");
             return;
           case "metal" :
-            Console.WriteLine("Info om metal");
+            Console.WriteLine("Hver 1 Metal udleder NUMBER Pollution per Dag.");
+            Console.WriteLine("Du kan bruge Metal til SOMETHING.");
             return;
           case "træ" :
-            Console.WriteLine("Info om træ");
+            Console.WriteLine("Hver 1 Træ udleder NUMBER Pollution per Dag.");
+            Console.WriteLine("Du kan bruge Træ til SOMETHING.");
             return;
           case "pap" :
-            Console.WriteLine("Info om pap");
+            Console.WriteLine("Hver 1 Pap udleder NUMBER Pollution per Dag.");
+            Console.WriteLine("Du kan bruge Pap til SOMETHING.");
             return;
           case "fisk" :
-            Console.WriteLine("Info om fisk");
+            Console.WriteLine("Fisk giver NUMBER mætning.");
+            Console.WriteLine("Fisk er fundet i havet.");
             return;
           case "frugt" :
             Console.WriteLine("Frugt giver 10 mætning.");
