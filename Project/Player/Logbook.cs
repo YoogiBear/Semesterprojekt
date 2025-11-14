@@ -11,7 +11,7 @@ public class Logbook
     private BoatObjective nextObjective;
     public Logbook()
     {
-        entry = new Objective() { title = "Stranded", description = "It seems like you are stranded.\nYou will have to figure out how to survive." };
+        entry = new Objective() { title = "Strandet", description = "Det ser ud til, at du er strandet.\nDu bliver nødt til at finde ud af, hvordan du overlever." };
         currentObjective = entry;
         nextObjective = new BoatObjective();
 
@@ -19,7 +19,7 @@ public class Logbook
 
     public void DisplayCurrentObjective()
     {
-        Utility.SlowPrint("You checked the logbook for your current objective.", 10);
+        Utility.SlowPrint("Du tjekkede logbogen for dit nuværende mål.", 10);
         Console.WriteLine();
         Thread.Sleep(1000);
         currentObjective.Present();
