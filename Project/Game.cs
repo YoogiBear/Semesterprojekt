@@ -29,28 +29,28 @@ public class Game {
   static void Main (string[] args) {
 
         Console.Clear();
-        Utility.SlowPrint("Welcome to", 50);
+        Utility.SlowPrint("Velkommen til", 50);
         Utility.SlowPrint("███████╗ ██████╗ ██████╗                ██████╗ ██╗   ██╗███████╗███████╗████████╗", 1);
         Utility.SlowPrint("██╔════╝██╔════╝██╔═══██╗              ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝", 1);
         Utility.SlowPrint("█████╗  ██║     ██║   ██║    █████╗    ██║   ██║██║   ██║█████╗  ███████╗   ██║", 1);
         Utility.SlowPrint("██╔══╝  ██║     ██║   ██║    ╚════╝    ██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║ ", 1);
         Utility.SlowPrint("███████╗╚██████╗╚██████╔╝              ╚██████╔╝╚██████╔╝███████╗███████║   ██║ ", 1);
         Utility.SlowPrint("╚══════╝ ╚═════╝ ╚═════╝                ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝ ", 1);
-        Console.WriteLine("Press any key to continue...");
+        Console.WriteLine("Tryk på en vilkårlig tast for at fortsætte...");
         Console.ReadKey();
         Console.Clear();
-        Utility.SlowPrint("You wake up on a deserted island in the middle of nowhere.",20);
+        Utility.SlowPrint("Du vågner på en øde ø midt i ingenting.",20);
         Thread.Sleep(1000);
-        Utility.SlowPrint("You spot a logbook on the ground.", 20);
+        Utility.SlowPrint("Du ser en logbog ligge på jorden.", 20);
         Thread.Sleep(1000);
-        Utility.SlowPrint("You pick it up and flip to the first page.", 20);
+        Utility.SlowPrint("Du tager den op og bladrer til første side.", 20);
         Thread.Sleep(1000);
-        Utility.SlowPrint("It reads: 'If ever you are in need of help. Just ask. But your main goal is to survive, and sail away from the island. Although there seems to be no boat, so you'll have to make your own. Good luck surviving by collecting food, and gathering resources to build your boat. All resources should refresh every morning.'", 20);
+        Utility.SlowPrint("Der står: 'Hvis du nogensinde har brug for hjælp, spørg bare. Men dit hovedmål er at overleve og sejle væk fra øen. Der ser dog ikke ud til at være en båd, så du må lave din egen. Held og lykke med at overleve ved at samle mad og ressourcer til at bygge din båd. Alle ressourcer opdateres hver morgen.'", 20);
         Thread.Sleep(1000);
-        Utility.SlowPrint("You wonder what it means...", 20);
+        Utility.SlowPrint("Du spekulerer på, hvad det betyder...", 20);
         Thread.Sleep(1000);
         Console.WriteLine();
-        Utility.SlowPrint("Press any key to continue...", 10);
+        Utility.SlowPrint("Tryk på en vilkårlig tast for at fortsætte...", 10);
         Console.ReadKey();
         Console.Clear();
 

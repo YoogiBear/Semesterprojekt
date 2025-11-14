@@ -1,4 +1,4 @@
-/* Main class for launching the game
+/* Klasse for træer på øen
  */
 
 using System.Collections.Specialized;
@@ -7,44 +7,46 @@ public class Tree
 {
     private static readonly Random rng = new Random();
     public int fruitsOnTree;
-    public Tree() //Constructor
+
+    public Tree() // Konstruktor
     {
-        fruitsOnTree = rng.Next(1, 6);;
+        fruitsOnTree = rng.Next(1, 6);
     }
+
     public string ChopTree(Player player)
     {
         if (Island.trees.Count == 0)
         {
-            return "No trees to chop";
+            return "Der er ingen træer at hugge ned";
         }
         else
         {
-            Island.trees.Remove(Island.trees[0]); //Removes a tree from the island
-            //Grant wood to player
+            Island.trees.Remove(Island.trees[0]); // Fjerner et træ fra øen
+            // Giv spiller træ
             Resource choppedtree = new Resource("Wood", 10, 5);
             player.resources.Add(choppedtree);
         
-            return "You chopped down a tree and collected 1 piece of wood!";
+            return "Du huggede et træ ned og samlede 1 stykke træ!";
         }
-        
     }
-    public string Gather(Player player) //Collect coconut from palm tree
+
+    public string Gather(Player player) // Saml kokosnød fra palmetræ
     {
         if (Island.trees.Count == 0)
         {
-            return "No tree to gather food from";
+            return "Der er intet træ at samle mad fra";
         }
         if (fruitsOnTree == 0)
         {
-            return "There are no coconuts left";
+            return "Der er ingen kokosnødder tilbage";
         }
-        else //If tree and fruit are available, create new Food object
+        else // Hvis træ og frugt er tilgængelig, opret nyt Food-objekt
         {
-            Food fruit = new Food("Coconut", 10);
+            Food fruit = new Food("Kokosnød", 10);
             player.foods.Add(fruit);
             fruitsOnTree -= 1;
 
-            return $"You collected a coconut! Remaining coconuts on the tree {fruitsOnTree}";
+            return $"Du samlede en kokosnød! Antal tilbage på træet: {fruitsOnTree}";
         }
     }
 }
