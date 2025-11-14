@@ -8,11 +8,11 @@ public class Ocean : Space
     public bool hasVisited;
     public Resource[] resourcesprefab =
         [
-            new Resource("plastic"), new Resource("plastic"),
+            new Resource("plast"), new Resource("plast"),
             new Resource("metal"), new Resource("metal"),
-            new Resource("plastic"), new Resource("plastic"),
-            new Resource("plastic"), new Resource("plastic"),
-            new Resource("plastic"),new Resource("plastic")
+            new Resource("plast"), new Resource("plast"),
+            new Resource("plast"), new Resource("plast"),
+            new Resource("plast"), new Resource("plast")
         ];
 
     public Resource[] resources; //Array to hold resources within the ocean
@@ -71,37 +71,37 @@ public class Ocean : Space
     {
         if (hasVisited == false)
         {
-            Utility.SlowPrint("A lot of plastic ends up as microplastics in nature, and due to its strength, it takes an extremely long time to decompose.", 20);
-            Utility.SlowPrint("11 million tons of plastic waste finds its way to our oceans, through mis-sorting and dumping of waste in the ocean. These 11 million tons,", 20);
-            Utility.SlowPrint("are just a small addition to the already 200 million tons that are already in the world's oceans. With this rate of production and waste, there will be more plastic than fish in the sea by 2050.", 30);
+            Utility.SlowPrint("Meget plastik ender som mikroplast i naturen, og på grund af dets styrke tager det ekstremt lang tid at nedbryde.", 20);
+            Utility.SlowPrint("11 millioner tons plastaffald finder vej til vores oceaner gennem fejlsortering og dumpning af affald i havet. Disse 11 millioner tons,", 20);
+            Utility.SlowPrint("er kun et lille tilskud til de allerede 200 millioner tons, der allerede findes i verdens oceaner. Med denne produktion og affaldsrate vil der i 2050 være mere plastik end fisk i havet.", 30);
             hasVisited = true;
-            Utility.SlowPrint("You can see these paths:", 20);
+            Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
             {
                 Console.WriteLine(" - " + exit);
                 Thread.Sleep(500);
             }
-            Utility.SlowPrint("What would you like to do now?", 20);
+            Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
         else
         {
-            Utility.SlowPrint("You are back in the forest, chop down trees or collect some fruits", 30);
-            Utility.SlowPrint("You can see these paths:", 20);
+            Utility.SlowPrint("Du er tilbage i havet, saml ressourcer eller fisk.", 30);
+            Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
             {
                 Console.WriteLine(" - " + exit);
                 Thread.Sleep(500);
             }
-            Utility.SlowPrint("What would you like to do now?", 20);
+            Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
     }
 
     public void ShowStatus()
     {
-        Console.WriteLine($"Pollution Level: {Pollution.Level}");
-        Console.WriteLine("Food sources: " + (food.Count == 0 ? "(none)" : string.Join(", ", food)));
+        Console.WriteLine($"Forureningsniveau: {Pollution.Level}");
+        Console.WriteLine("Fødevarer: " + (food.Count == 0 ? "(ingen)" : string.Join(", ", food)));
     }
 
 }
@@ -120,41 +120,40 @@ public static class FoodGenerator
         {
             for (int i = 0; i < 4; i++)
             {
-                foodSources.Add("Fish");
+                foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fish generated succesfully overnight!.");
+            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (10 < Island.pollution && Island.pollution <= 20) //Slight pollution
         {
             for (int i = 0; i < 3; i++)
             {
-                foodSources.Add("Fish");
+                foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fish generated succesfully overnight!.");
+            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
-        else if (20 < Island.pollution &&    Island.pollution <= 30) //Average pollution
+        else if (20 < Island.pollution && Island.pollution <= 30) //Average pollution
         {
             for (int i = 0; i < 2; i++)
             {
-                foodSources.Add("Fish");
+                foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fish generated succesfully overnight!.");
+            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (30 < Island.pollution && Island.pollution <= 40) //Max pollution
         {
-            foodSources.Add("Fish");
-            Console.WriteLine($"Fish generated succesfully overnight!.");
+            foodSources.Add("Fisk");
+            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (40<Island.pollution ) //Dead fish
         {
-            Console.WriteLine("Too much pollution in the ocean! No fish were generated overnight.");
+            Console.WriteLine("For meget forurening i havet! Ingen fisk blev genereret natten over.");
             return;
         }
 
     }
 }
-

@@ -14,32 +14,31 @@ public class South : Space
     {
         if (hasVisited == false)
         {
-            Utility.SlowPrint($"This is the first time visiting {name}. You find a newspaper and start reading it.", 20);
-            Utility.SlowPrint("The disadvantage of wood-based packaging is the recycling process, where the fibers can only be reused up to seven times.", 30);
-            Utility.SlowPrint("Another drawback is the use of PFAS chemicals in many paper and cardboard productions. PFAS are fluorinated compounds that provide a water-repellent effect on clothing.", 30);
-            Utility.SlowPrint("Some types are harmful to humans and can cause liver damage and fertility problems, and all of them are difficult to break down in nature.", 30);
+            Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
+            Utility.SlowPrint("Ulempen ved træbaseret emballage er genanvendelsesprocessen, hvor fibrene kun kan genbruges op til syv gange.", 30);
+            Utility.SlowPrint("En anden ulempe er brugen af PFAS-kemikalier i mange papir- og papproduktioner. PFAS er fluorforbindelser, der giver en vandafvisende effekt på tøj.", 30);
+            Utility.SlowPrint("Nogle typer er skadelige for mennesker og kan forårsage leverskader og fertilitetsproblemer, og alle er svære at nedbryde i naturen.", 30);
             hasVisited = true;
-            Utility.SlowPrint("You can see these paths:", 20);
+            Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
             {
                 Console.WriteLine(" - " + exit);
                 Thread.Sleep(500);
             }
-            Utility.SlowPrint("What would you like to do now?", 20);
+            Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
         else
         {
-            Utility.SlowPrint("You are back in the southeren part of the island.", 30);
-            Utility.SlowPrint("You can see these paths:", 20);
+            Utility.SlowPrint("Du er tilbage i den sydlige del af øen.", 30);
+            Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
-                {
-                    Console.WriteLine(" - " + exit);
-                    Thread.Sleep(500);
-                }
-                Utility.SlowPrint("What would you like to do now?", 20);
+            {
+                Console.WriteLine(" - " + exit);
+                Thread.Sleep(500);
+            }
+            Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
     }
 }
-

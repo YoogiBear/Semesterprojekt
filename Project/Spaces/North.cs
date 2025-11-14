@@ -14,33 +14,32 @@ public class North : Space
     {
         if (hasVisited == false)
         {
-            Utility.SlowPrint($"This is the first time visiting {name}. You find a newspaper and start reading it.", 20);
-            Utility.SlowPrint("It thus becomes clear that solving the packaging problem requires a broader effort,", 30);
-            Utility.SlowPrint("where both producers and consumers play a role", 30);
-            Utility.SlowPrint("in finding a balance between functionality and sustainability.", 30);
+            Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
+            Utility.SlowPrint("Det bliver derfor tydeligt, at løsningen på emballageproblemet kræver en bredere indsats,", 30);
+            Utility.SlowPrint("hvor både producenter og forbrugere spiller en rolle", 30);
+            Utility.SlowPrint("i at finde en balance mellem funktionalitet og bæredygtighed.", 30);
             hasVisited = true;
-            Utility.SlowPrint("You can see these paths:", 20);
+            Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
             {
                 Console.WriteLine(" - " + exit);
                 Thread.Sleep(500);
             }
-            Utility.SlowPrint("What would you like to do now?", 20);
+            Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
         else
         {
-            Utility.SlowPrint("You are back in the northeren part of the island.", 30);
-            Utility.SlowPrint("You can see these paths:", 20);
+            Utility.SlowPrint("Du er tilbage i den nordlige del af øen.", 30);
+            Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
             {
                 Console.WriteLine(" - " + exit);
                 Thread.Sleep(500);
             }
-                Utility.SlowPrint("What would you like to do now?", 20);
+            Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
 
         }
     }
 }
-
