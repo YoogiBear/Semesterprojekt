@@ -9,13 +9,13 @@ public class Center : Space
 
 
     }
-    //hasVisited bool set to false, meaning the player hasnt been in this area of the map yet.
+    //hasVisited bool set to false, meaning the player hasn't been in this area of the map yet.
 
-    public bool hasVisited;
+    private bool hasVisited;
 
     public override void Welcome()
     {
-        if (hasVisited == false) //If the player hasnt been here before it plays the custom message.
+        if (hasVisited == false) //If the player hasn't been here before it plays the custom message.
         {
             Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
             Utility.SlowPrint("I 2022 udgjorde emballage 1.108.000 tons — svarende til cirka 189,6 kg pr. borger i Danmark.", 30);

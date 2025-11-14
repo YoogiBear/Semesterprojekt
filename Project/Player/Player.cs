@@ -39,7 +39,10 @@ public class Player
         
     }
 
-    public void Build() { throw new NotImplementedException(); }
+    public void Build()
+    {
+        throw new NotImplementedException();
+    }
     public void Catch(Food food) { foods.Add(food); }
     public void Repair() { throw new NotImplementedException(); }
 

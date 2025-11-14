@@ -6,7 +6,7 @@ public class Resource
     public string name;
     public int pollution;
 
-    public Resource(string name = "defaultName", int strength = 10, int pollution = 10)
+    public Resource(string name = "defaultName", int pollution = 10)
     {
         this.name = name;
         this.pollution = pollution;

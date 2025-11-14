@@ -7,7 +7,7 @@ public class Forest : Space
     {
 
     }
-    public bool hasVisited;
+    private bool hasVisited;
     public override void Welcome()
     {
         if (hasVisited == false)

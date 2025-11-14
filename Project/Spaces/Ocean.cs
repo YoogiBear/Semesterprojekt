@@ -5,8 +5,8 @@
 
 public class Ocean : Space
 {
-    public bool hasVisited;
-    public Resource[] resourcesprefab =
+    private bool hasVisited;
+    private Resource[] resourcesprefab =
         [
             new Resource("plast"), new Resource("plast"),
             new Resource("metal"), new Resource("metal"),
@@ -15,7 +15,7 @@ public class Ocean : Space
             new Resource("plast"), new Resource("plast")
         ];
 
-    public Resource[] resources; //Array to hold resources within the ocean
+    private Resource[] resources; //Array to hold resources within the ocean
     public List<Food> food; //List to hold food sources within the ocean
     public Ocean(string Name) : base(Name)
     {
@@ -111,7 +111,7 @@ public class Ocean : Space
 // Food generator component
 public static class FoodGenerator
 {
-    public static readonly List<string> foodSources = new List<string>();
+    private static readonly List<string> foodSources = new List<string>();
     public static IReadOnlyList<string> FoodSources => foodSources.AsReadOnly();
     
     public static void GenerateFish()

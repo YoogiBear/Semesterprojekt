@@ -6,7 +6,7 @@ class CommandHelp : BaseCommand, ICommand {
   
   public CommandHelp (Registry registry) {
     this.registry = registry;
-    this.description = "Viser denne hjælpe-menu.";
+    description = "Viser denne hjælpe-menu.";
   }
   
   public void Execute (Context context, string command, string[] parameters) {

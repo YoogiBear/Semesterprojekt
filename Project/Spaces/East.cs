@@ -8,7 +8,7 @@ public class East : Space
     {
         
     }
-   public bool hasVisited;
+   private bool hasVisited;
 
     public override void Welcome()
     {

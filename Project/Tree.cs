@@ -23,7 +23,7 @@ public class Tree
         {
             Island.trees.Remove(Island.trees[0]); // Fjerner et træ fra øen
             // Giv spiller træ
-            Resource choppedtree = new Resource("Wood", 10, 5);
+            Resource choppedtree = new Resource("Wood", 5);
             player.resources.Add(choppedtree);
         
             return "Du huggede et træ ned og samlede 1 stykke træ!";
