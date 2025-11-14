@@ -47,12 +47,28 @@ class CommandHelp : BaseCommand, ICommand {
     }
     else{
         switch(parameters[0]){
-            case "wow" :
-                Console.WriteLine("ddd");
-                return;
-            default:
-                Console.WriteLine("default");
-                return;
+          case "plast" :
+            Console.WriteLine("Info om plast");
+            return;
+          case "metal" :
+            Console.WriteLine("Info om metal");
+            return;
+          case "træ" :
+            Console.WriteLine("Info om træ");
+            return;
+          case "pap" :
+            Console.WriteLine("Info om pap");
+            return;
+          case "fisk" :
+            Console.WriteLine("Info om fisk");
+            return;
+          case "frugt" :
+            Console.WriteLine("Frugt giver 10 mætning.");
+            Console.WriteLine("Frugt er fundet på trærer i området forest.");
+            return;
+          default:
+            Console.WriteLine("Det er ikke en ting du kan få hjælp med. 😢");
+            return;
         }
     }
   }

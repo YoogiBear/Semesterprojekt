@@ -4,7 +4,7 @@ class CommandGather : BaseCommand, ICommand
     public CommandGather(Player player)
     {
         _player = player;
-        description = "Giver mulighed for at samle ressourcer i havet";
+        description = "Giver mulighed for at samle ressourcer på stranden";
     }
 
     // forsøger at udføre kommandoen med givet context, command og parametre, ellers returner
@@ -15,18 +15,18 @@ class CommandGather : BaseCommand, ICommand
             Console.WriteLine("Jeg ved ikke, hvad du skal samle 🤔");
             return;
         }
-        else if (context.GetCurrent().GetName() != "the ocean")
+        else if (context.GetCurrent().GetName() != "the beach")
         {
-            Console.WriteLine("Du skal være i havet for at samle ressourcer");
+            Console.WriteLine("Du skal være på stranden for at samle ressourcer");
             return;
-        } 
-        else if (context.GetCurrent().GetName() == "the ocean")
+        }
+        else if (context.GetCurrent().GetName() == "the beach")
         {
-            Ocean ocean = (Ocean)context.GetCurrent();
+            Beach beach = (Beach)context.GetCurrent();
             string wanted = parameters[0];
-            Resource gathered = ocean.TakeResource(wanted);
+            Resource gathered = beach.TakeResource(wanted);
             _player.AddResource(gathered);
-            Console.WriteLine("Du har samlet en ressource fra havet");
+            Console.WriteLine("Du har samlet en ressource fra stranden");
             return;
         }
     }
