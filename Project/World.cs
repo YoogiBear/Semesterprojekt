@@ -12,9 +12,9 @@ class World {
         Space east = new East("den østlige del af øen");
         Space west = new West("den vestlige del af øen");
 
-        Space ocean = new Ocean("havet");
-        Space beach = new Beach("stranden");
-        Space forestArea = new Forest("skovområdet");
+        Space ocean = new Ocean("the ocean");
+        Space beach = new Beach("beach");
+        Space forestArea = new Forest("the forest area");
 
         // Tilknyt forbindelser
         ocean.AddEdge("land", beach);
