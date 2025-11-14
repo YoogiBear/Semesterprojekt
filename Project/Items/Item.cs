@@ -2,12 +2,12 @@ using System.Reflection.Metadata;
 
 public class Item
 {
-    //Sets Durability to 100
+    //Sætter holdbarhed til 100
     private int durability = 100;
-    //An empty string to put our Item into
+    //En tom streng til at sætte vores Item ind i
     private string itemCode;
 
-    //Constructor for Item, calls CreateItem, if the resource is null, it throws an exception
+    //Konstruktor for Item, kalder CreateItem, hvis ressourcen er null, kaster den en undtagelse
     public Item(Resource resources)
     {
         if (resources == null)
@@ -18,7 +18,7 @@ public class Item
         itemCode = CreateItem(resources);
     }
     
-    //Check the resource parameter and if the name of the resource matches to an item, it gets created
+    //Tjekker resource-parameteren, og hvis navnet på ressourcen matcher et item, bliver det oprettet
     string CreateItem(Resource r)
     {
         
@@ -26,42 +26,42 @@ public class Item
 
         switch (r.name)
         {
-            case "plastic":
+            case "plast":
                 return "Spade";
             case "metal":
-                return "Fishing Rod";
+                return "Fiskestang";
             case "Wood":
-                return "Plank";
+                return "Planke";
             case "cardboard":
-                return "Box";
+                return "Kasse";
             case "":
-                return "empty";
+                return "tom";
             default:
                 return null;
         }
     }
     
-    //Not implemented yet
+    //Ikke implementeret endnu
     public string Interaction(Player player)
     {
         throw new NotImplementedException();
 
     }
     
-    //Not implemented yet
+    //Ikke implementeret endnu
     public string Placed(Player player)
     {
         throw new NotImplementedException();
 
     }
     
-    //If the amount is greater or equal to durability it will return true, if not it returns false
+    //Hvis mængden er større eller lig med holdbarheden, returnerer den true, ellers false
     public bool DestroyItem(int amount)
     {
         return amount >= durability;
     }
     
-    //Repairs the item by the amount inputed. Keeps durability at a max of 100, even if repair gets it from 80 to 130
+    //Reparerer item med den indtastede mængde. Holder holdbarhed på maksimalt 100, selv hvis reparationen går fra 80 til 130
     public int RepairItem(int amount)
     {
         if (durability < 100)
@@ -76,10 +76,10 @@ public class Item
         return durability;
     }
     
-    //Damage the item by the amount inputed. Checks and make sure durability isn't 0
+    //Skader item med den indtastede mængde. Tjekker at holdbarheden ikke går under 0
     public int DamageItem(int amount)
     {
-        if (amount < 0) //Avoids a negative amount that would increase durability
+        if (amount < 0) //Undgår negativ mængde, der ville øge holdbarheden
         {
             amount = 0;
         }
@@ -94,7 +94,7 @@ public class Item
         return durability;
     }
     
-    //Created a ToString so we can print the list of Items the player have
+    //Lavede en ToString, så vi kan printe listen af items spilleren har
     public override string ToString() 
     {
         return itemCode;
