@@ -45,7 +45,7 @@ public class Game {
         Thread.Sleep(1000);
         Utility.SlowPrint("You pick it up and flip to the first page.", 20);
         Thread.Sleep(1000);
-        Utility.SlowPrint("It reads: 'If ever you are in need of help. Just ask.'", 20);
+        Utility.SlowPrint("It reads: 'If ever you are in need of help. Just ask. But your main goal is to survive, and sail away from the island. Although there seems to be no boat, so you'll have to make your own. Good luck surviving by collecting food, and gathering resources to build your boat. All resources should refresh every morning.'", 20);
         Thread.Sleep(1000);
         Utility.SlowPrint("You wonder what it means...", 20);
         Thread.Sleep(1000);
