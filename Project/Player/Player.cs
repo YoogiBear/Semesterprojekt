@@ -39,12 +39,53 @@ public class Player
         
     }
 
-    public void Build()
+    public string Build(List<Resource> lR)
     {
-        throw new NotImplementedException();
+        int countP = lR.Count(r => r.name == "plastic");
+        int countW = lR.Count(r => r.name == "wood");
+        int countM = lR.Count(r => r.name == "metal");
+        int countC = lR.Count(r => r.name == "cardboard");
+        
+        List<string> missingR = new List<string>();
+
+        if (countP < 5)
+        {
+            missingR.Add($"Mangler {5-countP} plastik");
+        }
+
+        if (countW < 10)
+        {
+            missingR.Add($"Mangler {10-countW} træ");
+        }
+
+        if (countM < 3)
+        {
+            missingR.Add($"Mangler {3-countM} metal");
+        }
+
+        if (countC < 20)
+        {
+            missingR.Add($"Mangler {20-countC} pap");
+        }
+
+        if (missingR.Count == 0)
+        {
+            return "boat";
+        }
+        
+        return string.Join(", ", missingR);
+
+        
     }
     public void Catch(Food food) { foods.Add(food); }
-    public void Repair() { throw new NotImplementedException(); }
+
+    public void Repair()
+    {
+        foreach (Item i in items)
+        {
+            i.RepairItem(5);
+        }
+    }
 
     public int Hunger()
     {

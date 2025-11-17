@@ -15,6 +15,7 @@ public class Game {
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
         registry.Register("catch", new CommandCatch(player));
+        registry.Register("build", new CommandBuild(player));
         registry.Register("check", new CommandCheck(player));
         registry.Register("chop", new CommandChop(player));
         registry.Register("collect", new CommandGather(player));
