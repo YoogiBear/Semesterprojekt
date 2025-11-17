@@ -79,3 +79,27 @@
 - Spcificer hvilke trash, der skal både være plastik og metal.
 	- Alt efter hvilke trash du collecter skal det tilføje pollution til ocean.
 - Der skal være en begrænset værdi af trash hver sleep-cycle.
+
+
+**Gruppemøde d. 17-11**
+- Planner for hvad der skal arbejdes med efter iteration #1
+
+**Gruppens tanker**
+
+1. Tilføje pollution hvis ressource bliver på stranden efter sleep ✅
+2. Tilføje story til logbogen ✅
+3. Quiz eller fuld gennemgang af story til sidst ✅
+4. Finpuds og debug ✅
+5. Rapportskrivning ✅
+6. Tilføje noget Evaluering ✅
+7. Flere ressourcer ✅
+8. Omskriv historien til dansk ✅
+9. Informationsøgning til In-game facts ✅
+10. information om de forskellige ressourcer ✅
+11. introduktion / Tutorial ✅
+12. Refactor koden ✅
+13. Nye Krav ✅
+14. Nyt UML-Diagram ✅
+15. Find Avis udklip forskellige steder ✅
+16. Små objectives ✅
+17. Styr på logbog / referat ✅
