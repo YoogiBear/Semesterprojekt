@@ -2,7 +2,8 @@
  */
 
 public class Space : Node {
-  public Space (String name) : base(name)
+
+    public Space (String name) : base(name)
   {
 
   }
