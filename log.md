@@ -115,3 +115,16 @@ Fredag - Planer for iteration #2
 * Arbejdet fra 8-12.
 * Referart:
 	- Idegeneraring til tilføjelser til iteration #2. Gennemgang af feedback fra iteration #1.
+
+Uge 47 - Gruppelog.
+Tirsdag - Kodening, status på projekt og opstart på iteration #2.
+* Møde på Universiteti.
+* Arbejdet fra 8-13.
+* Referart:
+	- Begyndt at implementere dele fra iteration #2, gennemgå rapport og diværse.
+**Til fredag**
+- Bygge båd og skade på båden over natten
+- Kig på vores værdier sikre balacing er korrekt
+- Opdelt rapport i iteration #1 og #2 og indsæt tekst til iteration #2
+- Set på hvilke spørgsmål vi skal stille spilleren i spillet
+- Læs referat og gruppelog igennem til fredag
