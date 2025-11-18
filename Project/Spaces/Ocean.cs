@@ -5,7 +5,7 @@
 
 public class Ocean : Space
 {
-    private bool hasVisited;
+    public static bool hasVisitedOcean;
     private Resource[] resourcesprefab =
         [
             new Resource("plast"), new Resource("plast"),
@@ -69,12 +69,12 @@ public class Ocean : Space
     //Look center class for code explantion
     public override void Welcome()
     {
-        if (hasVisited == false)
+        if (hasVisitedOcean == false)
         {
             Utility.SlowPrint("Meget plastik ender som mikroplast i naturen, og på grund af dets styrke tager det ekstremt lang tid at nedbryde.", 20);
             Utility.SlowPrint("11 millioner tons plastaffald finder vej til vores oceaner gennem fejlsortering og dumpning af affald i havet. Disse 11 millioner tons,", 20);
             Utility.SlowPrint("er kun et lille tilskud til de allerede 200 millioner tons, der allerede findes i verdens oceaner. Med denne produktion og affaldsrate vil der i 2050 være mere plastik end fisk i havet.", 30);
-            hasVisited = true;
+            hasVisitedOcean = true;
             Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)

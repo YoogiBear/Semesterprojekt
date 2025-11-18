@@ -12,6 +12,7 @@ public class Player
     public const int maxHunger = 100;
     public string[] objectives;
     public Logbook logbook;
+    public Story story;
     public Player()
     {
         resources = new List<Resource>();
@@ -19,6 +20,7 @@ public class Player
         foods = new List<Food>();
         objectives = new string[10];
         logbook = new Logbook();
+        story = new Story();
     }
     
     //Adds a resource to players list

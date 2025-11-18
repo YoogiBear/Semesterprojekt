@@ -8,18 +8,18 @@ public class West : Space
     {
 
     }
-    private bool hasVisited;
+    public static bool hasVisitedWest;
 
     public override void Welcome()
     {
-        if (hasVisited == false)
+        if (hasVisitedWest == false)
         {
             Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
-            Utility.SlowPrint("Ulempen ved træbaseret emballage ligger i genanvendelsesprocessen, hvor fibrene kan genbruges maksimalt syv gange.", 30);
-            Utility.SlowPrint("En anden ulempe er brugen af PFAS-stoffer i mange papir- og papproduktioner.", 30);
-            Utility.SlowPrint("PFAS er en gruppe fluorforbindelser, som blandt andet giver en vandafvisende effekt på tøj.", 30);
-            Utility.SlowPrint("Nogle typer er skadelige for mennesker og kan forårsage leverskader og fertilitetsproblemer, men de deler alle den egenskab, at de er svære at nedbryde i naturen.", 30);
-            hasVisited = true;
+            Utility.SlowPrint("Det giver et problem for os mennesker, siden forbruget af naturlige ressourcer er steget over de sidste 50 år,", 30);
+            Utility.SlowPrint("og det vil blive ved med at stige globalt fremover. Udover det er vores udnyttelse af genanvendelse af det affald, der bliver produceret, ikke god nok.", 30);
+            Utility.SlowPrint("Det betød, at vi i de sidste 5 måneder af 2018 overtrak mængden af Jordens ressourcer.", 30);
+            Utility.SlowPrint("Forbruget svarede til 1.7 jordkloder, hvis ressourcerne skulle fornyes.", 30);
+            hasVisitedWest = true;
             Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)

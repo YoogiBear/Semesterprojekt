@@ -28,6 +28,13 @@ class CommandCheck : BaseCommand, ICommand
             Console.WriteLine(" ");
             return; 
         }
+
+        else if (parameters[0].ToLower() == "story" || parameters[0].ToLower() == "historie")
+        {
+            Utility.SlowPrint("Historien er som følger: ",30);
+            _player.story.DisplayCurrentStory();
+            return;
+        }
         // Tjekker hvert item i inventaret
         for(int i = 0; i<_player.items.Count; i++)
         {

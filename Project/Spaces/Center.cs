@@ -11,16 +11,16 @@ public class Center : Space
     }
     //hasVisited bool set to false, meaning the player hasn't been in this area of the map yet.
 
-    private bool hasVisited;
+    public static bool hasVisitedCenter;
 
     public override void Welcome()
     {
-        if (hasVisited == false) //If the player hasn't been here before it plays the custom message.
+        if (hasVisitedCenter == false) //If the player hasn't been here before it plays the custom message.
         {
             Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
             Utility.SlowPrint("I 2022 udgjorde emballage 1.108.000 tons — svarende til cirka 189,6 kg pr. borger i Danmark.", 30);
             Utility.SlowPrint("Omkring 200.000 tons af dette kom fra plastikemballage — et materiale, der både er dyrt at producere og bliver downcyclet, hvilket betyder, at det til sidst ikke længere kan genanvendes.", 30);
-            hasVisited = true; //Sets hasVisited to true, meaning the player won't get the custom message anymore
+            hasVisitedCenter = true; //Sets hasVisited to true, meaning the player won't get the custom message anymore
             Utility.SlowPrint("Du kan se disse stier:", 20);
             // Hashset is used to check the edges for which paths are open from this area
 

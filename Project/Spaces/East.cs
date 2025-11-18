@@ -8,16 +8,16 @@ public class East : Space
     {
         
     }
-   private bool hasVisited;
+   public static bool hasVisitedEast;
 
     public override void Welcome()
     {
-        if (hasVisited == false)
+        if (hasVisitedEast == false)
         {
             Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
             Utility.SlowPrint("Emballage har en vigtig funktion, da den beskytter produkter under transport og forlænger deres holdbarhed, hvilket hjælper med at reducere madspild.", 30);
             Utility.SlowPrint("Dette skaber et dilemma mellem behovet for funktionel emballage", 30);
-            hasVisited = true;
+            hasVisitedEast = true;
             Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
