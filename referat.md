@@ -103,3 +103,19 @@
 15. Find Avis udklip forskellige steder ✅
 16. Små objectives ✅
 17. Styr på logbog / referat ✅
+
+**Referart til vejledermøde d. 18/11/2025**
+- Enten have iteration #1 og så iteration #2 som nyt hovdeafsnit
+	- Vores iteration #2 er mindre så det kan bare være et underafsnit af interation #1
+	- Iteration #1 med en del evaluerign, så kommer iteration #2 med alle de nye krav, UML diagrammer osv, med den endelige evaluering.
+
+- Opdater en endeligt UML diagram når koden er afleveret, dette skal implementeres i rapporten
+	- Hvis der er noget i koden som gruppen indser der skulle være ændret efter aflevering, så kan vi lave et reflektions afsnit i rapporten eller til eksamnen hvor man kan snakke om det.
+- Bare nævn meget kort om trello board i rapporten under metode delen.
+	- Formålet med rapporten er at dokumentere vores process og projekt, ikke at stå til regnskab for hvem der lavet hvad og hvad koden er.
+	- Den vigtige del er hvilke beslutninger og metoder der er taget for at lave spillet, ikke selve spillet.
+		- Hvorfor har vi taget de valg der er blevet taget og hvordan metoderne er sat op som de er.
+	- Man skal kunne beskrive alle de overfladiske programmerings termer, som private, public, classes, in/out of scope, input fra arrays/lister osv.
+- Eksamenstider kommer i midten/slut december nok
+- UnitTest skal være en del af spillet og rapporten.
+- Det er indforstået til eksamen er det er først gang man er oppe i koncepterne, men det er ikke forventet at man forstår det 100% og ved alt om det, men som semesterne går er forventningen højere og højere til at man ved det.
