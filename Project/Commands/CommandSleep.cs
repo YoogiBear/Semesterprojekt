@@ -5,10 +5,12 @@ class CommandSleep : BaseCommand, ICommand
 {
     public Player _player;
     public Ocean _ocean;
-    public CommandSleep(Player player, Ocean ocean)
+    public Island _island;
+    public CommandSleep(Player player, Ocean ocean, Island island)
     {
         _player = player;
         _ocean = ocean;
+        _island = island;
         description = "Sov for at genoprette havets ressourcer og affald";
     }
     public void Execute(Context context, string command, string[] parameters)
@@ -17,7 +19,7 @@ class CommandSleep : BaseCommand, ICommand
         {
             Console.Clear();
             //Opdater spillerens sult
-            _player.hunger += 15;
+            _player.hunger += 25;
             Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Sult", ConsoleColor.Red);
             Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
             Game.daycounter = Game.daycounter+1;
@@ -35,9 +37,15 @@ class CommandSleep : BaseCommand, ICommand
             }
             Thread.Sleep(1000);
             Console.WriteLine("Sulten steg med 15! Måske lidt morgenmad?", 10);
+
+            //Lav pollution
+            _island.GeneratePollution(_ocean.resources);
+
             //Opdater fisk i havet baseret på forurening
             Thread.Sleep(1000);
             FoodGenerator.GenerateFish();
+            
+
             //Opret nye ressourcer i havet
             _ocean.CreateResources();
             Thread.Sleep(1000);

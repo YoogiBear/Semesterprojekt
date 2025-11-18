@@ -15,11 +15,12 @@ public class Ocean : Space
             new Resource("plast"), new Resource("plast")
         ];
 
-    private Resource[] resources; //Array to hold resources within the ocean
+    //private Resource[] resources; //Array to hold resources within the ocean
+    public List<Resource> resources = new List<Resource>();
     public List<Food> food; //List to hold food sources within the ocean
     public Ocean(string Name) : base(Name)
     {
-        resources = new Resource[10];
+        resources = new List<Resource>();
         food = new List<Food>() { new Food(), new Food()};
         CreateResources();
     }
@@ -27,22 +28,20 @@ public class Ocean : Space
     //Changed so CreateResources now copies the elements of resourcesprefab and not just hold the same values
     public void CreateResources()
     {
-        resources = new Resource[resourcesprefab.Length];
-
         for (int i = 0; i < resourcesprefab.Length; i++)
         {
-            resources[i] = resourcesprefab[i];
+            resources.Add(resourcesprefab[i]);
         }
     }
 
-    public Resource TakeResource(string r) //Removes resource from ocean when called
+    public Resource? TakeResource(string r) //Removes resource from ocean when called
     {
         if (string.IsNullOrWhiteSpace(r))
         {
             return null;
         }
 
-        for(int i = 0; i < resources.Length; i++)
+        for(int i = 0; i < resources.Count; i++)
         {
             Resource rs = resources[i];
             
@@ -122,7 +121,7 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
+            Console.WriteLine($"Fisk genereret succesfuldt natten over.");
             return;
         }
         else if (10 < Island.pollution && Island.pollution <= 20) //Slight pollution
@@ -131,7 +130,7 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
+            Console.WriteLine($"Fisk genereret succesfuldt natten over.");
             return;
         }
         else if (20 < Island.pollution && Island.pollution <= 30) //Average pollution
