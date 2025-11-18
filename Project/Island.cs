@@ -1,6 +1,8 @@
 /* Main class for launching the game
  */
 
+using System.Collections;
+
 public class Island
 {
     public static int pollution;
@@ -9,7 +11,7 @@ public class Island
     Random rng;
     public Island()
     {
-        pollution = 10;
+        pollution = 0;
         rng = new Random();
         GenerateTrees();
         resources = new List<Resource>();
@@ -26,11 +28,34 @@ public class Island
         }
         //Console.WriteLine($"Generated {numberOfTrees} trees on the island.");
     }
-    public int GeneratePollution(Resource[] trash, int pollution)
+    public void GeneratePollution(List<Resource> trash)
     {
-        //Depending on the amount of trash (size of list), pollution is added to the "ocean"
-        float pollutionAdd = trash.Length/10f*2f;
-        return pollutionAdd >= 1.0f ? pollution += (int)Math.Round(pollutionAdd, 0) : pollution;
+        pollution = 0;
+        foreach(Resource material in trash)
+        {
+            switch(material.name)
+            {
+                case "wood":
+                pollution+= material.pollution;
+                break;
+
+                case "metal":
+                pollution+= material.pollution;
+                break;
+
+                case "pap":
+                pollution+= material.pollution;
+                break;
+
+                case "plast":
+                pollution+= material.pollution;
+                break;
+
+                default:
+                break;
+            }
+        }
+        return;
     }
 
 }

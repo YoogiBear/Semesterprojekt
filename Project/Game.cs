@@ -24,7 +24,7 @@ public class Game {
         registry.Register("go", new CommandGo());
         registry.Register("help", new CommandHelp(registry));
         registry.Register("quit", cmdExit);
-        registry.Register("sleep", new CommandSleep(player, ocean));
+        registry.Register("sleep", new CommandSleep(player, ocean, island));
     }
   
   static void Main (string[] args) {
