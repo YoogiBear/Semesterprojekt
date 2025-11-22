@@ -48,6 +48,7 @@ public class West : Space
     public static void QuestionWest()
     {
         if (hasVisitedWest == true)
+        {
             Utility.SlowPrint("Forbrug af ressourcer:", 20);
             Utility.SlowPrint("Hvor mange jorkloder af ressources svare forbruget til, i 2018?", 20);
             Utility.SlowPrint("a. 1.7 jordkloder.", 20);
@@ -88,7 +89,6 @@ public class West : Space
                             break;
                     }
                 }
-            }
-
-
+        }
+    }
 }

@@ -47,6 +47,7 @@ public class South : Space
     public static void QuestionSouth()
     {
         if (hasVisitedSouth == true)
+        {
             Utility.SlowPrint("Ulemper ved træbaseret emballage:", 20);
             Utility.SlowPrint("Er der ulemper ved træbaseret emballage? Hvis ja, hvilke?", 20);
             Utility.SlowPrint("a. Ja, det kan ikke genbruges.", 20);
@@ -87,6 +88,6 @@ public class South : Space
                             break;
                     }
                 }
-            }
-
+        }
+    }
 }

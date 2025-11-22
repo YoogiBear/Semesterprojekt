@@ -51,6 +51,7 @@ public class Center : Space
     public static void QuestionCenter()
     {
         if (hasVisitedCenter == true)
+        {
             Utility.SlowPrint("Plastikemballage:", 20);
             Utility.SlowPrint("Kan Plastikemballage altid genanvendes?", 20);
             Utility.SlowPrint("a. Nej, umulig.", 20);
@@ -91,5 +92,6 @@ public class Center : Space
                             break;
                     }
                 }
+        }
     }
 }
