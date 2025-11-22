@@ -103,6 +103,55 @@ public class Ocean : Space
         Console.WriteLine("Fødevarer: " + (food.Count == 0 ? "(ingen)" : string.Join(", ", food)));
     }
 
+
+
+    public static void QuestionOcean()
+    {
+        if (hasVisitedOcean == true)
+            Utility.SlowPrint("Plastaffald i havet:", 20);
+            Utility.SlowPrint("Hvor meget plastaffald vej i vores oceaner?", 20);
+            Utility.SlowPrint("a. Ikke noget.", 20);
+            Utility.SlowPrint("b. 11 millioner tons.", 20);
+            Utility.SlowPrint("c. 10.000 tons.", 20);
+            Utility.SlowPrint("d. 5 tons.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+                }
+        }
+
+
+
 }
 
 

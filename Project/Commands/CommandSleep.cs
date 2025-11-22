@@ -50,6 +50,15 @@ class CommandSleep : BaseCommand, ICommand
             _ocean.CreateResources();
             Thread.Sleep(1000);
             Console.WriteLine("Nye materialer skyllet op på stranden", 10);
+
+            Center.QuestionCenter();
+            East.QuestionEast();
+            Forest.QuestionForest();
+            North.QuestionNorth();
+            Ocean.QuestionOcean();
+            South.QuestionSouth();
+            West.QuestionWest();
+
             return;
         }
     }
