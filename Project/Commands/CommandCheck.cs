@@ -4,6 +4,7 @@
 class CommandCheck : BaseCommand, ICommand
 {
     private Player _player;
+    private Beach b = new Beach("The Beach");
     public CommandCheck(Player player)
     {
         _player = player;
@@ -33,6 +34,11 @@ class CommandCheck : BaseCommand, ICommand
         {
             Utility.SlowPrint("Historien er som følger: ",30);
             _player.story.DisplayCurrentStory();
+            return;
+        }
+        else if (parameters[0].ToLower() == "print")
+        {
+            b.PrintResources();
             return;
         }
         // Tjekker hvert item i inventaret

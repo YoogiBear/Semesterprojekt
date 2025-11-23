@@ -55,7 +55,6 @@ public class Island
                 break;
             }
         }
-        return;
     }
 
 }

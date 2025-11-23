@@ -36,18 +36,6 @@ class CommandGather : BaseCommand, ICommand
                     return;
             default: Console.WriteLine("Der er ikke noget at samle her"); return;
         }
-        /*
-                else if (context.GetCurrent().GetName() != "the beach")
-                {
-                    Console.WriteLine("Du skal være på stranden for at samle ressourcer");
-                    return;
-                }
-                else if (context.GetCurrent().GetName() == "the beach")
-                {
-
-                    return;
-                }
-        */
     }
 
 }
