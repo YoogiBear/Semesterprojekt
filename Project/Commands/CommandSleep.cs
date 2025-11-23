@@ -63,13 +63,13 @@ class CommandSleep : BaseCommand, ICommand
                 Console.WriteLine(r.name);
             }
 
-            /*Center.QuestionCenter();
+            Center.QuestionCenter();
             East.QuestionEast();
             Forest.QuestionForest();
             North.QuestionNorth();
             Ocean.QuestionOcean();
             South.QuestionSouth();
-            West.QuestionWest();*/
+            West.QuestionWest();
         }
     }
 }

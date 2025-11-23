@@ -8,8 +8,6 @@ public class Game {
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player();
   static Island island = new Island();
-  //static Ocean ocean = new Ocean("the ocean");
-  //static Beach beach = new Beach("beach");
   public static int daycounter = 0;
 
   //static int trash = 10;
