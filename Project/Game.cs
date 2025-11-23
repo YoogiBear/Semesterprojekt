@@ -8,7 +8,8 @@ public class Game {
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player();
   static Island island = new Island();
-  static Ocean ocean = new Ocean("the ocean");
+  //static Ocean ocean = new Ocean("the ocean");
+  //static Beach beach = new Beach("beach");
   public static int daycounter = 0;
 
   //static int trash = 10;
@@ -24,7 +25,7 @@ public class Game {
         registry.Register("go", new CommandGo());
         registry.Register("help", new CommandHelp(registry));
         registry.Register("quit", cmdExit);
-        registry.Register("sleep", new CommandSleep(player, ocean, island));
+        registry.Register("sleep", new CommandSleep(player, world.ocean, island, world.beach));
     }
   
   static void Main (string[] args) {

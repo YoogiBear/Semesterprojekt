@@ -24,7 +24,6 @@ public class Ocean : Space
     {
         resources = new List<Resource>();
         food = new List<Food>() { new Food("fisk"), new Food("fisk")};
-        CreateResources();
     }
     
     //Changed so CreateResources now copies the elements of resourcesprefab and not just hold the same values

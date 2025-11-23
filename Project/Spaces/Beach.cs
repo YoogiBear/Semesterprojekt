@@ -3,13 +3,12 @@
 
 public class Beach : Space
 {
-    private Ocean o = new Ocean("The Ocean");
+    public Ocean o = new Ocean("the ocean");
     public List<Resource> resourcePool; // list til at holde ressourcer p� stranden
-
-
+    
     public Beach(string Name) : base(Name)
     {
-        resourcePool = o.resources;
+        GetResources();
     }
     public void PrintResources()
     {
@@ -17,6 +16,12 @@ public class Beach : Space
         {
             Console.WriteLine(resource.name);
         }
+    }
+
+    private void GetResources()
+    {
+        o.CreateResources();
+        resourcePool = o.resources;
     }
 
     public Resource TakeResource(string r) // Fjerner ressource fra stranden, n�r den samles

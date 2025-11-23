@@ -4,7 +4,7 @@
 class CommandCheck : BaseCommand, ICommand
 {
     private Player _player;
-    private Beach b = new Beach("The Beach");
+    private Space _space; 
     public CommandCheck(Player player)
     {
         _player = player;
@@ -12,6 +12,7 @@ class CommandCheck : BaseCommand, ICommand
     }
     public void Execute(Context context, string command, string[] parameters)
     {
+        _space = context.GetCurrent(); 
         if (GuardEq(parameters, 1))
         {
             Console.WriteLine("Hvad ville du gerne tjekke?");
@@ -36,9 +37,10 @@ class CommandCheck : BaseCommand, ICommand
             _player.story.DisplayCurrentStory();
             return;
         }
-        else if (parameters[0].ToLower() == "print")
+        else if (parameters[0].ToLower() == "print" && _space.GetName() == "beach")
         {
-            b.PrintResources();
+            Beach beach = (Beach)context.GetCurrent();
+            beach.PrintResources();
             return;
         }
         // Tjekker hvert item i inventaret
