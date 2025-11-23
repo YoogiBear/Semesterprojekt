@@ -100,6 +100,7 @@ public class Ocean : Space
     public static void QuestionOcean()
     {
         if (hasVisitedOcean == true)
+        {
             Utility.SlowPrint("Plastaffald i havet:", 20);
             Utility.SlowPrint("Hvor meget plastaffald vej i vores oceaner?", 20);
             Utility.SlowPrint("a. Ikke noget.", 20);
@@ -141,9 +142,7 @@ public class Ocean : Space
                     }
                 }
         }
-
-
-
+    }
 }
 
 

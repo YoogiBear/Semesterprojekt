@@ -48,6 +48,7 @@ public class North : Space
     public static void QuestionNorth()
     {
         if (hasVisitedNorth == true)
+        {
             Utility.SlowPrint("Krav for løsning af emballageproblemet.", 20);
             Utility.SlowPrint("For hvilke dele af emballageproblemet, spiller producenter og forbrugere en vigtig rolle, i forhold til at løse problemet?", 20);
             Utility.SlowPrint("a. Producenter og forbrugere spiller en vigtig rolle i at finder en balance mellem funktionalitet og bæredygtighed.", 20);
@@ -88,8 +89,6 @@ public class North : Space
                             break;
                     }
             }
+        }
     }
-
-
-
 }

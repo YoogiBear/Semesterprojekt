@@ -44,6 +44,7 @@ public class Forest : Space
     public static void QuestionForest()
     {
         if (hasVisitedForest == true)
+        {
             Utility.SlowPrint("Uendelig og genanvendelig ressource:", 20);
             Utility.SlowPrint("Hvor kommer problemet i forhold til at bruge træer til vores emballage?", 20);
             Utility.SlowPrint("a. Pap og træ kan ikke genanvendes.", 20);
@@ -84,7 +85,6 @@ public class Forest : Space
                             break;
                     }
             }
+        }
     }
-
-
 }

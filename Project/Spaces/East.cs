@@ -44,6 +44,7 @@ public class East : Space
     public static void QuestionEast()
     {
         if (hasVisitedEast == true)
+        {
             Utility.SlowPrint("Emballage beskytning af mad:", 20);
             Utility.SlowPrint("Er emballage altid dårlig i forhold til opbevaring af mad?", 20);
             Utility.SlowPrint("a. Ja.", 20);
@@ -84,6 +85,6 @@ public class East : Space
                             break;
                     }
                 }
+        }
     }
-
 }
