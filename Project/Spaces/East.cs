@@ -45,7 +45,7 @@ public class East : Space
     {
         if (hasVisitedEast == true)
         {
-            Utility.SlowPrint("Emballagens funktion til madvarer:", 20);
+            Utility.SlowPrint("Emballagens funktion til madvarer", 20);
             Utility.SlowPrint("Er emballage altid dårlig ift. opbevaring af mad?", 20);
             Utility.SlowPrint("A: Ja, altid.", 20);
             Utility.SlowPrint("B: Så længe det er lavet af pap, er det okay.", 20);

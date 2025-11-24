@@ -54,7 +54,7 @@ public class Center : Space
     {
         if (hasVisitedCenter == true)
         {
-            Utility.SlowPrint("Plastikemballage:", 20);
+            Utility.SlowPrint("Plastikemballage", 20);
             Utility.SlowPrint("Kan plastikemballage altid genanvendes?", 20);
             Utility.SlowPrint("A: Nej, nogle typer er svære pga. deres molekylesammensætning", 20);
             Utility.SlowPrint("B: Det kan altid downcycles, men aldrig upcycles", 20);

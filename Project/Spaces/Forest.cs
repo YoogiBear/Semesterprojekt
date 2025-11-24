@@ -45,7 +45,7 @@ public class Forest : Space
     {
         if (hasVisitedForest == true)
         {
-            Utility.SlowPrint("Uendelig og genanvendelig ressource:", 20);
+            Utility.SlowPrint("Uendelig og genanvendelig ressource", 20);
             Utility.SlowPrint("Hvorfor er det et problem at bruge træer til vores emballage?", 20);
             Utility.SlowPrint("A: Pap og træ kan ikke genanvendes.", 20);
             Utility.SlowPrint("B: Træer er en meget begrænset ressource", 20);

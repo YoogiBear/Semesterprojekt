@@ -48,13 +48,13 @@ public class South : Space
     {
         if (hasVisitedSouth == true)
         {
-            Utility.SlowPrint("Ulemper ved træbaseret emballage:", 20);
-            Utility.SlowPrint("Er der ulemper ved træbaseret emballage? Hvis ja, hvilke?", 20);
-            Utility.SlowPrint("a: Ja, det kan ikke genbruges.", 20);
-            Utility.SlowPrint("b: Nej.", 20);
-            Utility.SlowPrint("c: Ulemperne ved træbaseret emballage er hvor meget energi der bliver brugt til at producere den.", 20);
-            Utility.SlowPrint("d: Ulemperne ved træbaseret emballage at fibre der bliver produceret fra træ er kun genanvendelig op til syv gange, og den anden ulempe er brugen af PFAS-kemikalier i produktionen.", 20);
-            Utility.SlowPrint("Vælge enten A, B, C eller D.", 20);
+            Utility.SlowPrint("Ulemper ved træbaseret emballage", 20);
+            Utility.SlowPrint("Er der ulemper ved træbaseret emballage?", 20);
+            Utility.SlowPrint("A: Ja, det kan ikke genbruges.", 20);
+            Utility.SlowPrint("B: Nej.", 20);
+            Utility.SlowPrint("C: Ulemperne ved træbaseret emballage er hvor meget energi der bliver brugt til at producere den.", 20);
+            Utility.SlowPrint("D: Ulemperne ved træbaseret emballage at fibre der bliver produceret fra træ er kun genanvendelig op til syv gange, og den anden ulempe er brugen af PFAS-kemikalier i produktionen.", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
 

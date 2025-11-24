@@ -15,9 +15,9 @@ public class North : Space
         if (hasVisitedNorth == false)
         {
             Utility.SlowPrint($"Dette er første gang, du besøger {name}. Du finder en avis og begynder at læse den.", 20);
-            Utility.SlowPrint("Det bliver derfor tydeligt, at løsningen på emballageproblemet kræver en bredere indsats,", 30);
-            Utility.SlowPrint("hvor både producenter og forbrugere spiller en rolle", 30);
-            Utility.SlowPrint("i at finde en balance mellem funktionalitet og bæredygtighed.", 30);
+            Utility.SlowPrint("MÆNGDEN AF SKRALD I VERDENSHAVENE TAGER OVERHÅND", 30);
+            Utility.SlowPrint("Mere end hver tredje fisk fanget til mennesker indeholder nu skrald", 30);
+            Utility.SlowPrint("80% af det studerede skrald er plastik...", 30);
             hasVisitedNorth = true;
             Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
@@ -55,7 +55,7 @@ public class North : Space
             Utility.SlowPrint("B: Omkring 20%", 20);
             Utility.SlowPrint("C: Omkring 50%", 20);
             Utility.SlowPrint("D: Over 33%", 20); //Source: https://www.sas.org.uk/plastic-pollution/plastic-pollution-facts-figures/
-            Utility.SlowPrint("Vælge enten A, B, C eller D.", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
             while (!hasAnswered)

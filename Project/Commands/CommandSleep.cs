@@ -23,7 +23,6 @@ class CommandSleep : BaseCommand, ICommand
             //Opdater spillerens sult
             _player.hunger += 25;
             Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Sult", ConsoleColor.Red);
-            Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
             Game.daycounter = Game.daycounter+1;
             if (_player.IsPlayerDeadFromHunger())
             {
@@ -38,7 +37,7 @@ class CommandSleep : BaseCommand, ICommand
                 return;
             }
             Thread.Sleep(1000);
-            Console.WriteLine("Sulten steg med 15! Måske lidt morgenmad?", 10);
+            Console.WriteLine("Sulten steg med 25!", 10);
 
             //Lav pollution
             _island.GeneratePollution(_ocean.resources);
@@ -47,10 +46,8 @@ class CommandSleep : BaseCommand, ICommand
             Thread.Sleep(1000);
             FoodGenerator.GenerateFish();
             
-
             //Opret nye ressourcer i havet
             _ocean.CreateResources();
-            
             Thread.Sleep(1000);
             Console.WriteLine("Nye materialer skyllet op på stranden", 10);
             foreach (Resource rs in _ocean.resources)
@@ -58,11 +55,16 @@ class CommandSleep : BaseCommand, ICommand
                 _beach.resourcePool.Add(rs);
             }
 
+            /*
             foreach (Resource r in _beach.resourcePool)
             {
                 Console.WriteLine(r.name);
             }
+            */
+            
+            Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
 
+            //Questions
             Center.QuestionCenter();
             East.QuestionEast();
             Forest.QuestionForest();

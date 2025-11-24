@@ -100,7 +100,7 @@ public class Ocean : Space
     {
         if (hasVisitedOcean == true)
         {
-            Utility.SlowPrint("Plastikaffald i havet:", 20);
+            Utility.SlowPrint("Plastikaffald i havet", 20);
             Utility.SlowPrint("Hvor meget plastikaffald finder vej til vores verdenshave hvert år?", 20);
             Utility.SlowPrint("a: Intet.", 20);
             Utility.SlowPrint("b: Ca. 11 mio. tons.", 20);
