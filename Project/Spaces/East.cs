@@ -45,19 +45,19 @@ public class East : Space
     {
         if (hasVisitedEast == true)
         {
-            Utility.SlowPrint("Emballage beskytning af mad:", 20);
-            Utility.SlowPrint("Er emballage altid dårlig i forhold til opbevaring af mad?", 20);
-            Utility.SlowPrint("a. Ja.", 20);
-            Utility.SlowPrint("b. Nej, den er ok så længe emballagen er lavede af pap.", 20);
-            Utility.SlowPrint("c. Emballage kan være brugebart for at transportere mad og forlænge dens holdbarhed.", 20);
-            Utility.SlowPrint("d. Nej, det er kun dårlig hvis emballagen er lavede af plastik.", 20);
-            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+            Utility.SlowPrint("Emballagens funktion til madvarer:", 20);
+            Utility.SlowPrint("Er emballage altid dårlig ift. opbevaring af mad?", 20);
+            Utility.SlowPrint("A: Ja, altid.", 20);
+            Utility.SlowPrint("B: Så længe det er lavet af pap, er det okay.", 20);
+            Utility.SlowPrint("C: Emballage kan være brugbart til at transportere mad og forlænge dens holdbarhed.", 20);
+            Utility.SlowPrint("D: Det er kun dårligt, hvis emballagen er lavet af plastik.", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
 
             while (!hasAnswered)
                 {
-                    string? answer = Console.ReadLine();
+                    string? answer = Console.ReadLine().ToLower();
                     switch(answer)
                     {
                         case "a":
@@ -71,7 +71,7 @@ public class East : Space
                             break;
 
                         case "c":
-                            Console.WriteLine("Rigtig");
+                            Console.WriteLine("Korrekt!");
                             hasAnswered = true;
                             break;
 
@@ -81,7 +81,7 @@ public class East : Space
                             break;
 
                         default:
-                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            Console.WriteLine("Dette er ikke et svar. Prøv igen.");
                             break;
                     }
                 }

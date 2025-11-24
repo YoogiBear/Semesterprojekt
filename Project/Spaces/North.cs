@@ -49,23 +49,22 @@ public class North : Space
     {
         if (hasVisitedNorth == true)
         {
-            Utility.SlowPrint("Krav for løsning af emballageproblemet.", 20);
-            Utility.SlowPrint("For hvilke dele af emballageproblemet, spiller producenter og forbrugere en vigtig rolle, i forhold til at løse problemet?", 20);
-            Utility.SlowPrint("a. Producenter og forbrugere spiller en vigtig rolle i at finder en balance mellem funktionalitet og bæredygtighed.", 20);
-            Utility.SlowPrint("b. Producenter spiller en vigtig rolle kun for funktionaliteten, og bæredygtigheden er noget forbrugerene skal tage sig af.", 20);
-            Utility.SlowPrint("c. Producenter og forbrugere spiller en vigtig rolle i at sørge for at produkter fortsætter med at blive produceret og brugt så meget som muligt.", 20);
-            Utility.SlowPrint("d. Producenter og forbrugere spiller en vigtig rolle kun i at gøre produkter og emballage så bæredygtig som muligt.", 20);
-            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+            Utility.SlowPrint("Livet i havet", 20);
+            Utility.SlowPrint("Hvor stor en procentdel af fisk, der fanges til mennesker, indeholder plastik", 20);
+            Utility.SlowPrint("A: Alle", 20);
+            Utility.SlowPrint("B: Omkring 20%", 20);
+            Utility.SlowPrint("C: Omkring 50%", 20);
+            Utility.SlowPrint("D: Over 33%", 20); //Source: https://www.sas.org.uk/plastic-pollution/plastic-pollution-facts-figures/
+            Utility.SlowPrint("Vælge enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
-
             while (!hasAnswered)
                 {
-                    string? answer = Console.ReadLine();
+                    string? answer = Console.ReadLine().ToLower();
                     switch(answer)
                     {
                         case "a":
-                            Console.WriteLine("Rigtig");
+                            Console.WriteLine("Forkert!");
                             hasAnswered = true;
                             break;
 
@@ -80,12 +79,12 @@ public class North : Space
                             break;
 
                         case "d":
-                            Console.WriteLine("Forkert");
+                            Console.WriteLine("Korrekt!");
                             hasAnswered = true;
                             break;
 
                         default:
-                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            Console.WriteLine("Dette er ikke et svar. Prøv igen.");
                             break;
                     }
             }

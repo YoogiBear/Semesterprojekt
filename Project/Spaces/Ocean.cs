@@ -100,19 +100,19 @@ public class Ocean : Space
     {
         if (hasVisitedOcean == true)
         {
-            Utility.SlowPrint("Plastaffald i havet:", 20);
-            Utility.SlowPrint("Hvor meget plastaffald vej i vores oceaner?", 20);
-            Utility.SlowPrint("a. Ikke noget.", 20);
-            Utility.SlowPrint("b. 11 millioner tons.", 20);
-            Utility.SlowPrint("c. 10.000 tons.", 20);
-            Utility.SlowPrint("d. 5 tons.", 20);
-            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+            Utility.SlowPrint("Plastikaffald i havet:", 20);
+            Utility.SlowPrint("Hvor meget plastikaffald finder vej til vores verdenshave hvert år?", 20);
+            Utility.SlowPrint("a: Intet.", 20);
+            Utility.SlowPrint("b: Ca. 11 mio. tons.", 20);
+            Utility.SlowPrint("c: Ca. 10.000 tons.", 20);
+            Utility.SlowPrint("d: Ca. 5 tons.", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
 
             while (!hasAnswered)
                 {
-                    string? answer = Console.ReadLine();
+                    string? answer = Console.ReadLine().ToLower();
                     switch(answer)
                     {
                         case "a":
@@ -121,7 +121,7 @@ public class Ocean : Space
                             break;
 
                         case "b":
-                            Console.WriteLine("Rigtig");
+                            Console.WriteLine("Korrekt!");
                             hasAnswered = true;
                             break;
 
@@ -136,7 +136,7 @@ public class Ocean : Space
                             break;
 
                         default:
-                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            Console.WriteLine("Dette er ikke et svar. Prøv igen.");
                             break;
                     }
                 }
