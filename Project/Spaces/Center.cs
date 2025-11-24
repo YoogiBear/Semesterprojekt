@@ -48,4 +48,50 @@ public class Center : Space
 
         }
     }
+    public static void QuestionCenter()
+    {
+        if (hasVisitedCenter == true)
+        {
+            Utility.SlowPrint("Plastikemballage:", 20);
+            Utility.SlowPrint("Kan Plastikemballage altid genanvendes?", 20);
+            Utility.SlowPrint("a. Nej, umulig.", 20);
+            Utility.SlowPrint("b. Til sidst efter den bliver downcycleret kan den ikke genanvendes.", 20);
+            Utility.SlowPrint("c. Ja, altid.", 20);
+            Utility.SlowPrint("d. Ja, men kun hvis produktet er økologisk.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+                }
+        }
+    }
 }

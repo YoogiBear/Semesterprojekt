@@ -39,4 +39,52 @@ public class Forest : Space
             Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
     }
+
+
+    public static void QuestionForest()
+    {
+        if (hasVisitedForest == true)
+        {
+            Utility.SlowPrint("Uendelig og genanvendelig ressource:", 20);
+            Utility.SlowPrint("Hvor kommer problemet i forhold til at bruge træer til vores emballage?", 20);
+            Utility.SlowPrint("a. Pap og træ kan ikke genanvendes.", 20);
+            Utility.SlowPrint("b. Træer er en meget begrænset ressource, og vi har ikke meget af det.", 20);
+            Utility.SlowPrint("c. Træer kan blive en begrænset ressource hvis vi fælder for mange trær.", 20);
+            Utility.SlowPrint("d. Det er svært at falde træer.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+            }
+        }
+    }
 }

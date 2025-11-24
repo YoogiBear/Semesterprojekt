@@ -41,4 +41,50 @@ public class East : Space
 
         }
     }
+    public static void QuestionEast()
+    {
+        if (hasVisitedEast == true)
+        {
+            Utility.SlowPrint("Emballage beskytning af mad:", 20);
+            Utility.SlowPrint("Er emballage altid dårlig i forhold til opbevaring af mad?", 20);
+            Utility.SlowPrint("a. Ja.", 20);
+            Utility.SlowPrint("b. Nej, den er ok så længe emballagen er lavede af pap.", 20);
+            Utility.SlowPrint("c. Emballage kan være brugebart for at transportere mad og forlænge dens holdbarhed.", 20);
+            Utility.SlowPrint("d. Nej, det er kun dårlig hvis emballagen er lavede af plastik.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+                }
+        }
+    }
 }

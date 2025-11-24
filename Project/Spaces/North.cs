@@ -42,4 +42,53 @@ public class North : Space
 
         }
     }
+
+
+
+    public static void QuestionNorth()
+    {
+        if (hasVisitedNorth == true)
+        {
+            Utility.SlowPrint("Krav for løsning af emballageproblemet.", 20);
+            Utility.SlowPrint("For hvilke dele af emballageproblemet, spiller producenter og forbrugere en vigtig rolle, i forhold til at løse problemet?", 20);
+            Utility.SlowPrint("a. Producenter og forbrugere spiller en vigtig rolle i at finder en balance mellem funktionalitet og bæredygtighed.", 20);
+            Utility.SlowPrint("b. Producenter spiller en vigtig rolle kun for funktionaliteten, og bæredygtigheden er noget forbrugerene skal tage sig af.", 20);
+            Utility.SlowPrint("c. Producenter og forbrugere spiller en vigtig rolle i at sørge for at produkter fortsætter med at blive produceret og brugt så meget som muligt.", 20);
+            Utility.SlowPrint("d. Producenter og forbrugere spiller en vigtig rolle kun i at gøre produkter og emballage så bæredygtig som muligt.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+            }
+        }
+    }
 }

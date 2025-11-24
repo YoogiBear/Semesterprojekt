@@ -3,14 +3,16 @@
 
 class CommandSleep : BaseCommand, ICommand
 {
-    public Player _player;
-    public Ocean _ocean;
-    public Island _island;
-    public CommandSleep(Player player, Ocean ocean, Island island)
+    private Player _player;
+    private Ocean _ocean;
+    private Island _island;
+    private Beach _beach;
+    public CommandSleep(Player player, Ocean ocean, Island island,  Beach beach)
     {
         _player = player;
         _ocean = ocean;
         _island = island;
+        _beach = beach;
         description = "Sov for at genoprette havets ressourcer og affald";
     }
     public void Execute(Context context, string command, string[] parameters)
@@ -48,9 +50,26 @@ class CommandSleep : BaseCommand, ICommand
 
             //Opret nye ressourcer i havet
             _ocean.CreateResources();
+            
             Thread.Sleep(1000);
             Console.WriteLine("Nye materialer skyllet op på stranden", 10);
-            return;
+            foreach (Resource rs in _ocean.resources)
+            {
+                _beach.resourcePool.Add(rs);
+            }
+
+            foreach (Resource r in _beach.resourcePool)
+            {
+                Console.WriteLine(r.name);
+            }
+
+            Center.QuestionCenter();
+            East.QuestionEast();
+            Forest.QuestionForest();
+            North.QuestionNorth();
+            Ocean.QuestionOcean();
+            South.QuestionSouth();
+            West.QuestionWest();
         }
     }
 }

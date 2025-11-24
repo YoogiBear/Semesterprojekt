@@ -42,4 +42,53 @@ public class West : Space
             Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
         }
     }
+
+
+
+    public static void QuestionWest()
+    {
+        if (hasVisitedWest == true)
+        {
+            Utility.SlowPrint("Forbrug af ressourcer:", 20);
+            Utility.SlowPrint("Hvor mange jorkloder af ressources svare forbruget til, i 2018?", 20);
+            Utility.SlowPrint("a. 1.7 jordkloder.", 20);
+            Utility.SlowPrint("b. 2 jordkloder.", 20);
+            Utility.SlowPrint("c. 5 jordkloder.", 20);
+            Utility.SlowPrint("d. 0.7 jordkloder.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+                }
+        }
+    }
 }

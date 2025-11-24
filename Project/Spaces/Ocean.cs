@@ -8,12 +8,14 @@ public class Ocean : Space
     public static bool hasVisitedOcean;
     private Resource[] resourcesprefab =
         [
-            new Resource("plast"), new Resource("plast"),
-            new Resource("metal"), new Resource("metal"),
-            new Resource("plast"), new Resource("plast"),
-            new Resource("plast"), new Resource("plast"),
-            new Resource("plast"), new Resource("plast")
+            new Resource("metal", 5, 10),
+            new Resource("pap", 1, 15),
+            new Resource("træ", 12, 20),
+            new Resource("glas", 10, 30),
+            new Resource("bioplast", 2, 40),
+            new Resource("plast", 15, 60)
         ];
+    Random rand = new Random();
 
     //private Resource[] resources; //Array to hold resources within the ocean
     public List<Resource> resources = new List<Resource>();
@@ -21,42 +23,31 @@ public class Ocean : Space
     public Ocean(string Name) : base(Name)
     {
         resources = new List<Resource>();
-        food = new List<Food>() { new Food(), new Food()};
-        CreateResources();
+        food = new List<Food>() { new Food("fisk"), new Food("fisk")};
     }
     
     //Changed so CreateResources now copies the elements of resourcesprefab and not just hold the same values
     public void CreateResources()
     {
-        for (int i = 0; i < resourcesprefab.Length; i++)
+        for (int j = 0; j < 6; j++)
         {
-            resources.Add(resourcesprefab[i]);
-        }
-    }
-
-    public Resource? TakeResource(string r) //Removes resource from ocean when called
-    {
-        if (string.IsNullOrWhiteSpace(r))
-        {
-            return null;
-        }
-
-        for(int i = 0; i < resources.Count; i++)
-        {
-            Resource rs = resources[i];
+            int spawnRate = rand.Next(176);
             
-            if (rs == null) { continue; }
-            
-            if (rs.name == r)
+            for (int i = 0; i < resourcesprefab.Length; i++)
             {
-                resources[i] = null;
+                int resourceWeight = resourcesprefab[i].weight;
                 
-                return rs;
+                spawnRate -= resourceWeight;
+                
+                if (spawnRate <= 0)
+                {
+                    resources.Add(resourcesprefab[i]);
+                    break;
+                }
             }
         }
-        return null;
     }
-
+    
     // Add Trash object to increase pollution 
     public void AddTrash(int trash)
     {
@@ -103,6 +94,54 @@ public class Ocean : Space
         Console.WriteLine("Fødevarer: " + (food.Count == 0 ? "(ingen)" : string.Join(", ", food)));
     }
 
+
+
+    public static void QuestionOcean()
+    {
+        if (hasVisitedOcean == true)
+        {
+            Utility.SlowPrint("Plastaffald i havet:", 20);
+            Utility.SlowPrint("Hvor meget plastaffald vej i vores oceaner?", 20);
+            Utility.SlowPrint("a. Ikke noget.", 20);
+            Utility.SlowPrint("b. 11 millioner tons.", 20);
+            Utility.SlowPrint("c. 10.000 tons.", 20);
+            Utility.SlowPrint("d. 5 tons.", 20);
+            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine();
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Rigtig");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            break;
+                    }
+                }
+        }
+    }
 }
 
 
