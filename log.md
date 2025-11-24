@@ -79,26 +79,26 @@ Lørdag/Søndag - Udkast til program
 
 Uge 44 - Gruppelog.
 Tirsdag - Kodening.
-* Arbejdet på Universiteti.
+* Arbejdet på Universitet.
 * Arbejdet fra 8-12
 * Referart:
 	- Begynde at kode ud fra World Of Zuul, tilføjet klasser og metoder fra UML-Diagrammet.
 
 Fredag - Kodening.
-* Arbejdet på Universiteti.
+* Arbejdet på Universitet.
 * Arbejdet fra 8-12
 * Referart:
 	- Tilføjet yderliger kode fra UML-Diagrammet og lavet mere funktionalitet.
 
 Uge 45 - Gruppelog.
 Tirsdag - Kodening.
-* Arbejdet på Universiteti.
+* Arbejdet på Universitet.
 * Arbejdet fra 8-12
 * Referart:
 	- Finpudsning af kode og sidste funktionalitet til iteration #1.
 
 Fredag - Rapport, slides og kode.
-* Arbejdet på Universiteti.
+* Arbejdet på Universitet.
 * Arbejdet fra 8-12
 * Referart:
 	- Bug fixet kode, skrev på rapporten og lavet slides til midtvejs semiar.
@@ -111,14 +111,14 @@ Tirsdag - Midtvejs seminar.
 	- Alle grupper mødets til midtvejs seminar, vi skulle fremlægge iteration #1 af spillet samt vores opgave indtilvidere.
 
 Fredag - Planer for iteration #2
-* Arbejdet på Universiteti.
+* Arbejdet på Universitet.
 * Arbejdet fra 8-12.
 * Referart:
 	- Idegeneraring til tilføjelser til iteration #2. Gennemgang af feedback fra iteration #1.
 
 Uge 47 - Gruppelog.
 Tirsdag - Kodening, status på projekt og opstart på iteration #2.
-* Møde på Universiteti.
+* Møde på Universitet.
 * Arbejdet fra 8-13.
 * Referart:
 	- Begyndt at implementere dele fra iteration #2, gennemgå rapport og diværse.
@@ -128,3 +128,6 @@ Tirsdag - Kodening, status på projekt og opstart på iteration #2.
 - Opdelt rapport i iteration #1 og #2 og indsæt tekst til iteration #2
 - Set på hvilke spørgsmål vi skal stille spilleren i spillet
 - Læs referat og gruppelog igennem til fredag
+
+Fredag - Korrekturlæsning, og iteration #2 implementering.
+* Møde på Universitet.
