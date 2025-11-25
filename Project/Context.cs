@@ -1,7 +1,7 @@
 /* Context-klasse til at holde al kontekst relevant for en session.
  */
 
-class Context {
+public class Context {
     Space current;
     bool done = false;
   
