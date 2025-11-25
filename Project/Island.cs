@@ -20,12 +20,7 @@ public class Island
 
     public void GenerateTrees()
     {
-
-        int numberOfTrees = rng.Next(1, 6); //Generates between 1 and 5 trees
-        for (int i = 0; i < numberOfTrees; i++)
-        {
-            trees.Add(new Tree());
-        }
+        trees.Add(new Tree());
         //Console.WriteLine($"Generated {numberOfTrees} trees on the island.");
     }
     public void GeneratePollution(List<Resource> trash)

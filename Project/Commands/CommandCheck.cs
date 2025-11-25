@@ -8,7 +8,7 @@ class CommandCheck : BaseCommand, ICommand
     public CommandCheck(Player player)
     {
         _player = player;
-        description = "- Item : Tjekker holdbarheden af et item i inventaret.\n\t  - logbog : Tjekker det nuværende mål.\n\t - ressourcer : Tjekker hvilke ressourcer der er tilgængelige i inventaret.";
+        description = "- Item : Tjekker holdbarheden af et item i inventaret.\n\t - logbog : Tjekker det nuværende mål.\n\t - ressourcer : Tjekker hvilke ressourcer der er tilgængelige i inventaret.";
     }
     public void Execute(Context context, string command, string[] parameters)
     {

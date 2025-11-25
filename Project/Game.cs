@@ -13,17 +13,17 @@ public class Game {
   //static int trash = 10;
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
-        registry.Register("catch", new CommandCatch(player));
-        registry.Register("build", new CommandBuild(player));
-        registry.Register("check", new CommandCheck(player));
-        registry.Register("chop", new CommandChop(player));
-        registry.Register("collect", new CommandGather(player));
-        registry.Register("create", new CommandItem(player));
-        registry.Register("eat", new CommandEat(player));
-        registry.Register("go", new CommandGo());
-        registry.Register("help", new CommandHelp(registry));
-        registry.Register("quit", cmdExit);
-        registry.Register("sleep", new CommandSleep(player, world.ocean, island, world.beach));
+        registry.Register("fang", new CommandCatch(player));
+        registry.Register("byg", new CommandBuild(player));
+        registry.Register("tjek", new CommandCheck(player));
+        registry.Register("hug", new CommandChop(player));
+        registry.Register("saml", new CommandGather(player));
+        registry.Register("lav", new CommandItem(player));
+        registry.Register("spis", new CommandEat(player));
+        registry.Register("gå", new CommandGo());
+        registry.Register("hjælp", new CommandHelp(registry));
+        registry.Register("slut", cmdExit);
+        registry.Register("sov", new CommandSleep(player, world.ocean, island, world.beach));
     }
   
   static void Main (string[] args) {

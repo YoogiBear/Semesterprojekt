@@ -5,7 +5,7 @@ class CommandChop : BaseCommand, ICommand
     public CommandChop(Player player)
     {
         _player = player;
-        description = "Giver mulighed for at hugge træer for ressourcer. Men kun tæt på et træ..";
+        description = "Giver mulighed for at hugge træer for ressourcer. Men kun tæt på et træ. Brug 'hug træ'";
     }
 
     public void Execute(Context context, string command, string[] parameters)

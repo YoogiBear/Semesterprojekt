@@ -34,7 +34,7 @@ class CommandHelp : BaseCommand, ICommand {
         }
         Thread.Sleep(1000);
         Console.WriteLine();
-        Utility.SlowPrint("De ressourcer du kan finde på øen er plast, metal, træ og pap.", 20);
+        Utility.SlowPrint("De ressourcer, du kan finde på øen er plast, metal, træ og pap.", 20);
         Thread.Sleep(1000);
         Utility.SlowPrint("Fødevarer du kan finde er fisk og frugt.", 20);
         Thread.Sleep(1000);
