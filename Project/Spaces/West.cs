@@ -49,23 +49,23 @@ public class West : Space
     {
         if (hasVisitedWest == true)
         {
-            Utility.SlowPrint("Forbrug af ressourcer:", 20);
-            Utility.SlowPrint("Hvor mange jorkloder af ressources svare forbruget til, i 2018?", 20);
-            Utility.SlowPrint("a. 1.7 jordkloder.", 20);
-            Utility.SlowPrint("b. 2 jordkloder.", 20);
-            Utility.SlowPrint("c. 5 jordkloder.", 20);
-            Utility.SlowPrint("d. 0.7 jordkloder.", 20);
-            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+            Utility.SlowPrint("Ressourceforbrug", 20);
+            Utility.SlowPrint("Hvor mange jordkloder skulle der til for at regenerere ressourceforbruget i 2018?", 20);
+            Utility.SlowPrint("a: 1,7 jordkloder.", 20);
+            Utility.SlowPrint("b: 2 jordkloder.", 20);
+            Utility.SlowPrint("c: 5 jordkloder.", 20);
+            Utility.SlowPrint("d: 0,7 jordkloder.", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
 
             while (!hasAnswered)
                 {
-                    string? answer = Console.ReadLine();
+                    string? answer = Console.ReadLine().ToLower();
                     switch(answer)
                     {
                         case "a":
-                            Console.WriteLine("Rigtig");
+                            Console.WriteLine("Korrekt!");
                             hasAnswered = true;
                             break;
 
@@ -85,7 +85,7 @@ public class West : Space
                             break;
 
                         default:
-                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            Console.WriteLine("Dette er ikke et svar. Prøv igen.");
                             break;
                     }
                 }

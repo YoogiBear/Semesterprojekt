@@ -8,10 +8,10 @@ public class Space : Node {
 
   }
     public virtual void Welcome () {
-        Utility.SlowPrint($"Currently you are at {name}.", 10);
+        Utility.SlowPrint($"Du befinder dig her: {name}.", 10);
         HashSet<string> exits = edges.Keys.ToHashSet();
         Thread.Sleep(500);
-        Utility.SlowPrint("You can see these paths:", 20);
+        Utility.SlowPrint("Du kan se disse stier:", 20);
         foreach (String exit in exits)
         {
             Console.WriteLine(" - " + exit);
@@ -19,7 +19,7 @@ public class Space : Node {
         }
 
         Console.WriteLine();
-        Utility.SlowPrint("What would you like to do now?", 20);
+        Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
     }
 
     public void Goodbye () {

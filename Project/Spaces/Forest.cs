@@ -45,19 +45,19 @@ public class Forest : Space
     {
         if (hasVisitedForest == true)
         {
-            Utility.SlowPrint("Uendelig og genanvendelig ressource:", 20);
-            Utility.SlowPrint("Hvor kommer problemet i forhold til at bruge træer til vores emballage?", 20);
-            Utility.SlowPrint("a. Pap og træ kan ikke genanvendes.", 20);
-            Utility.SlowPrint("b. Træer er en meget begrænset ressource, og vi har ikke meget af det.", 20);
-            Utility.SlowPrint("c. Træer kan blive en begrænset ressource hvis vi fælder for mange trær.", 20);
-            Utility.SlowPrint("d. Det er svært at falde træer.", 20);
-            Utility.SlowPrint("Vælge enten a, b, c, eller d.", 20);
+            Utility.SlowPrint("Uendelig og genanvendelig ressource", 20);
+            Utility.SlowPrint("Hvorfor er det et problem at bruge træer til vores emballage?", 20);
+            Utility.SlowPrint("A: Pap og træ kan ikke genanvendes.", 20);
+            Utility.SlowPrint("B: Træer er en meget begrænset ressource", 20);
+            Utility.SlowPrint("C: Træer kan blive en begrænset ressource, hvis vi fælder for mange træer.", 20);
+            Utility.SlowPrint("D: Det er svært at fælde træer.", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
 
             while (!hasAnswered)
                 {
-                    string? answer = Console.ReadLine();
+                    string? answer = Console.ReadLine().ToLower();
                     switch(answer)
                     {
                         case "a":
@@ -71,7 +71,7 @@ public class Forest : Space
                             break;
 
                         case "c":
-                            Console.WriteLine("Rigtig");
+                            Console.WriteLine("Korrekt!");
                             hasAnswered = true;
                             break;
 
@@ -81,7 +81,7 @@ public class Forest : Space
                             break;
 
                         default:
-                            Console.WriteLine("Dette er ikke en svar. Prøve igen.");
+                            Console.WriteLine("Dette er ikke et svar. Prøv igen.");
                             break;
                     }
             }
