@@ -26,7 +26,7 @@ class CommandCatch : BaseCommand, ICommand
         // Tillader udførelse af kommando
         // TODO: Denne logik er dårlig, opdater venligst
         Ocean ocean = (Ocean)context.GetCurrent();
-        if (ocean.food.Count<Food>()>0 && ocean.food.Exists(food => food.name == parameters[0]))
+        if (ocean.food.Count<Food>()>0 && ocean.food.Exists(food => food.name == parameters[0].ToLower()))
         {
             Food food = ocean.food.First<Food>();
             _player.Catch(food);

@@ -8,12 +8,12 @@ public class Ocean : Space
     public static bool hasVisitedOcean;
     private Resource[] resourcesprefab =
         [
-            new Resource("metal", 5, 10),
-            new Resource("pap", 1, 15),
-            new Resource("træ", 12, 20),
-            new Resource("glas", 10, 30),
-            new Resource("bioplast", 2, 40),
-            new Resource("plast", 15, 60)
+            new Resource("metal", 4, 10),
+            new Resource("pap", 5, 15),
+            new Resource("træ", 7, 20),
+            new Resource("glas", 5, 10),
+            new Resource("bioplast", 3, 10),
+            new Resource("plast", 10, 30)
         ];
     Random rand = new Random();
 
@@ -29,13 +29,14 @@ public class Ocean : Space
     //Changed so CreateResources now copies the elements of resourcesprefab and not just hold the same values
     public void CreateResources()
     {
+        
         for (int j = 0; j < 6; j++)
         {
-            int spawnRate = rand.Next(176);
+            int spawnRate = rand.Next(90);
             
             for (int i = 0; i < resourcesprefab.Length; i++)
             {
-                int resourceWeight = resourcesprefab[i].weight;
+                int resourceWeight = resourcesprefab[i].Weight;
                 
                 spawnRate -= resourceWeight;
                 

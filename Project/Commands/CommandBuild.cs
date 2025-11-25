@@ -19,7 +19,7 @@ class CommandBuild : BaseCommand, ICommand
             return;
         }
 
-        if (parameters[0] == "boat" || parameters[0] == "båd")
+        if (parameters[0].ToLower() == "boat" || parameters[0].ToLower() == "båd")
         {
             Console.WriteLine(_player.Build(_player.resources));
         }

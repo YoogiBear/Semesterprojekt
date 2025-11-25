@@ -3,14 +3,16 @@
 
 public class Resource
 {
-    public string name;
-    public int pollution;
-    public int weight;
+    public string Name { get; }
+    public int Pollution { get; }
+    public int Weight { get; }
+    public int Strength { get; }
 
-    public Resource(string name = "defaultName", int pollution = 10, int weight = 0)
+    public Resource(string name = "defaultName", int pollution = 10, int weight = 0, int strength = 0)
     {
-        this.name = name;
-        this.pollution = pollution;
-        this.weight = weight;
+        Name = name;
+        Pollution = pollution;
+        Weight = weight;
+        Strength = strength;
     }
 }

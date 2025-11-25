@@ -35,7 +35,7 @@ public class Player
     {
         foreach (Resource r in resources)
         {
-            Console.Write(r.name + " ");
+            Console.Write(r.Name + " ");
         }
 
         
@@ -43,10 +43,10 @@ public class Player
 
     public string Build(List<Resource> lR)
     {
-        int countP = lR.Count(r => r.name == "plastic");
-        int countW = lR.Count(r => r.name == "wood");
-        int countM = lR.Count(r => r.name == "metal");
-        int countC = lR.Count(r => r.name == "cardboard");
+        int countP = lR.Count(r => r.Name == "plastic");
+        int countW = lR.Count(r => r.Name == "wood");
+        int countM = lR.Count(r => r.Name == "metal");
+        int countC = lR.Count(r => r.Name == "cardboard");
         
         List<string> missingR = new List<string>();
 

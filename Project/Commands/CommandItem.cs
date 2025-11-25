@@ -19,7 +19,7 @@
             for(int i = 0; i < player.resources.Count() ; i++)
             {
 
-                if (player.resources[i].name == parameters[0].ToLower())
+                if (player.resources[i].Name == parameters[0].ToLower())
                 {
                     player.items.Add(new Item(player.resources[i]));
                     player.resources.Remove(player.resources[i]);

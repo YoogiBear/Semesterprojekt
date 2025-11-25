@@ -24,7 +24,7 @@ public class Item
         
         if (r == null) { return null;}
 
-        switch (r.name)
+        switch (r.Name)
         {
             case "plast":
                 return "Spade";

@@ -28,22 +28,22 @@ public class Island
         pollution = 0;
         foreach(Resource material in trash)
         {
-            switch(material.name)
+            switch(material.Name)
             {
                 case "wood":
-                pollution+= material.pollution;
+                pollution+= material.Pollution;
                 break;
 
                 case "metal":
-                pollution+= material.pollution;
+                pollution+= material.Pollution;
                 break;
 
                 case "pap":
-                pollution+= material.pollution;
+                pollution+= material.Pollution;
                 break;
 
                 case "plast":
-                pollution+= material.pollution;
+                pollution+= material.Pollution;
                 break;
 
                 default:

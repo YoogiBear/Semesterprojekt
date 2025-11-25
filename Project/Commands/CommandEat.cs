@@ -23,7 +23,7 @@ class CommandEat : BaseCommand, ICommand
             return;
         }
         // predicate til at tjekke om mad IKKE findes efter navn, hvis sand returner og afslut
-        if (!_player.foods.Exists(food => food.name == parameters[0])) {
+        if (!_player.foods.Exists(food => food.name == parameters[0].ToLower())) {
             Console.WriteLine($"{parameters[0]} blev ikke fundet i inventaret."); 
             return;
         }

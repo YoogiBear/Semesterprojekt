@@ -14,8 +14,10 @@ public class Beach : Space
     {
         foreach (Resource resource in resourcePool)
         {
-            Console.WriteLine(resource.name);
+            Console.Write(resource.Name + ", ");
         }
+
+        Console.WriteLine();
     }
 
     private void GetResources()
@@ -26,12 +28,12 @@ public class Beach : Space
 
     public Resource TakeResource(string r) // Fjerner ressource fra stranden, n�r den samles
     {
-        if(resourcePool.Count == 0 || !resourcePool.Exists(resource => resource.name == r))
+        if(resourcePool.Count == 0 || !resourcePool.Exists(resource => resource.Name == r))
         {
             Console.WriteLine($"'{r}' kunne ikke findes");
             return null;
         } else {
-            Resource foundItem = resourcePool.Find(resource => resource.name == r);
+            Resource foundItem = resourcePool.Find(resource => resource.Name == r);
             resourcePool.Remove(foundItem);
             Console.WriteLine($"Du samlede {r} op fra stranden!");
             return foundItem;

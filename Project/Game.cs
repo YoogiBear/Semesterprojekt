@@ -61,7 +61,7 @@ public class Game {
     //THIS IS THE MAIN GAME LOOP. EVERYTHING STARTS FROM HERE
     while (context.IsDone()==false) {
       Console.Write("> ");
-      string? line = Console.ReadLine();
+      string? line = Console.ReadLine()!.ToLower();
       if (line!=null) registry.Dispatch(line);
     }
     Console.WriteLine("Game Over 😥");
