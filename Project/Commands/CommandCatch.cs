@@ -7,7 +7,7 @@ class CommandCatch : BaseCommand, ICommand
     public CommandCatch(Player player)
     {
         _player = player;
-        description = "Giver mulighed for at fange fisk. Men kun tæt på en gyldig vandkilde.";
+        description = "Giver mulighed for at fange fisk. Men kun tæt på en gyldig vandkilde. Blot brug kommandoen 'fang fisk'";
     }
     // forsøger at udføre CatchCommand med givet context, command og parametre, ellers returner 
     public void Execute(Context context, string command, string[] parameters)

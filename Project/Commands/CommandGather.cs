@@ -5,7 +5,7 @@ class CommandGather : BaseCommand, ICommand
     public CommandGather(Player player)
     {
         _player = player;
-        description = "Giver mulighed for at samle ressourcer på stranden";
+        description = "Giver mulighed for at samle ressourcer på stranden. Brug 'saml frugt'";
     }
 
     // forsøger at udføre kommandoen med givet context, command og parametre, ellers returner
@@ -28,7 +28,7 @@ class CommandGather : BaseCommand, ICommand
             case "the forest area":
                 
                 if(Island.trees.Count == 0 || Island.trees.Exists(fruitsOntrees => fruitsOntrees.fruitsOnTree == 0)) {
-                    Console.WriteLine("Ingen mad til dig.");
+                    Console.WriteLine("Der er ikke flere frugter på træet.");
                 } else {
                     Tree? tree = Island.trees.Find(fruitsOntrees => fruitsOntrees.fruitsOnTree > 0);
                     Console.WriteLine(tree?.Gather(_player));

@@ -96,6 +96,10 @@ public class Player
 
     public void Eat(int decrease) {
         hunger -= decrease;
+        if (hunger < 0)
+        {
+            hunger = 0;
+        }
     }
 
     public bool IsPlayerDeadFromHunger() { return hunger >= 100; }
