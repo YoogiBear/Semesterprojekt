@@ -3,6 +3,8 @@
 
 class World {
     Space entry;
+    public Beach beach = new Beach("beach");
+    public Ocean ocean = new Ocean("the ocean");
   
     public World () {
 
@@ -12,8 +14,8 @@ class World {
         Space east = new East("den østlige del af øen");
         Space west = new West("den vestlige del af øen");
 
-        Space ocean = new Ocean("the ocean");
-        Space beach = new Beach("beach");
+        Space ocean = this.ocean;
+        Space beach = this.beach;
         Space forestArea = new Forest("the forest area");
 
         // Tilknyt forbindelser

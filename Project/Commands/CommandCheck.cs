@@ -4,6 +4,7 @@
 class CommandCheck : BaseCommand, ICommand
 {
     private Player _player;
+    private Space _space; 
     public CommandCheck(Player player)
     {
         _player = player;
@@ -11,6 +12,7 @@ class CommandCheck : BaseCommand, ICommand
     }
     public void Execute(Context context, string command, string[] parameters)
     {
+        _space = context.GetCurrent(); 
         if (GuardEq(parameters, 1))
         {
             Console.WriteLine("Hvad ville du gerne tjekke?");
@@ -33,6 +35,12 @@ class CommandCheck : BaseCommand, ICommand
         {
             Utility.SlowPrint("Historien er som følger: ",30);
             _player.story.DisplayCurrentStory();
+            return;
+        }
+        else if (parameters[0].ToLower() == "print" && _space.GetName() == "beach")
+        {
+            Beach beach = (Beach)context.GetCurrent();
+            beach.PrintResources();
             return;
         }
         // Tjekker hvert item i inventaret

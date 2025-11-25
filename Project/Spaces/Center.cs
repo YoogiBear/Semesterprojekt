@@ -2,6 +2,8 @@
 Center class is only for the hasVisited at the start for the story line
 */
 
+using System.ComponentModel;
+
 public class Center : Space
 {
     public Center(String name) : base(name)
@@ -46,6 +48,53 @@ public class Center : Space
             }
                 Utility.SlowPrint("Hvad vil du gerne gøre nu?", 20);
 
+        }
+    }
+    public static void QuestionCenter()
+    {
+        if (hasVisitedCenter == true)
+        {
+            Utility.SlowPrint("Plastikemballage", 20);
+            Utility.SlowPrint("Kan plastikemballage altid genanvendes?", 20);
+            Utility.SlowPrint("A: Nej, nogle typer er svære pga. deres molekylesammensætning", 20);
+            Utility.SlowPrint("B: Det kan altid downcycles, men aldrig upcycles", 20);
+            Utility.SlowPrint("C: Ja, altid.", 20);
+            Utility.SlowPrint("D: Kun hvis det er bioplast", 20);
+            Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
+
+            bool hasAnswered = false;
+
+            while (!hasAnswered)
+                {
+                    string? answer = Console.ReadLine().ToLower();
+
+                    switch(answer)
+                    {
+                        case "a":
+                            Console.WriteLine("Korrekt!");
+                            hasAnswered = true;
+                            break;
+
+                        case "b":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "c":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        case "d":
+                            Console.WriteLine("Forkert");
+                            hasAnswered = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Dette er ikke et svar. Prøv igen.");
+                            break;
+                    }
+                }
         }
     }
 }

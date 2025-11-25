@@ -3,21 +3,28 @@
 
 public class Beach : Space
 {
-    public List<Resource> resourcePool; // list til at holde ressourcer på stranden
-
-
+    public Ocean o = new Ocean("the ocean");
+    public List<Resource> resourcePool; // list til at holde ressourcer pï¿½ stranden
+    
     public Beach(string Name) : base(Name)
     {
-        resourcePool = new List<Resource>() {
-            new Resource("plastic"), new Resource("plastic"),
-            new Resource("metal"), new Resource("metal"),
-            new Resource("plastic"), new Resource("plastic"),
-            new Resource("plastic"), new Resource("plastic"),
-            new Resource("plastic"), new Resource("plastic")
-        };
+        GetResources();
+    }
+    public void PrintResources()
+    {
+        foreach (Resource resource in resourcePool)
+        {
+            Console.WriteLine(resource.name);
+        }
     }
 
-    public Resource TakeResource(string r) // Fjerner ressource fra stranden, når den samles
+    private void GetResources()
+    {
+        o.CreateResources();
+        resourcePool = o.resources;
+    }
+
+    public Resource TakeResource(string r) // Fjerner ressource fra stranden, nï¿½r den samles
     {
         if(resourcePool.Count == 0 || !resourcePool.Exists(resource => resource.name == r))
         {

@@ -3,14 +3,16 @@
 
 class CommandSleep : BaseCommand, ICommand
 {
-    public Player _player;
-    public Ocean _ocean;
-    public Island _island;
-    public CommandSleep(Player player, Ocean ocean, Island island)
+    private Player _player;
+    private Ocean _ocean;
+    private Island _island;
+    private Beach _beach;
+    public CommandSleep(Player player, Ocean ocean, Island island,  Beach beach)
     {
         _player = player;
         _ocean = ocean;
         _island = island;
+        _beach = beach;
         description = "Sov for at genoprette havets ressourcer og affald";
     }
     public void Execute(Context context, string command, string[] parameters)
@@ -21,7 +23,6 @@ class CommandSleep : BaseCommand, ICommand
             //Opdater spillerens sult
             _player.hunger += 25;
             Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Sult", ConsoleColor.Red);
-            Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
             Game.daycounter = Game.daycounter+1;
             if (_player.IsPlayerDeadFromHunger())
             {
@@ -36,7 +37,7 @@ class CommandSleep : BaseCommand, ICommand
                 return;
             }
             Thread.Sleep(1000);
-            Console.WriteLine("Sulten steg med 15! Måske lidt morgenmad?", 10);
+            Console.WriteLine("Sulten steg med 25!", 10);
 
             //Lav pollution
             _island.GeneratePollution(_ocean.resources);
@@ -45,12 +46,32 @@ class CommandSleep : BaseCommand, ICommand
             Thread.Sleep(1000);
             FoodGenerator.GenerateFish();
             
-
             //Opret nye ressourcer i havet
             _ocean.CreateResources();
             Thread.Sleep(1000);
             Console.WriteLine("Nye materialer skyllet op på stranden", 10);
-            return;
+            foreach (Resource rs in _ocean.resources)
+            {
+                _beach.resourcePool.Add(rs);
+            }
+
+            /*
+            foreach (Resource r in _beach.resourcePool)
+            {
+                Console.WriteLine(r.name);
+            }
+            */
+            
+            Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
+
+            //Questions
+            Center.QuestionCenter();
+            East.QuestionEast();
+            Forest.QuestionForest();
+            North.QuestionNorth();
+            Ocean.QuestionOcean();
+            South.QuestionSouth();
+            West.QuestionWest();
         }
     }
 }
