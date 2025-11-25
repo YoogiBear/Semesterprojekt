@@ -42,7 +42,7 @@ public class Tree
         }
         else // Hvis træ og frugt er tilgængelig, opret nyt Food-objekt
         {
-            Food fruit = new Food("Kokosnød", 10);
+            Food fruit = new Food("kokosnød", 10);
             player.foods.Add(fruit);
             fruitsOnTree -= 1;
 
