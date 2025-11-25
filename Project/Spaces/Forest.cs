@@ -41,7 +41,7 @@ public class Forest : Space
     }
 
 
-    public static void QuestionForest()
+    public static bool QuestionForest()
     {
         if (hasVisitedForest == true)
         {
@@ -62,23 +62,19 @@ public class Forest : Space
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "c":
                             Console.WriteLine("Korrekt!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
@@ -86,5 +82,7 @@ public class Forest : Space
                     }
             }
         }
+
+    return false;
     }
 }
