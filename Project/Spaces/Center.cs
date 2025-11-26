@@ -50,8 +50,9 @@ public class Center : Space
 
         }
     }
-    public static void QuestionCenter()
+    public static bool QuestionCenter()
     {
+
         if (hasVisitedCenter == true)
         {
             Utility.SlowPrint("Plastikemballage", 20);
@@ -67,28 +68,23 @@ public class Center : Space
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
-
                     switch(answer)
                     {
                         case "a":
                             Console.WriteLine("Korrekt!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
@@ -96,5 +92,7 @@ public class Center : Space
                     }
                 }
         }
+
+    return false;
     }
 }

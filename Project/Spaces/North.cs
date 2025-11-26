@@ -45,7 +45,7 @@ public class North : Space
 
 
 
-    public static void QuestionNorth()
+    public static bool QuestionNorth()
     {
         if (hasVisitedNorth == true)
         {
@@ -58,6 +58,7 @@ public class North : Space
             Utility.SlowPrint("Vælg enten A, B, C eller D.", 20);
 
             bool hasAnswered = false;
+
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
@@ -65,23 +66,19 @@ public class North : Space
                     {
                         case "a":
                             Console.WriteLine("Forkert!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "d":
                             Console.WriteLine("Korrekt!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
@@ -89,5 +86,7 @@ public class North : Space
                     }
             }
         }
+
+    return false;
     }
 }

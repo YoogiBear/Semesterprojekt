@@ -44,7 +44,7 @@ public class South : Space
 
 
 
-    public static void QuestionSouth()
+    public static bool QuestionSouth()
     {
         if (hasVisitedSouth == true)
         {
@@ -65,23 +65,19 @@ public class South : Space
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "d":
                             Console.WriteLine("Korrekt!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
@@ -89,5 +85,7 @@ public class South : Space
                     }
                 }
         }
+
+    return false;
     }
 }

@@ -61,17 +61,48 @@ class CommandSleep : BaseCommand, ICommand
                 Console.WriteLine(r.name);
             }
             */
-            
+
             Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
 
             //Questions
+            var rand = new Random();
+            bool questionIsAsked = false;
+
+            while(!questionIsAsked)
+                {
+                switch(rand.Next(1, 8))
+                    {
+                    case 1:
+                        questionIsAsked = Center.QuestionCenter();
+                        break;
+                    case 2:
+                        questionIsAsked = East.QuestionEast();
+                        break;
+                    case 3:
+                        questionIsAsked = Forest.QuestionForest();
+                        break;
+                    case 4:
+                        questionIsAsked = North.QuestionNorth();
+                        break;
+                    case 5:
+                        questionIsAsked = Ocean.QuestionOcean();
+                        break;
+                    case 6:
+                        questionIsAsked = South.QuestionSouth();
+                        break;
+                    case 7:
+                        questionIsAsked = West.QuestionWest();
+                        break;
+                    }
+                }
+/*
             Center.QuestionCenter();
             East.QuestionEast();
             Forest.QuestionForest();
             North.QuestionNorth();
             Ocean.QuestionOcean();
             South.QuestionSouth();
-            West.QuestionWest();
+            West.QuestionWest();*/
         }
     }
 }

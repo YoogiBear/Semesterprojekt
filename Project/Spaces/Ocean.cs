@@ -97,7 +97,7 @@ public class Ocean : Space
 
 
 
-    public static void QuestionOcean()
+    public static bool QuestionOcean()
     {
         if (hasVisitedOcean == true)
         {
@@ -118,23 +118,19 @@ public class Ocean : Space
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "b":
                             Console.WriteLine("Korrekt!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
@@ -142,6 +138,8 @@ public class Ocean : Space
                     }
                 }
         }
+
+    return false;
     }
 }
 

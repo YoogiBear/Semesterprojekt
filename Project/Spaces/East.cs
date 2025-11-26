@@ -41,7 +41,7 @@ public class East : Space
 
         }
     }
-    public static void QuestionEast()
+    public static bool QuestionEast()
     {
         if (hasVisitedEast == true)
         {
@@ -62,23 +62,19 @@ public class East : Space
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "c":
                             Console.WriteLine("Korrekt!");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            hasAnswered = true;
-                            break;
+                            return true;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
@@ -86,5 +82,7 @@ public class East : Space
                     }
                 }
         }
+
+    return false;
     }
 }

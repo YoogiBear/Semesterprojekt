@@ -3,5 +3,5 @@ obj/
 bin/
 .idea/
 .vs/
-UnitTest/obj/
 UnitTest/bin/
+UnitTest/obj/

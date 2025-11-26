@@ -119,3 +119,7 @@
 - Eksamenstider kommer i midten/slut december nok
 - UnitTest skal være en del af spillet og rapporten.
 - Det er indforstået til eksamen er det er først gang man er oppe i koncepterne, men det er ikke forventet at man forstår det 100% og ved alt om det, men som semesterne går er forventningen højere og højere til at man ved det.
+
+**Referart til vejeldermøde d. 25/11/2025**
+- reflektion , kig koden igennem og find steder der kunne have været refaktoreret så det ville være nemmere og teste og kunne trækkes ud så det ikke var afhængiet af andet. Skriv om reflsktionen med dette. Aldrig sig at vores kode eller projekt er fuldendt og godt. Indrøm fejl og ting der kan forbedres.
+
