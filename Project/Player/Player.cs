@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 /**
  * Player class NOT finished. Base has been established
  * TODO: Implement proper properties and methods.
@@ -41,43 +43,48 @@ public class Player
         
     }
 
-    public string Build(List<Resource> lR)
+    public int Build(List<Resource> listResource)
     {
-        int countP = lR.Count(r => r.Name == "plastic");
-        int countW = lR.Count(r => r.Name == "wood");
-        int countM = lR.Count(r => r.Name == "metal");
-        int countC = lR.Count(r => r.Name == "cardboard");
-        
-        List<string> missingR = new List<string>();
-
-        if (countP < 5)
+        int boatDurability = 0;
+        foreach (Resource resource in listResource)
         {
-            missingR.Add($"Mangler {5-countP} plastik");
+            if (resource != null) continue;
+            
+            boatDurability += resource.Strength;
         }
 
-        if (countW < 10)
-        {
-            missingR.Add($"Mangler {10-countW} træ");
-        }
+            if (boatDurability < 150)
+            {
+                while (true)
+                {
+                    Console.WriteLine(
+                        "Der er desværre ikke nok materialer til at bygge hele båden, vil du gerne bruge dine nuværende materialer til at bygge med?");
+                    Console.WriteLine("Ja/Nej ?");
+                    string? input = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(input))
+                    {
+                        Console.WriteLine("Ikke gyldigt input");
+                        continue;
+                    }
 
-        if (countM < 3)
-        {
-            missingR.Add($"Mangler {3-countM} metal");
-        }
-
-        if (countC < 20)
-        {
-            missingR.Add($"Mangler {20-countC} pap");
-        }
-
-        if (missingR.Count == 0)
-        {
-            return "boat";
-        }
-        
-        return string.Join(", ", missingR);
-
-        
+                    string answer = input.ToLower();
+                    if (answer == "ja")
+                    {
+                        listResource.Clear();
+                        break;
+                    }
+                    else if (input == "nej")
+                    {
+                        boatDurability = 0;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jeg forstod ikke dit svar, prøv igen");
+                    }
+                }
+            }
+        return boatDurability;
     }
     public void Catch(Food food) { foods.Add(food); }
 

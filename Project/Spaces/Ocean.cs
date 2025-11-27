@@ -8,12 +8,12 @@ public class Ocean : Space
     public static bool hasVisitedOcean;
     private Resource[] resourcesprefab =
         [
-            new Resource("metal", 4, 10),
-            new Resource("pap", 5, 15),
-            new Resource("træ", 7, 20),
-            new Resource("glas", 5, 10),
-            new Resource("bioplast", 3, 10),
-            new Resource("plast", 10, 30)
+            new Resource("metal", 4, 10, 25),
+            new Resource("pap", 5, 15, 5),
+            new Resource("træ", 7, 20, 15),
+            new Resource("glas", 5, 10, 10),
+            new Resource("bioplast", 3, 10, 10),
+            new Resource("plast", 10, 30, 15)
         ];
     Random rand = new Random();
 

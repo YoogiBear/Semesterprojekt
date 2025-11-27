@@ -55,13 +55,6 @@ class CommandSleep : BaseCommand, ICommand
                 _beach.resourcePool.Add(rs);
             }
 
-            /*
-            foreach (Resource r in _beach.resourcePool)
-            {
-                Console.WriteLine(r.name);
-            }
-            */
-
             Utility.SlowPrint("Du gik i seng og vågnede næste dag.", 40);
 
             //Questions

@@ -821,39 +821,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tobim\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\netni\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\netni\\OneDrive\\Dokumenter\\Uni\\S1\\Semester_Project\\Git\\Semesterprojekt\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\tobim\\.nuget\\packages\\",
-      "outputPath": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\UnitTest\\obj\\",
+      "projectPath": "C:\\Users\\netni\\OneDrive\\Dokumenter\\Uni\\S1\\Semester_Project\\Git\\Semesterprojekt\\UnitTest\\UnitTest.csproj",
+      "packagesPath": "C:\\Users\\netni\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\netni\\OneDrive\\Dokumenter\\Uni\\S1\\Semester_Project\\Git\\Semesterprojekt\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\tobim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\netni\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj": {
-              "projectPath": "C:\\Kate\\semesterProjekt1\\Semesterprojekt-1\\Project\\cs.csproj"
+            "C:\\Users\\netni\\OneDrive\\Dokumenter\\Uni\\S1\\Semester_Project\\Git\\Semesterprojekt\\Project\\cs.csproj": {
+              "projectPath": "C:\\Users\\netni\\OneDrive\\Dokumenter\\Uni\\S1\\Semester_Project\\Git\\Semesterprojekt\\Project\\cs.csproj"
             }
           }
         }
@@ -911,7 +904,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
