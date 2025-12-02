@@ -1,10 +1,10 @@
-/* Main class for launching the game
- */
 
 class CommandCheck : BaseCommand, ICommand
 {
     private Player _player;
     private Space _space; 
+    
+    //CommandCheck allows for the player to check the status of various item and resources within the players inventory.
     public CommandCheck(Player player)
     {
         _player = player;

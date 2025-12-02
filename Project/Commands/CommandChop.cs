@@ -10,14 +10,14 @@ class CommandChop : BaseCommand, ICommand
 
     public void Execute(Context context, string command, string[] parameters)
     {
-        // Hvis spilleren kun skriver "chop"
+        //Guard command to evaluate if the given parameters are given else return a message
         if (GuardEq(parameters, 1))
         {
             Console.WriteLine("Jeg ved ikke, hvad du skal hugge 🤔");
             return;
         }
 
-        // Spilleren skal være i skov-området
+        //If the current space the player is not within a forest area
         if (context.GetCurrent().GetName() != "the forest area")
         {
             Console.WriteLine("Du er ikke i et område, hvor du kan hugge noget.");

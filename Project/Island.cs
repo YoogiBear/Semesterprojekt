@@ -1,5 +1,3 @@
-/* Main class for launching the game
- */
 
 using System.Collections;
 
@@ -21,7 +19,6 @@ public class Island
     public void GenerateTrees()
     {
         trees.Add(new Tree());
-        //Console.WriteLine($"Generated {numberOfTrees} trees on the island.");
     }
     public void GeneratePollution(List<Resource> trash)
     {

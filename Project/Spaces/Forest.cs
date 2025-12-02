@@ -1,6 +1,4 @@
-/*
-Look center class for code explantion
-*/
+
 public class Forest : Space
 {
     public Forest(String name) : base(name)

@@ -10,7 +10,6 @@ public class Game {
   static Island island = new Island();
   public static int daycounter = 0;
 
-  //static int trash = 10;
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
         registry.Register("fang", new CommandCatch(player));
@@ -26,6 +25,7 @@ public class Game {
         registry.Register("sov", new CommandSleep(player, world.ocean, island, world.beach));
     }
   
+    //Init
   static void Main (string[] args) {
 
         Console.Clear();
