@@ -131,3 +131,19 @@ Tirsdag - Kodening, status på projekt og opstart på iteration #2.
 
 Fredag - Korrekturlæsning, og iteration #2 implementering.
 * Møde på Universitet.
+* Arbejde fra 8-12.
+* Referart:
+	- Korrekturlæst nye dele af rapporten, og implementeret krav fra iteration #2
+
+Uge 48 - Gruppelog.
+Tirsdag - Ineration #2 rapportskrivning og minimal kodening.
+* Møde på Universitet.
+* Arbejdet fra 8-13.
+* Referart:
+	- Der blev skrevet til iteration #2 og implementering af sidste dele af programmet + UnitTesting.
+
+Fredag - Rapport skrivning og iteration #2 implentering.
+* Møde på universitet.
+* Arbejdet fra 8-12
+* Referart:
+	- Videreskrivning af iteration #2 af rapporten og finpudset de sidste dele til iteration #2 af programmet. 
