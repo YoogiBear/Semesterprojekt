@@ -33,7 +33,14 @@ public static class Utility
     public static void DrawStatusBar(int current, int max, string content, ConsoleColor barColor)
     {
         int barLength = 20; // Number of characters for the bar
-        double percentage = (double)current / max;
+        double percentage = 0; 
+        if (current >= max)
+        {
+            percentage = 1; 
+        } else
+        {
+            percentage = (double)current / max;
+        }
         int filledLength = (int)(barLength * percentage);
 
         Console.Write("[");
@@ -41,7 +48,7 @@ public static class Utility
         Console.Write(new string('▮', filledLength));
         Console.ResetColor();
         Console.Write(new string(' ', barLength - filledLength));
-        Console.Write("] ");
+        Console.Write(" ] ");
         Console.WriteLine($"{current}/{max} " + content);
     }
 }

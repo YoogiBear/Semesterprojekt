@@ -21,7 +21,13 @@ class CommandSleep : BaseCommand, ICommand
         {
             Console.Clear();
             //Opdater spillerens sult
-            _player.hunger += 25;
+            if (_player.hunger + 25 >= 100)
+            {
+                _player.hunger = 100;
+            } else {
+                _player.hunger += 25;    
+            }
+            
             Utility.DrawStatusBar(_player.hunger, Player.maxHunger, "Sult", ConsoleColor.Red);
             Game.daycounter = Game.daycounter+1;
             if (_player.IsPlayerDeadFromHunger())
