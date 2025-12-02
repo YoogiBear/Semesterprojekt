@@ -123,3 +123,7 @@
 **Referart til vejeldermøde d. 25/11/2025**
 - reflektion , kig koden igennem og find steder der kunne have været refaktoreret så det ville være nemmere og teste og kunne trækkes ud så det ikke var afhængiet af andet. Skriv om reflsktionen med dette. Aldrig sig at vores kode eller projekt er fuldendt og godt. Indrøm fejl og ting der kan forbedres.
 
+**Referart til vejledermøde d. 2/12/2025**
+- Hvis der er brug for ekstra vejledning kan vi skrive, så findes der tid til en vejledning ift. koden, der er vejledning tirsdag d. 16/12 hvor vejledningen kun kommer til at omhandle rapporten.
+- Statusopgørsel: Hvad mangler vi? - Rapporten ser overordnet god ud i opsætning og overskrifter.
+- Exam: Relativ kort, vi kommer ind, fremlægger fællses om de principper vi har lært, det omhandler meget om sammenarbejde, kommunikation og hvad vi har lært om at arbejde i et team, vi har kun 10 minutter derinde. Ikke læs op fra slides, tag det somom vi tager det vigtigeste ud fra rapporten og snak om det, snak om projekt, metode, test og evaluering. Efter der individuelt, forbedred noget vi gerne vil tale om, noget vi syndes der er spændende, noget vi har lavet (kode, rapport, metode, kommunikation osv.) Så er der sprøgsmål der kan være: Kode, belvin, CRC kort, UML diagrammer osv.

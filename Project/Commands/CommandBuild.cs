@@ -22,6 +22,10 @@ class CommandBuild : BaseCommand, ICommand
         if (parameters[0].ToLower() == "boat" || parameters[0].ToLower() == "båd")
         {
             Console.WriteLine(_player.Build(_player.resources));
+            if (_player.Build(_player.resources) == 150)
+            {
+                context.MakeDone();
+            }
         }
         else
         {

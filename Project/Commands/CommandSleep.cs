@@ -60,6 +60,7 @@ class CommandSleep : BaseCommand, ICommand
             //Questions
             var rand = new Random();
             bool questionIsAsked = false;
+            Console.WriteLine("\nQuiz tid!");
 
             while(!questionIsAsked)
                 {
@@ -88,14 +89,17 @@ class CommandSleep : BaseCommand, ICommand
                         break;
                     }
                 }
-/*
-            Center.QuestionCenter();
-            East.QuestionEast();
-            Forest.QuestionForest();
-            North.QuestionNorth();
-            Ocean.QuestionOcean();
-            South.QuestionSouth();
-            West.QuestionWest();*/
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
