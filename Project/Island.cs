@@ -26,30 +26,9 @@ public class Island
     public void GeneratePollution(List<Resource> trash)
     {
         pollution = 0;
-        foreach(Resource material in trash)
+        for (int i = 0; i < trash.Count(); i++)
         {
-            switch(material.Name)
-            {
-                case "wood":
-                pollution+= material.Pollution;
-                break;
-
-                case "metal":
-                pollution+= material.Pollution;
-                break;
-
-                case "pap":
-                pollution+= material.Pollution;
-                break;
-
-                case "plast":
-                pollution+= material.Pollution;
-                break;
-
-                default:
-                break;
-            }
+         pollution += trash[i].Pollution;
         }
     }
-
 }
