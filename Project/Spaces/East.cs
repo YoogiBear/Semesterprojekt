@@ -2,6 +2,8 @@
 Look center class for code explantion
 */
 
+using cs.Data;
+
 public class East : Space
 {
    public East(String name) : base(name)
@@ -58,27 +60,40 @@ public class East : Space
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
+                    bool isCorrect = false;
+                    bool valid = true;
                     switch(answer)
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "c":
                             Console.WriteLine("Korrekt!");
-                            return true;
+                            isCorrect = true;
+                            break;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
+                            valid = false;
                             break;
+                    }
+
+                    if (valid)
+                    {
+                        GameSession.RecordAnswer("Øst", "Emballage madvare", answer, isCorrect);
+                        return true; 
                     }
                 }
         }

@@ -1,4 +1,6 @@
 
+using cs.Data;
+
 public class Forest : Space
 {
     public Forest(String name) : base(name)
@@ -56,27 +58,40 @@ public class Forest : Space
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
+                    bool isCorrect = false;
+                    bool valid = true;
                     switch(answer)
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "c":
                             Console.WriteLine("Korrekt!");
-                            return true;
+                            isCorrect = true;
+                            break;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
+                            valid = false;
                             break;
+                    }
+
+                    if (valid)
+                    {
+                        GameSession.RecordAnswer("Skov", "Genanvendelig Ressource", answer, isCorrect);
+                        return true;
                     }
             }
         }

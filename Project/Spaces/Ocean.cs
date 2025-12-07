@@ -1,3 +1,5 @@
+using cs.Data;
+
 /**
  * Ocean class NOT finished. Base has been established
  * TODO: Implement proper properties and methods.
@@ -114,31 +116,42 @@ public class Ocean : Space
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
+                    bool valid = true;
+                    bool isCorrect = false;
                     switch(answer)
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "b":
                             Console.WriteLine("Korrekt!");
-                            return true;
+                            isCorrect = true;
+                            break;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
+                            valid = false; 
                             break;
+                    }
+                    if (valid)
+                    {
+                        GameSession.RecordAnswer("Havet", "Plastik Affald", answer, isCorrect);
+                        return true;
                     }
                 }
         }
-
     return false;
     }
 }

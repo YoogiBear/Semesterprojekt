@@ -2,6 +2,8 @@
 Look center class for code explantion
 */
 
+using cs.Data;
+
 public class South : Space
 {
     public South(String name) : base(name)
@@ -61,31 +63,43 @@ public class South : Space
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
+                    bool isCorrect = false;
+                    bool valid = true; 
                     switch(answer)
                     {
                         case "a":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "d":
                             Console.WriteLine("Korrekt!");
-                            return true;
+                            isCorrect = true;
+                            break;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
+                            valid = false;
                             break;
+                    }
+
+                    if (valid)
+                    {
+                        GameSession.RecordAnswer("Syd", "Træbaseret Emballage", answer, isCorrect);
+                        return true; 
                     }
                 }
         }
-
     return false;
     }
 }

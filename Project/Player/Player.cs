@@ -57,8 +57,7 @@ public class Player
             {
                 while (true)
                 {
-                    Console.WriteLine(
-                        "Der er desværre ikke nok materialer til at bygge hele båden, vil du gerne bruge dine nuværende materialer til at bygge med?");
+                    Console.WriteLine( "Der er desværre ikke nok materialer til at bygge hele båden, vil du gerne bruge dine nuværende materialer til at bygge med?");
                     Console.WriteLine("Ja/Nej ?");
                     string? input = Console.ReadLine();
                     if (string.IsNullOrWhiteSpace(input))

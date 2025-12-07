@@ -1,6 +1,8 @@
 /* Main class for launching the game
  */
 
+using cs.Data;
+
 public class Game {
   static World    world    = new World();
   static Context  context  = new Context(world.GetEntry());
@@ -39,6 +41,12 @@ public class Game {
         Console.WriteLine("Tryk på en vilkårlig tast for at fortsætte...");
         Console.ReadKey();
         Console.Clear();
+        
+        Console.WriteLine("Indtast BrugerID: ");
+        string username = Console.ReadLine();
+        GameSession.Login(username);
+        Console.Clear();
+        
         Utility.SlowPrint("Du vågner på en øde ø midt i ingenting.",20);
         Thread.Sleep(1000);
         Utility.SlowPrint("Du ser en logbog ligge på jorden.", 20);

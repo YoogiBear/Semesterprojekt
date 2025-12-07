@@ -1,0 +1,44 @@
+[
+  {
+    "Place": "center",
+    "Question": "Plastik Emballage",
+    "PlayerAnswer": "b",
+    "IsCorrect": false
+  },
+  {
+    "Place": "center",
+    "Question": "Plastik Emballage",
+    "PlayerAnswer": "d",
+    "IsCorrect": false
+  },
+  {
+    "Place": "center",
+    "Question": "Plastik Emballage",
+    "PlayerAnswer": "a",
+    "IsCorrect": true
+  },
+  {
+    "Place": "center",
+    "Question": "Plastik Emballage",
+    "PlayerAnswer": "c",
+    "IsCorrect": false
+  },
+  {
+    "Place": "\u00D8st",
+    "Question": "Emballage madvare",
+    "PlayerAnswer": "b",
+    "IsCorrect": false
+  },
+  {
+    "Place": "Nord",
+    "Question": "Livet i Havet",
+    "PlayerAnswer": "a",
+    "IsCorrect": false
+  },
+  {
+    "Place": "center",
+    "Question": "Plastik Emballage",
+    "PlayerAnswer": "c",
+    "IsCorrect": false
+  }
+]

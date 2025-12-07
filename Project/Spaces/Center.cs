@@ -3,6 +3,7 @@ Center class is only for the hasVisited at the start for the story line
 */
 
 using System.ComponentModel;
+using cs.Data;
 
 public class Center : Space
 {
@@ -68,31 +69,44 @@ public class Center : Space
             while (!hasAnswered)
                 {
                     string? answer = Console.ReadLine().ToLower();
+                    bool valid = true;
+                    bool isCorrect = false;
+                    
                     switch(answer)
                     {
                         case "a":
                             Console.WriteLine("Korrekt!");
-                            return true;
+                            isCorrect = true;
+                            break;
 
                         case "b":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "c":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         case "d":
                             Console.WriteLine("Forkert");
-                            return true;
+                            isCorrect = false;
+                            break;
 
                         default:
                             Console.WriteLine("Dette er ikke et svar. Prøv igen.");
+                            valid = false;
                             break;
                     }
-                }
-        }
 
+                    if (valid)
+                    {
+                        GameSession.RecordAnswer("Center", "Plastik Emballage", answer, isCorrect);
+                        return true;
+                    }
+                } 
+        }
     return false;
     }
 }
