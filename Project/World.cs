@@ -3,7 +3,7 @@
 
 class World {
     Space entry;
-    public Beach beach = new Beach("strand");
+    public Beach beach = new Beach("stranden");
     public Ocean ocean = new Ocean("havet");
   
     public World () {
