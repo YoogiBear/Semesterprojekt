@@ -17,7 +17,7 @@ class CommandCatch : BaseCommand, ICommand
             Console.WriteLine("Jeg ved ikke, hvad du skal fange 🤔");
             return;
         } 
-        else if(context.GetCurrent().GetName() != "the ocean") 
+        else if(context.GetCurrent().GetName() != "havet") 
         {
             Console.WriteLine("Du er ikke i et område, hvor du kan fange noget.");
             return;

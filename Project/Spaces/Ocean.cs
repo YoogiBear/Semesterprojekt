@@ -68,6 +68,7 @@ public class Ocean : Space
             Utility.SlowPrint("11 millioner tons plastaffald finder vej til vores oceaner gennem fejlsortering og dumpning af affald i havet. Disse 11 millioner tons,", 20);
             Utility.SlowPrint("er kun et lille tilskud til de allerede 200 millioner tons, der allerede findes i verdens oceaner. Med denne produktion og affaldsrate vil der i 2050 være mere plastik end fisk i havet.", 30);
             hasVisitedOcean = true;
+            Utility.SlowPrint("I havet har du mulighed for at fange fisk", 30);
             Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
@@ -79,7 +80,7 @@ public class Ocean : Space
         }
         else
         {
-            Utility.SlowPrint("Du er tilbage i havet, saml ressourcer eller fisk.", 30);
+            Utility.SlowPrint("Du er tilbage i havet, hvor der kan fanges fisk.", 30);
             Utility.SlowPrint("Du kan se disse stier:", 20);
             HashSet<string> exits = edges.Keys.ToHashSet();
             foreach (String exit in exits)
@@ -172,7 +173,6 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over.");
             return;
         }
         else if (10 < Island.pollution && Island.pollution <= 20) //Slight pollution
@@ -181,7 +181,6 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over.");
             return;
         }
         else if (20 < Island.pollution && Island.pollution <= 30) //Average pollution
@@ -190,18 +189,16 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (30 < Island.pollution && Island.pollution <= 40) //Max pollution
         {
             foodSources.Add("Fisk");
-            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (40<Island.pollution ) //Dead fish
         {
-            Console.WriteLine("For meget forurening i havet! Ingen fisk blev genereret natten over.");
+            Console.WriteLine("For meget forurening i havet! Der er ikke nogen fisk i havet");
             return;
         }
 

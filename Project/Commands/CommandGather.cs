@@ -5,7 +5,7 @@ class CommandGather : BaseCommand, ICommand
     public CommandGather(Player player)
     {
         _player = player;
-        description = "Giver mulighed for at samle ressourcer på stranden. Brug 'saml frugt'";
+        description = "Giver mulighed for at samle ressourcer på stranden eller frugt i skoven. Brug 'saml (materiale)'";
     }
     //Attempts to execute a command with a given context, command and parameters or returns
     public void Execute(Context context, string command, string[] parameters)
@@ -22,7 +22,7 @@ class CommandGather : BaseCommand, ICommand
         switch(_space.GetName().ToLower())
         {
             //if the current space is beach it allows for gathering of a resource
-            case "beach":
+            case "stranden":
                 //To allow the use of beach command the current space requires a reference
                 Beach beach = (Beach)context.GetCurrent();
                 string wanted = parameters[0];
@@ -30,7 +30,7 @@ class CommandGather : BaseCommand, ICommand
                 _player.AddResource(gathered);
                 return;
             //If the current area is within a forest area.
-            case "the forest area":
+            case "skov området":
                 //Checks whether there is no valid tree target to gather fruit from, or if there is NOT any fruits to collect.
                 if(Island.trees.Count == 0 || Island.trees.Exists(fruitsOntrees => fruitsOntrees.fruitsOnTree == 0)) {
                     Console.WriteLine("Der er ikke flere frugter på træet.");

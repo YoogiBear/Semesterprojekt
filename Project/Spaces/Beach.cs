@@ -3,7 +3,7 @@
 
 public class Beach : Space
 {
-    public Ocean o = new Ocean("the ocean");
+    public Ocean o = new Ocean("havet");
     public List<Resource> resourcePool; // list til at holde ressourcer p� stranden
     
     public Beach(string Name) : base(Name)

@@ -18,7 +18,7 @@ class CommandChop : BaseCommand, ICommand
         }
 
         //If the current space the player is not within a forest area
-        if (context.GetCurrent().GetName() != "the forest area")
+        if (context.GetCurrent().GetName() != "skov området")
         {
             Console.WriteLine("Du er ikke i et område, hvor du kan hugge noget.");
             return;

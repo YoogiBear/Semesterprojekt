@@ -1,7 +1,7 @@
 
 class CommandGo : BaseCommand, ICommand {
   public CommandGo () {
-    description = "Bruges til at bevæge dig rundt på øen. Skriv 'go' efterfulgt af en gyldig retning.";
+    description = "Bruges til at bevæge dig rundt på øen. Skriv 'gå' efterfulgt af en gyldig retning.";
   }
   
   //Attempts to execute GoCommand with a given context, command and parameter otherwise returns

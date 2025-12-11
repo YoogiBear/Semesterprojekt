@@ -55,7 +55,7 @@ class CommandSleep : BaseCommand, ICommand
             //Opret nye ressourcer i havet
             _ocean.CreateResources();
             Thread.Sleep(1000);
-            Console.WriteLine("Nye materialer skyllet op på stranden", 10);
+            Console.WriteLine("Nye materialer skyllede op på stranden", 10);
             foreach (Resource rs in _ocean.resources)
             {
                 _beach.resourcePool.Add(rs);
@@ -95,6 +95,7 @@ class CommandSleep : BaseCommand, ICommand
                         break;
                     }
                 }
+            
         }
     }
 }
