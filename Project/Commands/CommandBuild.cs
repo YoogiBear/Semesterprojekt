@@ -8,7 +8,7 @@ class CommandBuild : BaseCommand, ICommand
     public CommandBuild(Player player)
     {
         _player = player;
-        description = "Kan bruges til at bygge en båd til at komme væk fra øen.";
+        description = "Kan bruges til at bygge en båd for at undslippe fra øen.";
     }
 
     public void Execute(Context context, string command, string[] parameters)

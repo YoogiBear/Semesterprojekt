@@ -53,7 +53,7 @@ public class Game {
         Thread.Sleep(1000);
         Utility.SlowPrint("Du tager den op og bladrer til første side.", 20);
         Thread.Sleep(1000);
-        Utility.SlowPrint("Der står: 'Hvis du nogensinde har brug for hjælp, bare sig 'hjælp'. Men dit hovedmål er at overleve og sejle væk fra øen.\nDer ser dog ikke ud til at være en båd, så du må lave din egen.\nHeld og lykke med at overleve ved at samle mad og ressourcer til at bygge din båd. Alle ressourcer opdateres hver morgen.'", 20);
+        Utility.SlowPrint("Der står: 'Hvis du nogensinde har brug for hjælp, bare skriv 'hjælp'. \nDit hovedmål er at overleve og sejle væk fra øen.\nDer ser dog ikke ud til at være en båd, så du må lave din egen.\nHeld og lykke med at overleve ved at samle mad og ressourcer til at bygge din båd. Alle ressourcer opdateres hver morgen.'", 20);
         Thread.Sleep(1000);
         Utility.SlowPrint("Du spekulerer på, hvad det betyder...", 20);
         Thread.Sleep(1000);

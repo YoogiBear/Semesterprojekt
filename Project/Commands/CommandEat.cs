@@ -8,7 +8,7 @@ class CommandEat : BaseCommand, ICommand
     public CommandEat(Player player)
     {
         _player = player;
-        description = "Du spiser mad";
+        description = "Er din sult for høj? Prøv at spise noget... brug: \"spis (navn på mad)\"";
     }
     // forsøger at udføre EatCommand med givet context, command og parametre, ellers returner
     public void Execute(Context context, string command, string[] parameters)

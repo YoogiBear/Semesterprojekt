@@ -5,7 +5,7 @@ class CommandGather : BaseCommand, ICommand
     public CommandGather(Player player)
     {
         _player = player;
-        description = "Giver mulighed for at samle ressourcer på stranden. Brug 'saml frugt'";
+        description = "Giver mulighed for at samle ressourcer på stranden eller frugt i skoven. Brug 'saml (materiale)'";
     }
     //Attempts to execute a command with a given context, command and parameters or returns
     public void Execute(Context context, string command, string[] parameters)
