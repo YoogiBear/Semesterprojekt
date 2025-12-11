@@ -3,8 +3,8 @@
 
 class World {
     Space entry;
-    public Beach beach = new Beach("beach");
-    public Ocean ocean = new Ocean("the ocean");
+    public Beach beach = new Beach("strand");
+    public Ocean ocean = new Ocean("havet");
   
     public World () {
 
@@ -16,28 +16,28 @@ class World {
 
         Space ocean = this.ocean;
         Space beach = this.beach;
-        Space forestArea = new Forest("the forest area");
+        Space forestArea = new Forest("skov området");
 
         // Tilknyt forbindelser
         ocean.AddEdge("land", beach);
-        center.AddEdge("forest", forestArea);
-        forestArea.AddEdge("center", center);
+        center.AddEdge("skov", forestArea);
+        forestArea.AddEdge("centrum", center);
 
-        center.AddEdge("north", north);
-        center.AddEdge("south", south);
-        center.AddEdge("east", east);
-        center.AddEdge("west", west);
-        north.AddEdge("center", center);
-        south.AddEdge("center", center);
-        east.AddEdge("center", center);
-        west.AddEdge("center", center);
+        center.AddEdge("nord", north);
+        center.AddEdge("syd", south);
+        center.AddEdge("øst", east);
+        center.AddEdge("vest", west);
+        north.AddEdge("centrum", center);
+        south.AddEdge("centrum", center);
+        east.AddEdge("centrum", center);
+        west.AddEdge("centrum", center);
 
-        north.AddEdge("beach", beach);
-        south.AddEdge("beach", beach);
-        east.AddEdge("beach", beach);
-        west.AddEdge("beach", beach);
-        beach.AddEdge("ocean", ocean);
-        beach.AddEdge("center", center);
+        north.AddEdge("strand", beach);
+        south.AddEdge("strand", beach);
+        east.AddEdge("strand", beach);
+        west.AddEdge("strand", beach);
+        beach.AddEdge("havet", ocean);
+        beach.AddEdge("centrum", center);
 
         this.entry = center;
     }

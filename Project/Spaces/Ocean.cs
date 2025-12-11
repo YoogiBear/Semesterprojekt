@@ -172,7 +172,6 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over.");
             return;
         }
         else if (10 < Island.pollution && Island.pollution <= 20) //Slight pollution
@@ -181,7 +180,6 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over.");
             return;
         }
         else if (20 < Island.pollution && Island.pollution <= 30) //Average pollution
@@ -190,18 +188,16 @@ public static class FoodGenerator
             {
                 foodSources.Add("Fisk");
             }
-            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (30 < Island.pollution && Island.pollution <= 40) //Max pollution
         {
             foodSources.Add("Fisk");
-            Console.WriteLine($"Fisk genereret succesfuldt natten over!.");
             return;
         }
         else if (40<Island.pollution ) //Dead fish
         {
-            Console.WriteLine("For meget forurening i havet! Ingen fisk blev genereret natten over.");
+            Console.WriteLine("For meget forurening i havet! Der er ikke nogen fisk i havet");
             return;
         }
 
