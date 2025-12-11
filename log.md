@@ -146,4 +146,24 @@ Fredag - Rapport skrivning og iteration #2 implentering.
 * Møde på universitet.
 * Arbejdet fra 8-12
 * Referart:
-	- Videreskrivning af iteration #2 af rapporten og finpudset de sidste dele til iteration #2 af programmet. 
+	- Videreskrivning af iteration #2 af rapporten og finpudset de sidste dele til iteration #2 af programmet.
+
+Uge 49 - Gruppelog
+Tirsdag - Rapporskrivning og kode finpudsning.
+* Møde på Universitet.
+* Arbejdet fra 8-12.
+* Referart:
+	- Der blev skrevet på rapporten og finpudset kode.
+
+Fredag - Rapportskrivning og 3 lag arkitektur
+* Møde på universitet.
+* Arbejdet fra 8-12.
+* Referart:
+	- Skrevet på rapport & implementeret 3 lags arkitektur med en Json fil der gemmer brugernavn og svar på quiz.
+
+Uge 50 - Gruppelog
+Torsdag - Endelig gennemgang af kode
+* Møde på universitet.
+* møde fra 12-14
+* Referart:
+	- Der blev lavet brugertest og sidste finpudsning ud fra brugertest på koden, derefter afleveret. 
