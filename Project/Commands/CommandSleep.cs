@@ -43,19 +43,19 @@ class CommandSleep : BaseCommand, ICommand
                 return;
             }
             Thread.Sleep(1000);
-            Console.WriteLine("Sulten steg med 25!", 10);
+            Console.WriteLine("Sulten steg med 25!");
 
             //Lav pollution
             _island.GeneratePollution(_ocean.resources);
 
             //Opdater fisk i havet baseret på forurening
             Thread.Sleep(1000);
-            FoodGenerator.GenerateFish();
+            FoodGenerator.GenerateFish(_ocean.food);
             
             //Opret nye ressourcer i havet
             _ocean.CreateResources();
             Thread.Sleep(1000);
-            Console.WriteLine("Nye materialer skyllede op på stranden", 10);
+            Console.WriteLine("Nye materialer skyllede op på stranden");
             foreach (Resource rs in _ocean.resources)
             {
                 _beach.resourcePool.Add(rs);
