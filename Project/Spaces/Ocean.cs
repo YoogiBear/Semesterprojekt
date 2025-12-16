@@ -162,16 +162,15 @@ public class Ocean : Space
 // Food generator component
 public static class FoodGenerator
 {
-    private static readonly List<string> foodSources = new List<string>();
-    public static IReadOnlyList<string> FoodSources => foodSources.AsReadOnly();
-    
-    public static void GenerateFish()
+    public static void GenerateFish(List<Food> food)
     {
+        Console.WriteLine($"POLLUTION: {Island.pollution}");
         if (Island.pollution <= 10) //Little to no pollution
         {
             for (int i = 0; i < 4; i++)
             {
-                foodSources.Add("Fisk");
+                Food fish = new Food("fisk");
+                food.Add(fish);
             }
             return;
         }
@@ -179,7 +178,8 @@ public static class FoodGenerator
         {
             for (int i = 0; i < 3; i++)
             {
-                foodSources.Add("Fisk");
+                Food fish = new Food("fisk");
+                food.Add(fish);
             }
             return;
         }
@@ -187,13 +187,15 @@ public static class FoodGenerator
         {
             for (int i = 0; i < 2; i++)
             {
-                foodSources.Add("Fisk");
+                Food fish = new Food("fisk");
+                food.Add(fish);
             }
             return;
         }
         else if (30 < Island.pollution && Island.pollution <= 40) //Max pollution
         {
-            foodSources.Add("Fisk");
+            Food fish = new Food("fisk");
+            food.Add(fish);
             return;
         }
         else if (40<Island.pollution ) //Dead fish

@@ -40,5 +40,11 @@
     "Question": "Plastik Emballage",
     "PlayerAnswer": "c",
     "IsCorrect": false
+  },
+  {
+    "Place": "Center",
+    "Question": "Plastik Emballage",
+    "PlayerAnswer": "d",
+    "IsCorrect": false
   }
 ]
