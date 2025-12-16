@@ -127,3 +127,11 @@
 - Hvis der er brug for ekstra vejledning kan vi skrive, så findes der tid til en vejledning ift. koden, der er vejledning tirsdag d. 16/12 hvor vejledningen kun kommer til at omhandle rapporten.
 - Statusopgørsel: Hvad mangler vi? - Rapporten ser overordnet god ud i opsætning og overskrifter.
 - Exam: Relativ kort, vi kommer ind, fremlægger fællses om de principper vi har lært, det omhandler meget om sammenarbejde, kommunikation og hvad vi har lært om at arbejde i et team, vi har kun 10 minutter derinde. Ikke læs op fra slides, tag det somom vi tager det vigtigeste ud fra rapporten og snak om det, snak om projekt, metode, test og evaluering. Efter der individuelt, forbedred noget vi gerne vil tale om, noget vi syndes der er spændende, noget vi har lavet (kode, rapport, metode, kommunikation osv.) Så er der sprøgsmål der kan være: Kode, belvin, CRC kort, UML diagrammer osv.
+
+**Referart til vejledermøde d. 16/12/2025**
+- Kort kodeafsnit meget ned, kun vis de metoder der er vigtige og bliver snakket om, lig den flude kode fra udsnittet i billag. Til f.eks public override void Welcome i ocean skal vi kun vise den ene linje.
+- Antal sider, hvor mange anslag osv er ikke så betydende for Jeppe og afleveringen. Det vigtige er at rapporten er fyldestgørende og ikke har irrelevante informationer.
+- Vi skal kigge på ting i vores rapport, og se om hvis vi tager det ud af rapporten, ville der så mangle noget? For Jeppe er projektgrundlaget lidt for langt, men det kommer også an på censor. Men udfra indholdsfortegnelsen er der ikke noget der mangler eller noget der skal fjernen.
+- Problemformuleringen i slutningen af projektgrundlag.
+- Eksamen højst sansyndeligt den 13 Januar, omkring kl. 10. Endelige plan kommer snart. 
+
