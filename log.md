@@ -166,4 +166,25 @@ Torsdag - Endelig gennemgang af kode
 * Møde på universitet.
 * møde fra 12-14
 * Referart:
-	- Der blev lavet brugertest og sidste finpudsning ud fra brugertest på koden, derefter afleveret. 
+	- Der blev lavet brugertest og sidste finpudsning ud fra brugertest på koden, derefter afleveret.
+
+Uge 51 - Gruppelog
+Mandag - Første gennemgang af rapport
+* Møde på universitet
+* Møde 9-14
+* Refeart:
+  	- Gemmengang af rapport, læste igennem og blev enige om hvad der manglede og hvad skulle rettes
+Tirsdag - Vejledermøde plus gruppemøde om rapport
+* Møde på universitet
+* Møde 8-15
+* Refeart:
+    - Havde vejledermøde, fik snakket rapport, lavet en samlet konklusion og gennemgik nye tekst tilføjet i rapporten
+Torsdag - Sidste gennemgang af rapport
+* Møde på universitet
+* Møde 10-16
+* Refeart:
+  	- Læste hele rapporten igennem igen, finpudset teksten
+* Online møde
+* Møde 19-23
+* Refeart:
+  	- Skrev konklusion færdig, og afleverede rapport
